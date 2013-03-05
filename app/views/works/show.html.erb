@@ -1,0 +1,50 @@
+<h1>Anzeigen</h1>
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+<% end %>
+
+<table class id="ueberschrift">
+<tr>
+ <td><b>Datum:</b></td>
+ <td><%=l @work.datum %></td>
+</tr>
+<tr>
+  <td><b>Kw:</b></td>
+  <td><%= @work.kw %></td>
+</tr>
+<tr>
+  <td><b>Tag:</b></td>
+  <td><%= @work.tag %></td>
+</tr>
+<tr>
+  <td><b>Von:</b></td>
+  <td><%=l @work.von, format:  :short %></td>
+</tr>
+<tr>
+  <td><b>Bis:</b></td>
+  <td><%=l @work.bis, format: :short %></td>
+</tr>
+<tr>
+  <td><b>Mm:</b></td>
+  <td><%=l @work.mm, format: :short %></td>
+</tr>
+<tr>
+  <td><b>Std:</b></td>
+  <td><%= @work.std %></td>
+</tr>
+<tr>
+  <td><b>Pbez:</b></td>
+  <td><%= @work.pbez %></td>
+</tr>
+<tr>
+  <td><b>Kunde:</b></td>
+  <td><%= @work.kunde %></td>
+</tr>
+<tr>
+  <td><b>Erl:</b></td>
+  <td><%= @work.erl %></td>
+</tr>
+</table>
+
+<%= link_to 'Ändern', edit_work_path(@work) %> |
+<%= link_to 'Zurück', works_path %>

@@ -1,0 +1,37 @@
+<table>
+  <tr class ="ueberschrift">
+    <th>Datum</th>
+    <th>Kw</th>
+    <th>Tag</th>
+    <th>Von</th>
+    <th>Bis</th>
+    <th>Pause</th>
+    <th>Stunden</th>
+    <th>Projekt</th>
+    <th>Kunde</th>
+    <th>Text</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @works.each do |work| %>
+      <tr>
+        <td><%= l work.datum %></td>
+        <td><%= work.kw %></td>
+        <td><%= work.tag %></td>
+        <td><%= l work.von, format: :short %></td>
+        <td><%= l work.bis, format: :short %></td>
+        <td><%= l work.mm, format: :short %></td>
+        <td><%= work.std %></td>
+        <td><%= work.pbez %></td>
+        <td><%= work.kunde %></td>
+        <td><%= work.erl %></td>
+
+      </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Ausgabe', ausgabe_excel_index_path(:work => @works) %> |
+<%= link_to 'Zurück', excel_path %>
+

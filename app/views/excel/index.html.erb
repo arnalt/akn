@@ -1,0 +1,12 @@
+<h3>AKN-Monatsauswahl</h3>
+
+<table>
+  <% @monat.each do |m| %>
+      <tr>
+        <td><%= link_to m, list_excel_index_path(:name => m)   %></td>
+      </tr>
+  <% end %>
+</table>
+
+
+

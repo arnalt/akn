@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  datum: 2013-02-07
+  kw: 1
+  tag: MyString
+  von: 2013-02-07 11:23:24
+  bis: 2013-02-07 11:23:24
+  mm: 2013-02-07 11:23:24
+  std: 9.99
+  pbez: MyString
+  kunde: MyString
+  erl: MyText
+
+two:
+  datum: 2013-02-07
+  kw: 1
+  tag: MyString
+  von: 2013-02-07 11:23:24
+  bis: 2013-02-07 11:23:24
+  mm: 2013-02-07 11:23:24
+  std: 9.99
+  pbez: MyString
+  kunde: MyString
+  erl: MyText
