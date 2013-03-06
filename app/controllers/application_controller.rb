@@ -6,10 +6,12 @@ class ApplicationController < ActionController::Base
   def current_user
     if session[:user_id]
       @current_user ||= User.find(session[:user_id])
-
     end
   end
 
+  def user_name
+    User.find(current_user).vorname + " " + User.find(current_user).nachname
+  end
   def kalw (date)
     ((date - date.at_beginning_of_year) / 7 + 1).round.to_i
   end
@@ -24,8 +26,9 @@ class ApplicationController < ActionController::Base
   end
 
   def monat_akt
-    @a = current_user.works.where("user_id = ?", current_user)
-    @a = @a.order("datum DESC")
+  #  @a = current_user.works.where("user_id = ?", current_user)
+    @a = Work.find_all_by_user_id(current_user)
+   # @a = @a.order("datum DESC")
     m = @a[0].datum.to_s[5,2].to_i
     @monat = I18n.t("date.month_names")[1..m]
   end

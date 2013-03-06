@@ -26,7 +26,7 @@ class ExcelController < ApplicationController
    @@monat = monat
 
 
-  @works = current_user.works.where("substr(datum,6,2) = ?", @@mo )
+   @works = current_user.works.where("substr(datum,6,2) = ?", @@mo )
 
     respond_to do |format|
       format.html # show.html.erb

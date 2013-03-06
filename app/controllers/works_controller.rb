@@ -3,6 +3,7 @@ class WorksController < ApplicationController
   # GET /works.json
   def index
     @works = current_user.works
+    @username = user_name
 
     respond_to do |format|
       format.html # index.html.erb
