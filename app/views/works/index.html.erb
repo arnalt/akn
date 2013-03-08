@@ -13,9 +13,6 @@
     <th>Projekt</th>
     <th>Kunde</th>
     <th>Text</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @works.each do |work| %>
@@ -30,9 +27,10 @@
     <td><%= work.pbez %></td>
     <td><%= work.kunde %></td>
     <td><%= work.erl %></td>
-    <td><%= link_to 'Show', work %></td>
-    <td><%= link_to 'Edit', edit_work_path(work) %></td>
-    <td><%= link_to 'Destroy', work, confirm: 'Are you sure?', method: :delete %></td>
+    <td></td><td></td><td></td>
+    <td><%= link_to 'Anzeigen', work %></td>
+    <td><%= link_to 'Ändern', edit_work_path(work) %></td>
+    <td><%= link_to 'Löschen', work, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

@@ -27,8 +27,13 @@ class ExcelController < ApplicationController
 
 
    @works = current_user.works.where("substr(datum,6,2) = ?", @@mo )
+   @total_std = 0.0
+   @works.each do |w|
+     @total_std += w.std.to_f
+   end
+   @akt_monat = @@monat
 
-    respond_to do |format|
+   respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @work }
     end

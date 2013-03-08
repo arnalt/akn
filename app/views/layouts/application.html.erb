@@ -26,6 +26,12 @@
          </ul>
     </div>
     <div id="main">
+    	<% if flash[:alert] %>
+    	<p id="alert">
+    		<%= flash[:alert] %>
+    	</p>
+    	<% end %>
+    		
          <%= yield %>
     </div>
 </div>

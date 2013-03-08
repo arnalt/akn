@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if (cookies[:user_id] == nil)
+  #  if (cookies[:user_id] == nil)
        user = User.find_by_email(params[:email])
        if user && user.authenticate(params[:password])
           session[:user_id] = user.id
@@ -12,13 +12,13 @@ class SessionsController < ApplicationController
           redirect_to works_path,
                   notice: "Sie haben sich angemeldet!"
        else
-           flash.now.alert = "Fehlerhafte E.Mail-Adresse oder Passwort"
+           flash.now.alert = "Fehlerhafte E-Mail-Adresse oder Passwort"
            render "new"
        end
-    else
-      session[:user_id] = cookies[:user_id]
-      redirect_to works_path
-    end
+  #  else
+  #    session[:user_id] = cookies[:user_id]
+  #    redirect_to works_path
+  #  end
   end
 
   def destroy

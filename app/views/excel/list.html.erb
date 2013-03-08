@@ -1,7 +1,8 @@
 <table>
+  <div class="excel_title">Monat: <%= @akt_monat %> </div>
   <tr class ="ueberschrift">
     <th>Datum</th>
-    <th>Kw</th>
+    <th>Woche</th>
     <th>Tag</th>
     <th>Von</th>
     <th>Bis</th>
@@ -27,9 +28,12 @@
         <td><%= work.pbez %></td>
         <td><%= work.kunde %></td>
         <td><%= work.erl %></td>
-
       </tr>
   <% end %>
+  <tr class="total_line">
+    <td colspan="6">Gesamt</td>
+    <td class="total_cell"><%= @total_std %></td>
+  </tr>
 </table>
 
 <%= link_to 'Ausgabe', ausgabe_excel_index_path(:work => @works) %> |
