@@ -7,7 +7,7 @@ class Work < ActiveRecord::Base
 
 
 
-    def complete_work
+  def complete_work
     @arr = I18n.t("date.day_names")
     self.tag = @arr.at(self.datum.wday)
     self.kw = ((self.datum - self.datum.at_beginning_of_year) / 7 + 0.8).round.to_i
