@@ -1,17 +1,19 @@
 <h1>AKN</h1>
 <h3><%= @username %></h3>
-
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+<% end %>
 <table>
   <tr class ="ueberschrift">
-    <th>Datum</th>
-    <th>Kw</th>
-    <th>Tag</th>
-    <th>Von</th>
-    <th>Bis</th>
-    <th>Pause</th>
-    <th>Stunden</th>
-    <th>Projekt</th>
-    <th>Kunde</th>
+    <th width="100px">Datum</th>
+    <th width="20px">Woche</th>
+    <th width="100px">Tag</th>
+    <th width="100px">Von</th>
+    <th width="100px">Bis</th>
+    <th width="100px">Pause</th>
+    <th width="100px">Stunden</th>
+    <th width="100px">Projekt</th>
+    <th width="100px">Kunde</th>
     <th>Text</th>
   </tr>
 
@@ -23,11 +25,12 @@
     <td><%= l work.von, format: :short %></td>
     <td><%= l work.bis, format: :short %></td>
     <td><%= l work.mm, format: :short %></td>
-    <td><%= work.std %></td>
+    <td><%= number_with_precision(work.std, :precision => 2) %></td>
     <td><%= work.pbez %></td>
     <td><%= work.kunde %></td>
     <td><%= work.erl %></td>
     <td></td><td></td><td></td>
+
     <td><%= link_to 'Anzeigen', work %></td>
     <td><%= link_to 'Ändern', edit_work_path(work) %></td>
     <td><%= link_to 'Löschen', work, confirm: 'Are you sure?', method: :delete %></td>

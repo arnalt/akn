@@ -40,7 +40,7 @@ class ExcelController < ApplicationController
   end
 
   def ausgabe
-  #  @works = params[:work]
+
     @works = current_user.works.where("substr(datum,6,2) = ?", @@mo)
     jahr = @works[0].datum.to_s
 
@@ -67,7 +67,7 @@ class ExcelController < ApplicationController
       while j < 32
           if tag == j
             c = "B" + (s + j).to_s
-            ws.Range(c).value = w.std.to_s
+            ws.Range(c).value = (w.std.to_s).gsub('.',',')
             gstd  = gstd + w.std
             c = "C" + (s + j).to_s
             ws.Range(c).value = w.erl.to_s
@@ -76,8 +76,8 @@ class ExcelController < ApplicationController
           j += 1
         end
     end
-    ws.Range("B40").value = gstd.to_s
-    ws.Range("B41").value = anzahl_tage.to_s
+   # ws.Range("B40").value = gstd.to_s
+   # ws.Range("B41").value = anzahl_tage.to_s
   end
 
 

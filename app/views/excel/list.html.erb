@@ -1,16 +1,16 @@
 <table>
   <div class="excel_title">Monat: <%= @akt_monat %> </div>
   <tr class ="ueberschrift">
-    <th>Datum</th>
-    <th>Woche</th>
-    <th>Tag</th>
-    <th>Von</th>
-    <th>Bis</th>
-    <th>Pause</th>
-    <th>Stunden</th>
-    <th>Projekt</th>
-    <th>Kunde</th>
-    <th>Text</th>
+    <th width="100px">Datum</th>
+    <th width="20px">Woche</th>
+    <th width="100px">Tag</th>
+    <th width="100px">Von</th>
+    <th width="100px">Bis</th>
+    <th width="100px">Pause</th>
+    <th width="100px">Stunden</th>
+    <th width="100px">Projekt</th>
+    <th width="100px">Kunde</th>
+    <th width="100px">Text</th>
     <th></th>
     <th></th>
     <th></th>
@@ -24,7 +24,7 @@
         <td><%= l work.von, format: :short %></td>
         <td><%= l work.bis, format: :short %></td>
         <td><%= l work.mm, format: :short %></td>
-        <td><%= work.std %></td>
+        <td><%= number_with_precision(work.std, :precision => 2) %></td>
         <td><%= work.pbez %></td>
         <td><%= work.kunde %></td>
         <td><%= work.erl %></td>
@@ -32,10 +32,10 @@
   <% end %>
   <tr class="total_line">
     <td colspan="6">Gesamt</td>
-    <td class="total_cell"><%= @total_std %></td>
+    <td class="total_cell"><%= number_with_precision(@total_std, :precision => 2) %></td>
   </tr>
 </table>
 
-<%= link_to 'Ausgabe', ausgabe_excel_index_path(:work => @works) %> |
+<%= link_to 'Ausgabe', ausgabe_excel_index_path %> |
 <%= link_to 'Zurück', excel_path %>
 

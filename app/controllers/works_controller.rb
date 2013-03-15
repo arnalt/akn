@@ -2,9 +2,8 @@ class WorksController < ApplicationController
   # GET /works
   # GET /works.json
   def index
-    @works = current_user.works
-    @username = user_name
-
+    @works = current_user.works.order("datum")
+    @username = current_user.user_name
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @works }
@@ -46,14 +45,10 @@ class WorksController < ApplicationController
   # POST /works.json
   def create
     @work = current_user.works.build(params[:work])
-    @work.kw = kalw(@work.datum)
-    @work.tag = wtag(@work.datum)
-    @work.std = pstd(@work.von, @work.bis, @work.mm)
-
-    respond_to do |format|
+      respond_to do |format|
       if @work.save
-        format.html { redirect_to @work, notice: 'Datensatz wurde angelegt.' }
-        format.json { render json: @work, status: :created, location: @work }
+        format.html { redirect_to works_path, notice: 'Datensatz wurde angelegt.' }
+        format.json { render json: works_path, status: :created, location: @work }
       else
         format.html { render action: "new" }
         format.json { render json: @work.errors, status: :unprocessable_entity }
@@ -65,13 +60,12 @@ class WorksController < ApplicationController
   # PUT /works/1.json
   def update
     @work = current_user.works.find(params[:id])
-    @work.kw = kalw(@work.datum)
-    @work.tag = wtag(@work.datum)
-    @work.std = pstd(@work.von, @work.bis, @work.mm)
 
     respond_to do |format|
-      if @work.update_attributes(params[:work])
-        format.html { redirect_to @work, notice: 'Work was successfully updated.' }
+
+     if @work.update_attributes(params[:work] )
+
+        format.html { redirect_to works_path, notice: 'Daten wurden geaendert.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -91,4 +85,6 @@ class WorksController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
 end

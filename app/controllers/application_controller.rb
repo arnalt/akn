@@ -9,22 +9,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def user_name
-    User.find(current_user).vorname + " " + User.find(current_user).nachname
-  end
-  
-  def kalw (date)
-    ((date - date.at_beginning_of_year) / 7 + 1).round.to_i
-  end
 
-  def wtag (date)
-    @arr = I18n.t("date.day_names")
-    tag = @arr.at(date.wday)
-  end
-
-  def pstd(von,bis, mm)
-    ((((bis.hour * 60) + bis.min) - ((von.hour * 60) + von.min)) - ((mm.hour * 60) + mm.mon)) / 60
-  end
 
 
   def monat_akt
