@@ -17,15 +17,15 @@
   </div>
   <div class="field">
     <%= f.label :von %><br />
-    <%= f.time_select :von, :minute_step => 15  %>
+    <%= f.time_select :von, :default => "2000-01-01 07:30".to_datetime, :minute_step => 15  %>
   </div>
   <div class="field">
     <%= f.label :bis %><br />
-    <%= f.time_select :bis, :minute_step => 15 %>
+    <%= f.time_select :bis, :default => "2000-01-01 16:00".to_datetime, :minute_step => 15 %>
   </div>
   <div class="field">
     <%= f.label :Pause %><br />
-    <%= f.time_select :mm, :minute_step => 15 %>
+    <%= f.time_select :mm, :default => "2000-01-01 00:30".to_datetime, :minute_step => 15 %>
   </div>
   <div class="field">
     <%= f.label :Bezeichnung %><br />

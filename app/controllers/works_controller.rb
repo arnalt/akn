@@ -25,11 +25,6 @@ class WorksController < ApplicationController
   # GET /works/new.json
   def new
     @work = current_user.works.build
-    @work.von = "07:30"
-    @work.bis = "16:00"
-    @work.mm = "00:30"
-    @work.pbez = "Intern"
-    @work.kunde = "Testkunde"
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @work }
