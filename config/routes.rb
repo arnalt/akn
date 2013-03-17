@@ -1,5 +1,5 @@
 Akn::Application.routes.draw do
-    get 'excel' => 'excel#index'
+    get 'reports' => 'reports#index'
 
     get "login" => "sessions#new", as: "login"
 
@@ -8,13 +8,7 @@ Akn::Application.routes.draw do
     delete "logout" => "sessions#destroy", as: "logout"
 
 
-    #  get 'excel/:id' => 'excel#show'
-    resources :excel do
-      collection do
-        get  :list
-        get  :ausgabe
-      end
-    end
+    get 'works/:name' => 'works#show', as: 'work'
 
 
 

@@ -31,8 +31,7 @@
     <td><%= work.erl %></td>
     <td></td><td></td><td></td>
 
-    <td><%= link_to 'Anzeigen', work %></td>
-    <td><%= link_to 'Ändern', edit_work_path(work) %></td>
+     <td><%= link_to 'Ändern', edit_work_path(work) %></td>
     <td><%= link_to 'Löschen', work, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>

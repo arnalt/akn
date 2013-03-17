@@ -1,50 +1,39 @@
-<h1>Anzeigen</h1>
-<% if notice %>
-    <p id="notice"><%= notice %></p>
-<% end %>
+<table>
+  <div class="excel_title">Monat: <%= @akt_monat %> </div>
+  <tr class ="ueberschrift">
+    <th width="100px">Datum</th>
+    <th width="20px">Woche</th>
+    <th width="100px">Tag</th>
+    <th width="100px">Von</th>
+    <th width="100px">Bis</th>
+    <th width="100px">Pause</th>
+    <th width="100px">Stunden</th>
+    <th width="100px">Projekt</th>
+    <th width="100px">Kunde</th>
+    <th width="100px">Text</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
 
-<table class id="ueberschrift">
-<tr>
- <td><b>Datum:</b></td>
- <td><%=l @work.datum %></td>
-</tr>
-<tr>
-  <td><b>Kw:</b></td>
-  <td><%= @work.kw %></td>
-</tr>
-<tr>
-  <td><b>Tag:</b></td>
-  <td><%= @work.tag %></td>
-</tr>
-<tr>
-  <td><b>Von:</b></td>
-  <td><%=l @work.von, format:  :short %></td>
-</tr>
-<tr>
-  <td><b>Bis:</b></td>
-  <td><%=l @work.bis, format: :short %></td>
-</tr>
-<tr>
-  <td><b>Mm:</b></td>
-  <td><%=l @work.mm, format: :short %></td>
-</tr>
-<tr>
-  <td><b>Std:</b></td>
-  <td><%= @work.std %></td>
-</tr>
-<tr>
-  <td><b>Pbez:</b></td>
-  <td><%= @work.pbez %></td>
-</tr>
-<tr>
-  <td><b>Kunde:</b></td>
-  <td><%= @work.kunde %></td>
-</tr>
-<tr>
-  <td><b>Erl:</b></td>
-  <td><%= @work.erl %></td>
-</tr>
+  <% @works.each do |work| %>
+      <tr>
+        <td><%= l work.datum %></td>
+        <td><%= work.kw %></td>
+        <td><%= work.tag %></td>
+        <td><%= l work.von, format: :short %></td>
+        <td><%= l work.bis, format: :short %></td>
+        <td><%= l work.mm, format: :short %></td>
+        <td><%= number_with_precision(work.std, :precision => 2) %></td>
+        <td><%= work.pbez %></td>
+        <td><%= work.kunde %></td>
+        <td><%= work.erl %></td>
+      </tr>
+  <% end %>
+  <tr class="total_line">
+    <td colspan="6">Gesamt</td>
+    <td class="total_cell"><%= number_with_precision(@total_std, :precision => 2) %></td>
+  </tr>
 </table>
-
-<%= link_to 'Ändern', edit_work_path(@work) %> |
-<%= link_to 'Zurück', works_path %>
+<%= link_to "CSV", work_path(format: "csv") %> |
+<%= link_to "Excel", work_path(format: "xls") %>

@@ -13,10 +13,23 @@ class WorksController < ApplicationController
   # GET /works/1
   # GET /works/1.json
   def show
-    @work = current_user.works.find(params[:id])
+  #  @work = current_user.works.find(params[:id])
+    @arr = I18n.t("date.month_names")
+    mo = (@arr.index params[:name]).to_s
+    if (mo.length < 2)
+      mo = "0" + mo
+    end
 
+    @works = current_user.works.where("substr(datum,6,2) = ?", mo )
+    @total_std = 0.0
+    @works.each do |w|
+      @total_std += w.std.to_f
+    end
+    @akt_monat = params[:name]
     respond_to do |format|
       format.html # show.html.erb
+      format.csv { send_data @products.to_csv }
+      format.xls # { send_data @products.to_csv(col_sep: "\t") }
       format.json { render json: @work }
     end
   end
