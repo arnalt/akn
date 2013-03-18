@@ -26,6 +26,8 @@ class WorksController < ApplicationController
       @total_std += w.std.to_f
     end
     @akt_monat = params[:name]
+    @username = current_user.user_name
+    @total_tage = @total_std / 8.0
     respond_to do |format|
       format.html # show.html.erb
       format.csv { send_data @products.to_csv }
