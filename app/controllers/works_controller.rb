@@ -30,7 +30,7 @@ class WorksController < ApplicationController
     @total_tage = @total_std / 8.0
     respond_to do |format|
       format.html # show.html.erb
-      format.csv { send_data @products.to_csv }
+     # format.csv { send_data @products.to_csv }
       format.xls # { send_data @products.to_csv(col_sep: "\t") }
       format.json { render json: @work }
     end

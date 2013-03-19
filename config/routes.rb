@@ -1,6 +1,8 @@
 Akn::Application.routes.draw do
     get 'reports' => 'reports#index'
 
+
+
     get "login" => "sessions#new", as: "login"
 
     post "sessions" => "sessions#create", as: "sessions"
@@ -8,8 +10,8 @@ Akn::Application.routes.draw do
     delete "logout" => "sessions#destroy", as: "logout"
 
 
-    get 'works/:name' => 'works#show', as: 'work'
 
+    get 'reports/:name' => 'reports#show', as: 'report'
 
 
     resources :works
