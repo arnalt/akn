@@ -1,6 +1,7 @@
 Akn::Application.routes.draw do
   resources :clients
   resources :users
+  resources :reports
 
 
     get 'reports' => 'reports#index'
@@ -12,7 +13,7 @@ Akn::Application.routes.draw do
     delete "logout" => "sessions#destroy", as: "logout"
 
 
-    get 'reports/:name' => 'reports#show', as: 'report'
+  #  get 'reports/:name' => 'reports#show', as: 'report'
 
 
 

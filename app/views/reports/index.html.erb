@@ -1,10 +1,15 @@
 <h1>AKN-Monatsauswahl</h1>
 
 <table>
+  <tr>
+  <th width="100px">Kunde</th>
+  <th width="20px">Monat</th>
+  </tr>
   <div class="liste">
-    <% @monat.each do |m| %>
+    <% @reports.each do |m| %>
       <tr>
-        <td><%= link_to m, report_path(:name => m)   %></td>
+         <td><%= m.client.name   %></td>
+        <td><%=  link_to I18n.t("date.month_names")[m.monat], report_path(m.id)   %></td>
       </tr>
   <% end %>
   </div>

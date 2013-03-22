@@ -12,10 +12,10 @@ class ApplicationController < ActionController::Base
 
 
   private
-  def monat_akt
-   @a = current_user.works.order("datum DESC")
-     m = @a[0].datum.to_s[5,2].to_i
-    @monat = I18n.t("date.month_names")[1..m]
-  end
+#  def monat_akt
+#   @a = current_user.works.order("datum DESC")
+#     m = @a[0].datum.to_s[5,2].to_i
+#    @monat = I18n.t("date.month_names")[1..m]
+#  end
 
 end
