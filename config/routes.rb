@@ -1,4 +1,8 @@
 Akn::Application.routes.draw do
+  resources :clients
+  resources :users
+
+
     get 'reports' => 'reports#index'
 
     get "login" => "sessions#new", as: "login"
@@ -8,12 +12,12 @@ Akn::Application.routes.draw do
     delete "logout" => "sessions#destroy", as: "logout"
 
 
-    get 'works/:name' => 'works#show', as: 'work'
+    get 'reports/:name' => 'reports#show', as: 'report'
 
 
 
     resources :works
-    resources :users, only: [:new, :create]
+
 
 
 
@@ -72,7 +76,7 @@ Akn::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
 
-  root :to => 'sessions#new'
+  root :to => 'works#home'
   
   # See how all your routes lay out with "rake routes"
 

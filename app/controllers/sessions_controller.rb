@@ -4,26 +4,19 @@ class SessionsController < ApplicationController
   end
 
   def create
-  #  if (cookies[:user_id] == nil)
-       user = User.find_by_email(params[:email])
-       if user && user.authenticate(params[:password])
-          session[:user_id] = user.id
-          cookies[:user_id] = user.id
-          redirect_to works_path,
-                  notice: "Sie haben sich angemeldet!"
-       else
-           flash.now.alert = "Fehlerhafte E-Mail-Adresse oder Passwort"
-           render "new"
-       end
-  #  else
-  #    session[:user_id] = cookies[:user_id]
-  #    redirect_to works_path
-  #  end
-  end
+      user = User.find_by_email(params[:session][:email].downcase)
+      if user && user.authenticate(params[:session][:password])
+        sign_in user
+        redirect_back_or works_path
+      else
+        flash.now[:error] = 'Invalid email/password combination'
+        render 'new'
+      end
+    end
 
   def destroy
-    session[:user_id]= nil
-    redirect_to root_path,
-                notice: "Sie haben sich abgmeldet!"
+    sign_out
+    redirect_to root_url
   end
+
 end
