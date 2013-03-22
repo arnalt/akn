@@ -1,0 +1,41 @@
+<table>
+<div>Monat: <%= @akt_monat %> </div>
+<tr>
+  <th width="100px">Datum</th>
+  <th width="20px">Woche</th>
+  <th width="100px">Tag</th>
+  <th width="100px">Von</th>
+  <th width="100px">Bis</th>
+  <th width="100px">Pause</th>
+  <th width="100px">Stunden</th>
+  <th width="100px">Projekt</th>
+  <th width="100px">Kunde</th>
+  <th width="100px">Text</th>
+  <th></th>
+  <th></th>
+  <th></th>
+</tr>
+
+<% @works.each do |work| %>
+    <tr>
+      <td><%= l work.datum %></td>
+      <td><%= work.kw %></td>
+      <td><%= work.tag %></td>
+      <td><%= l work.von, format: :short %></td>
+      <td><%= l work.bis, format: :short %></td>
+      <td><%= l work.mm, format: :short %></td>
+      <td><%= number_with_precision(work.std, :precision => 2) %></td>
+      <td><%= work.client.project %></td>
+      <td><%= work.client.name %></td>
+      <td><%= work.erl %></td>
+    </tr>
+<% end %>
+<tr>
+  <td colspan="6">Gesamt</td>
+  <td><%= number_with_precision(@total_std, :precision => 2) %></td>
+</tr>
+</table>
+<br>
+<div><p>
+<%= link_to "Excel", report_path(format: "xls") %>
+</p></div>

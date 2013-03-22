@@ -1,0 +1,17 @@
+<h1>AKN-Monatsauswahl</h1>
+
+<table>
+  <div class="liste">
+    <% @monat.each do |m| %>
+      <tr>
+        <td><%= link_to m, report_path(:name => m)   %></td>
+      </tr>
+  <% end %>
+  </div>
+</table>
+<br>
+<%= link_to 'Zurück', works_path  %>
+
+
+
+
