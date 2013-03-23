@@ -9,7 +9,7 @@
     <% @reports.each do |m| %>
       <tr>
          <td><%= m.client.name   %></td>
-        <td><%=  link_to I18n.t("date.month_names")[m.monat], report_path(m.id)   %></td>
+        <td><%=  link_to I18n.t("date.month_names")[m.monat], work_path(m.id)   %></td>
       </tr>
   <% end %>
   </div>
