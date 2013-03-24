@@ -1,4 +1,8 @@
 Akn::Application.routes.draw do
+  get "home_pages/home"
+
+  get "home_pages/help"
+
   resources :clients
   resources :users
   resources :reports
@@ -77,7 +81,7 @@ Akn::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
 
-  root :to => 'works#home'
+  root :to => 'home_pages#home'
   
   # See how all your routes lay out with "rake routes"
 

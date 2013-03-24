@@ -24,6 +24,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :test do
+  gem 'capybara', '1.1.2'
+end
 group :production do
   gem 'pg'
 end
@@ -31,6 +34,7 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'heroku'
+  gem 'rspec-rails', '2.11.0'
 end
 
 gem 'jquery-rails'
