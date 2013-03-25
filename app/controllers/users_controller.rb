@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to the AKN App!"
-      redirect_to works_path
+      redirect_to @user
     else
       render "new"
     end

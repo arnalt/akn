@@ -1,36 +1,20 @@
 Akn::Application.routes.draw do
-  get "home_pages/home"
 
-  get "home_pages/help"
+  match  '/help',        to:  'home_pages#help'
+  match  '/about',     to:  'home_pages#about'
+  match  '/contact',  to:  'home_pages#contact'
+  match '/signup',     to: 'users#new'
+
+  get "login" => "sessions#new", as: "login"
+  post "sessions" => "sessions#create", as: "sessions"
+  delete "logout" => "sessions#destroy", as: "logout"
 
   resources :clients
   resources :users
   resources :reports
+  resources :works
 
-
-    get 'reports' => 'reports#index'
-
-    get "login" => "sessions#new", as: "login"
-
-    post "sessions" => "sessions#create", as: "sessions"
-
-    delete "logout" => "sessions#destroy", as: "logout"
-
-
-  #  get 'reports/:name' => 'reports#show', as: 'report'
-
-
-
-    resources :works
-
-
-
-
-
-
-
-
-  # The priority is based upon order of creation:
+   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:

@@ -26,6 +26,7 @@ end
 
 group :test do
   gem 'capybara', '1.1.2'
+  gem 'factory_girl_rails'
 end
 group :production do
   gem 'pg'
@@ -35,6 +36,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'heroku'
   gem 'rspec-rails', '2.11.0'
+  gem 'annotate', '2.5.0'
 end
 
 gem 'jquery-rails'
