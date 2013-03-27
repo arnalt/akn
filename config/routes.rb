@@ -9,9 +9,12 @@ Akn::Application.routes.draw do
   post "sessions" => "sessions#create", as: "sessions"
   delete "logout" => "sessions#destroy", as: "logout"
 
+  get "reports/input", as: :input
+  post "reports/output", as: :output
+  get "reports/excel", as: :excel
+
   resources :clients
   resources :users
-  resources :reports
   resources :works
 
    # The priority is based upon order of creation:

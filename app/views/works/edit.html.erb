@@ -1,11 +1,8 @@
-<h1>Ändern</h1><br>
+<% provide(:title, 'Works') %>
+<h1>Update Work</h1><br>
 
-<div class id=""works_form">
-    <fieldset>
-        <legend>Datensatz</legend>
-      <%= render 'form' %>
-    </fieldset>
+<div>
+  <%= render 'form' %>
 </div>
 
-<%= link_to 'Anzeigen', @work %> |
 <%= link_to 'Zurück', works_path %>

@@ -1,43 +1,46 @@
 <%= form_for(@work) do |f| %>
-  <% if @work.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@work.errors.count, "error") %> prohibited this work from being saved:</h2>
+    <% if @work.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@work.errors.count, "error") %> prohibited this work from being saved:</h2>
 
-      <ul>
-      <% @work.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% @work.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
 
 
-   <div>
-    <%= f.label :datum %><br />
+
+     <%= f.label :datum %>
     <%= f.date_select :datum,{}, :style => "width: 120px" %>
-  </div>
-  <div class="field">
-    <%= f.label :von %><br />
-    <%= f.time_select :von,{ :default => "2000-01-01 07:30".to_datetime, :minute_step => 15}, :style => "width: 60px"   %>
-  </div>
-  <div class="field">
-    <%= f.label :bis %><br />
-    <%= f.time_select :bis, {:default => "2000-01-01 16:00".to_datetime, :minute_step => 15},:style => "width: 60px" %>
-  </div>
-  <div class="field">
-    <%= f.label :Pause %><br />
-    <%= f.time_select :mm,{ :default => "2000-01-01 00:30".to_datetime, :minute_step => 15},:style => "width: 60px" %>
-  </div>
-   <div class="field">
-    <%= f.label :kunde %><br />
-    <%= f.select :client_id, Client.all.map { |d| [d.name, d.id]}, prompt: "Bitte wählen Sie" %>
-  </div>
-  <div class="field">
-    <%= f.label :Erläuterung %><br />
-    <%= f.text_area :erl, rows: 2 %>
-  </div>
 
-  <div>
-    <%= submit_tag "Work create",  class: "btn btn-large btn-primary"   %>
-  </div>
+    <table>
+      <tr>
+      <th> <%= f.label :von %></th>
+      <th> <%= f.label :bis %></th>
+      <th>  <%= f.label :Pause %></th>
+     </tr>
+     <tr>
+       <td> <%= f.time_select :von,{ :default => "2000-01-01 07:30".to_datetime, :minute_step => 15}, :style => "width: 60px"   %></td>
+       <td>  <%= f.time_select :bis, {:default => "2000-01-01 16:00".to_datetime, :minute_step => 15},:style => "width: 60px" %></td>
+       <td>  <%= f.time_select :mm,{ :default => "2000-01-01 00:30".to_datetime, :minute_step => 15},:style => "width: 60px" %></td>
+     </tr>
+    </table>
+
+      <%= f.label :kunde %>
+      <%= f.select :client_id, Client.all.map { |d| [d.name, d.id]}, prompt: "Bitte wählen Sie" %>
+
+
+      <%= f.label :Erläuterung %>
+      <%= f.text_area :erl, rows: 2 %>
+
+
+    <div>
+      <%= submit_tag "Save Work" ,  class: "btn btn-large btn-primary"   %>
+    </div>
 <% end %>
+
+
+

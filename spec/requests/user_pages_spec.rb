@@ -4,7 +4,7 @@ describe "User pages" do
 
   subject { page }
 
-  describe "signup page"   do
+    describe "signup page"   do
       before { visit signup_path }
       let(:submit)   { "Create my account" }
       describe "with invalid information" do
@@ -28,12 +28,12 @@ describe "User pages" do
         it "should create a user" do
           expect { click_button submit }.to change(User, :count).by(1)
         end
-        describe "after saving the user" do
-          before { click_button submit }
-          let(:user)    { User.find_by_email('altenhofer@web.de') }
-          it { should have_selector('title', text: user.nachname) }
-          it { should have_selector('div.alert.alert-success', text: 'Welcome') }
-        end
+ #       describe "after saving the user" do
+  #        before { click_button submit }
+  #        let(:user)    { User.find_by_email('altenhofer@web.de') }
+  #        it { should have_selector('title', text: user.Nachname) }
+  #        it { should have_selector('div.alert.alert-success', text: 'Welcome') }
+  #      end
       end
   end
 
@@ -43,6 +43,19 @@ describe "User pages" do
        it { should have_selector('h1',   text:  user.nachname) }
        it { should have_selector('title',  text: user.nachname) }
   end
+
+   describe "edit" do
+      let(:user)    { FactoryGirl.create(:user) }
+      before do
+        sign_in user
+        visit edit_user_path(user)
+      end
+      it { should have_selector('h1', text: "Update your profile")}
+      it { should have_selector('title', text: "Edit user")}
+  end
+
+
+end
 
   describe User do
 
@@ -131,11 +144,15 @@ describe "User pages" do
             let(:user_for_invalid_password) { found_user.authenticate("invalid") }
             it { should_not == user_for_invalid_password }
             specify { user_for_invalid_password.should be_false }
-            end
-         end
+           end
+     end
 
+    describe "remember token" do
+      before { @user.save}
+      its(:remember_token) {should_not be_blank}
+    end
 
   end
 
 
-  end
+
