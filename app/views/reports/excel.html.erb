@@ -6,9 +6,9 @@
           <%=  label_tag :Kunde %>
           <%=  select_tag 'Clientname', options_for_select(Client.all.map {|d| d.name}) %><br>
           <%=  label_tag :Beginn %>
-          <%=  date_select :zeitraum_von, params[:zeitraum_von]  %> <br>
+          <%=  datepicker :zeitraum_von,  params[:zeitraum_von],dateFormat: 'dd.mm.yy'  %> <br>
           <%=  label_tag :Ende %>
-          <%=  date_select :zeitraum_bis, params[:zeitraum_bis] %>
+          <%=   datepicker :zeitraum_bis,  params[:zeitraum_bis],dateFormat: 'dd.mm.yy'  %>
         </div>
         <%=  submit_tag "GO"   %>
     <% end %>

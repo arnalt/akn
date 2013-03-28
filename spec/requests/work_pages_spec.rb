@@ -40,10 +40,10 @@ describe "Works pages" do
 
   describe "edit" do
     let(:user)    { FactoryGirl.create(:user) }
-    let(:work)   { User.find(1).works(17) }
+    let(:work)   { FactoryGirl.create(:work) }
     before do
       sign_in user
-      visit edit_work_path(work)
+      visit edit_work_path(18)
     end
 
     it { should have_selector('title', text: 'Works') }

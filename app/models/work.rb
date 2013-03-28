@@ -5,7 +5,7 @@ class Work < ActiveRecord::Base
   before_create :complete_work
   before_update :complete_work
 
-
+  validates :datum, :von, :bis, :mm, :client_id, presence: true
 
  # def self.to_csv(options = {})
   #  CSV.generate(options) do |csv|

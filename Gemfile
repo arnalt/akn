@@ -4,6 +4,7 @@ gem 'rails', '3.2.1'
 gem 'bootstrap-sass', '2.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
+gem 'jquery_datepicker'
 
 
 # Bundle edge Rails instead:
