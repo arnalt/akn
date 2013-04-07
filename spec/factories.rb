@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :work do
+      id          1
       datum  "28.03.2013"
       kw        "14"
       tag       "Montag"
@@ -7,6 +8,8 @@ FactoryGirl.define do
       bis        "16:00"
       mm      "00:30"
       std       8.0
+      client_id    1
+      user_id      1
     end
   factory  :user do
     vorname  "Klaus"

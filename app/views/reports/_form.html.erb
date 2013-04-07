@@ -1,0 +1,8 @@
+<div class="select">
+  <%=  label_tag :Kunde %>
+  <%=  select_tag 'Clientname', options_for_select(Client.all.map {|d| d.name}) %><br>
+  <%=  label_tag :Beginn %>
+  <%=  datepicker :zeitraum_von,  params[:zeitraum_von],dateFormat: 'dd.mm.yy'  %> <br>
+  <%=  label_tag :Ende %>
+  <%=   datepicker :zeitraum_bis,  params[:zeitraum_bis],dateFormat: 'dd.mm.yy'  %>
+</div>

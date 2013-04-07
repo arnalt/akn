@@ -107,7 +107,7 @@
       </Row>
       <Row>
         <Cell ss:StyleID="s18"><Data ss:Type="String">Jahr</Data></Cell>
-        <Cell ss:StyleID="s22"><Data ss:Type="String"><%= @works.at(1).datum.to_s[0,4] %></Data></Cell>
+        <Cell ss:StyleID="s22"><Data ss:Type="String"><%= @works.first.datum.to_s[0,4] %></Data></Cell>
       </Row>
       <Row>
         <Cell ss:StyleID="s18"><Data ss:Type="String">Bearbeiter</Data></Cell>
@@ -115,11 +115,11 @@
       </Row>
       <Row>
         <Cell ss:StyleID="s18"><Data ss:Type="String">Kunde</Data></Cell>
-        <Cell ss:StyleID="s22"><Data ss:Type="String"><%= @works.at(1).client.name %></Data></Cell>
+        <Cell ss:StyleID="s22"><Data ss:Type="String"><%= @works.first.client.name %></Data></Cell>
       </Row>
       <Row>
         <Cell ss:StyleID="s18"><Data ss:Type="String">Projekt</Data></Cell>
-        <Cell><Data ss:Type="String"><%= @works.at(1).client.project %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= @works.first.client.project %></Data></Cell>
       </Row>
       <Row ss:Index="8" ss:AutoFitHeight="0" ss:Height="44.25" ss:StyleID="s21">
         <Cell ss:StyleID="s20"><Data ss:Type="String">Tag</Data></Cell>

@@ -43,7 +43,7 @@ describe "Works pages" do
     let(:work)   { FactoryGirl.create(:work) }
     before do
       sign_in user
-      visit edit_work_path(18)
+      visit edit_work_path(work)
     end
 
     it { should have_selector('title', text: 'Works') }

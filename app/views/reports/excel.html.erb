@@ -2,14 +2,7 @@
   <div class="offset1">
     <h4>Auswahl Parameter</h4>
     <%=  form_tag output_path(format: "xls") do %>
-        <div class="select">
-          <%=  label_tag :Kunde %>
-          <%=  select_tag 'Clientname', options_for_select(Client.all.map {|d| d.name}) %><br>
-          <%=  label_tag :Beginn %>
-          <%=  datepicker :zeitraum_von,  params[:zeitraum_von],dateFormat: 'dd.mm.yy'  %> <br>
-          <%=  label_tag :Ende %>
-          <%=   datepicker :zeitraum_bis,  params[:zeitraum_bis],dateFormat: 'dd.mm.yy'  %>
-        </div>
+        <%= render 'form' %>
         <%=  submit_tag "GO"   %>
     <% end %>
   </div>
