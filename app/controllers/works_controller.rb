@@ -1,9 +1,9 @@
 class WorksController < ApplicationController
-  # GET /works
-  # GET /works.json
- def home
 
- end
+  def home
+
+  end
+
   def index
     @works = current_user.works.order("datum")
     @username = current_user.user_name
@@ -13,14 +13,12 @@ class WorksController < ApplicationController
     end
   end
 
-  # GET /works/1
-  # GET /works/1.json
+
   def show
 
   end
 
-  # GET /works/new
-  # GET /works/new.json
+
   def new
     @work = current_user.works.build
     respond_to do |format|
@@ -29,16 +27,15 @@ class WorksController < ApplicationController
     end
   end
 
-  # GET /works/1/edit
+
   def edit
     @work = current_user.works.find(params[:id])
   end
 
-  # POST /works
-  # POST /works.json
+
   def create
     @work = current_user.works.build(params[:work])
-      respond_to do |format|
+    respond_to do |format|
       if @work.save
         format.html { redirect_to works_path, notice: 'Work was successfully created.' }
         format.json { render json: works_path, status: :created, location: @work }
@@ -49,14 +46,13 @@ class WorksController < ApplicationController
     end
   end
 
-  # PUT /works/1
-  # PUT /works/1.json
+
   def update
     @work = current_user.works.find(params[:id])
 
     respond_to do |format|
 
-     if @work.update_attributes(params[:work] )
+      if @work.update_attributes(params[:work])
 
         format.html { redirect_to works_path, notice: 'Work was successfully updated.' }
         format.json { head :no_content }
@@ -67,8 +63,7 @@ class WorksController < ApplicationController
     end
   end
 
-  # DELETE /works/1
-  # DELETE /works/1.json
+
   def destroy
     @work = current_user.works.find(params[:id])
     @work.destroy

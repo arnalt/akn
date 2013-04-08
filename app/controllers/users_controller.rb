@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only:[:edit, :update]
-  before_filter :correct_user,   only: [:edit, :update]
-  before_filter :admin_user,     only: :destroy
+  before_filter :signed_in_user, only: [:edit, :update]
+  before_filter :correct_user, only: [:edit, :update]
+  before_filter :admin_user, only: :destroy
 
   def index
-     @users = User.all
+    @users = User.all
 
   end
 
@@ -12,8 +12,8 @@ class UsersController < ApplicationController
     @user = User.new
 
     respond_to do |format|
-    format.html # new.html.erb
-    format.json { render json: @category }
+      format.html # new.html.erb
+      format.json { render json: @category }
     end
   end
 
@@ -57,7 +57,7 @@ class UsersController < ApplicationController
   def signed_in_user
     unless signed_in?
       store_location
-      redirect_to  login_path, notice: "Please sign in."
+      redirect_to login_path, notice: "Please sign in."
     end
   end
 

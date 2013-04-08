@@ -7,16 +7,9 @@ class Work < ActiveRecord::Base
 
   validates :datum, :von, :bis, :mm, :client_id, presence: true
 
- # def self.to_csv(options = {})
-  #  CSV.generate(options) do |csv|
-   #   csv << column_names
-    #  all.each do |product|
-    #    csv << product.attributes.values_at(*column_names)
-   #   end
-  #  end
-#  end
-
-
+  def self.build_report(von,bis,clientname)
+    where("datum >= ? AND datum <= ? and client_id = ?", von, bis, Client.find_all_by_name(clientname))
+  end
 
 
   def complete_work
