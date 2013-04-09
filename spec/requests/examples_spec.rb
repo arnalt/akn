@@ -4,7 +4,7 @@ require "spec_helper"
 
 describe WorksController do
   before(:each) do
-    @user = User.create(:vorname => "Klaus", :nachname => "Mustermann", :email => "mustermann@example.com",
+    @user = User.create(:firstname => "Klaus", :lastname => "Mustermann", :email => "mustermann@example.com",
                                            :password => "foobar", :password_confirmation => "foobar")
     @work = mock(Work)
     @work.stub!(:user=)

@@ -5,18 +5,18 @@ class Work < ActiveRecord::Base
   before_create :complete_work
   before_update :complete_work
 
-  validates :datum, :von, :bis, :mm, :client_id, presence: true
+  validates :date, :start_at, :end_at, :pause, :client_id, presence: true
 
-  def self.build_report(von,bis,clientname)
-    where("datum >= ? AND datum <= ? and client_id = ?", von, bis, Client.find_all_by_name(clientname))
+  def self.build_report(start_at,end_at,clientname)
+    where("date >= ? AND date <= ? and client_id = ?", start_at, end_at, Client.find_all_by_name(clientname))
   end
 
 
   def complete_work
     @arr = I18n.t("date.day_names")
-    self.tag = @arr.at(self.datum.wday)
-    self.kw = ((self.datum - self.datum.at_beginning_of_year) / 7 + 0.8).round.to_i
-    self.std = ((((self.bis.hour * 60) + self.bis.min) - ((self.von.hour * 60) + self.von.min)) - ((self.mm.hour * 60) + self.mm.min)) / 60.0
+    self.day = @arr.at(self.date.wday)
+    self.week = ((self.date - self.date.at_beginning_of_year) / 7 + 0.8).round.to_i
+    self.working_hours = ((((self.end_at.hour * 60) + self.end_at.min) - ((self.start_at.hour * 60) + self.start_at.min)) - ((self.pause.hour * 60) + self.pause.min)) / 60.0
   end
 
 end

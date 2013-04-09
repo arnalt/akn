@@ -19,8 +19,8 @@ describe "User pages" do
       end
       describe "with valid information" do
         before do
-          fill_in "Vorname",            with: "Klaus"
-          fill_in "Nachname",         with: "Mustermann"
+          fill_in "Firstname",           with: "Klaus"
+          fill_in "Lastname",           with: "Mustermann"
           fill_in "Email",                   with: "mustermann@example.com"
           fill_in "Password",            with: "foobar"
           fill_in "Confirmation",     with: "foobar"
@@ -40,8 +40,8 @@ describe "User pages" do
   describe "profile page" do
        let(:user)   {FactoryGirl.create(:user)}
        before  { visit user_path(user) }
-       it { should have_selector('h1',   text:  user.nachname) }
-       it { should have_selector('title',  text: user.nachname) }
+       it { should have_selector('h1',   text:  user.lastname) }
+       it { should have_selector('title',  text: user.firstname) }
   end
 
    describe "edit" do
@@ -60,14 +60,14 @@ end
   describe User do
 
     before do
-      @user = User.new(vorname:"Example",nachname: "User", email: "user@example.com",
+      @user = User.new(firstname:"Example",lastname: "User", email: "user@example.com",
                        password: "foobar", password_confirmation: "foobar")
     end
 
     subject { @user }
 
-    it { should respond_to(:vorname) }
-    it { should respond_to(:nachname) }
+    it { should respond_to(:firstname) }
+    it { should respond_to(:lastname) }
     it { should respond_to(:email) }
     it { should respond_to(:password_digest) }
     it { should respond_to(:password) }
@@ -75,16 +75,16 @@ end
 
     it { should be_valid }
 
-        describe "when nachname is not present" do
-        before { @user.nachname = " " }
+        describe "when lastname is not present" do
+        before { @user.lastname = " " }
           it { should_not be_valid }
         end
-        describe "when vorname is not present" do
-         before { @user.vorname = " " }
+        describe "when firstname is not present" do
+         before { @user.firstname = " " }
          it { should_not be_valid }
         end
-        describe "when nachname is too long" do
-        before { @user.nachname = "a" * 51 }
+        describe "when lastname is too long" do
+        before { @user.lastname = "a" * 51 }
         it { should_not be_valid }
         end
         describe "when email format is valid" do

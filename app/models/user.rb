@@ -1,13 +1,13 @@
 class User < ActiveRecord::Base
-  attr_accessible :vorname, :nachname, :email, :password, :password_confirmation
+  attr_accessible :firstname, :lastname, :email, :password, :password_confirmation
   has_many :works
   has_secure_password
 
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
 
-  validates :nachname, presence: true, length: { maximum: 50 }
-  validates :vorname, presence: true
+  validates :lastname, presence: true, length: { maximum: 50 }
+  validates :firstname, presence: true
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence:   true,
             format:     { with: VALID_EMAIL_REGEX },
@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true
 
   def user_name
-    "#{vorname} #{nachname}"
+    "#{firstname} #{lastname}"
   end
 
   private

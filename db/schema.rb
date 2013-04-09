@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130327110835) do
+ActiveRecord::Schema.define(:version => 20130409080106) do
 
   create_table "clients", :force => true do |t|
     t.string   "name"
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(:version => 20130327110835) do
     t.string   "password_digest"
     t.datetime "created_at",                         :null => false
     t.datetime "updated_at",                         :null => false
-    t.string   "vorname"
-    t.string   "nachname"
+    t.string   "firstname"
+    t.string   "lastname"
     t.string   "remember_token"
     t.boolean  "admin",           :default => false
   end
@@ -34,16 +34,16 @@ ActiveRecord::Schema.define(:version => 20130327110835) do
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
   create_table "works", :force => true do |t|
-    t.date     "datum"
-    t.integer  "kw"
-    t.string   "tag"
-    t.time     "von"
-    t.time     "bis"
-    t.time     "mm"
-    t.decimal  "std"
-    t.text     "erl"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.date     "date"
+    t.integer  "week"
+    t.string   "day"
+    t.time     "start_at"
+    t.time     "end_at"
+    t.time     "pause"
+    t.decimal  "working_hours"
+    t.text     "description"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.integer  "user_id"
     t.integer  "client_id"
   end

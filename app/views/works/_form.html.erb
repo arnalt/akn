@@ -13,28 +13,28 @@
 
 
 
-     <%= f.label :datum %>
-    <%= f.datepicker :datum, { dateFormat: 'dd.mm.yy' } %>
+     <%= f.label :date %>
+    <%=  f.datepicker :date,  { dateFormat: 'dd.mm.yy' } %>
 
     <table>
       <tr>
-      <th> <%= f.label :von %></th>
-      <th> <%= f.label :bis %></th>
-      <th>  <%= f.label :Pause %></th>
+      <th> <%= f.label :start_at  %></th>
+      <th> <%= f.label :end_at %></th>
+      <th>  <%= f.label :pause %></th>
      </tr>
      <tr>
-       <td> <%= f.time_select :von,{ :default => "2000-01-01 07:30".to_datetime, :minute_step => 15}, :style => "width: 60px"   %></td>
-       <td>  <%= f.time_select :bis, {:default => "2000-01-01 16:00".to_datetime, :minute_step => 15},:style => "width: 60px" %></td>
-       <td>  <%= f.time_select :mm,{ :default => "2000-01-01 00:30".to_datetime, :minute_step => 15},:style => "width: 60px" %></td>
+       <td> <%= f.time_select :start_at,{ :default => "2000-01-01 07:30".to_datetime, :minute_step => 15}, :style => "width: 60px"   %></td>
+       <td>  <%= f.time_select :end_at, {:default => "2000-01-01 16:00".to_datetime, :minute_step => 15},:style => "width: 60px" %></td>
+       <td>  <%= f.time_select :pause, { :default => "2000-01-01 00:30".to_datetime, :minute_step => 15},:style => "width: 60px" %></td>
      </tr>
     </table>
 
-      <%= f.label :kunde %>
-      <%= f.select :client_id, Client.all.map { |d| [d.name, d.id]}, prompt: "Bitte wählen Sie" %>
+      <%= f.label :client %>
 
+      <%= f.select :client_id, @client.map { |c| [c.name, c.id]}, prompt: "Select a client please"   %>
 
-      <%= f.label :Erläuterung %>
-      <%= f.text_area :erl, rows: 2 %>
+      <%= f.label :description %>
+      <%= f.text_area :description, rows: 2 %>
 
 
     <div>

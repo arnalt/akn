@@ -1,16 +1,16 @@
 <table>
   <div>Monat: <%= @akt_monat %> </div>
   <tr>
-    <th width="100px">Datum</th>
-    <th width="20px">Woche</th>
-    <th width="100px">Tag</th>
-    <th width="100px">Von</th>
-    <th width="100px">Bis</th>
+    <th width="100px">Date</th>
+    <th width="20px">Week</th>
+    <th width="100px">Day</th>
+    <th width="100px">Start_at</th>
+    <th width="100px">End_at</th>
     <th width="100px">Pause</th>
-    <th width="100px">Stunden</th>
-    <th width="100px">Projekt</th>
-    <th width="100px">Kunde</th>
-    <th width="100px">Text</th>
+    <th width="100px">Hours</th>
+    <th width="100px">Project</th>
+    <th width="100px">Client</th>
+    <th width="100px">Description</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,20 +18,20 @@
 
   <% @works.each do |work| %>
       <tr>
-        <td><%= l work.datum %></td>
-        <td><%= work.kw %></td>
-        <td><%= work.tag %></td>
-        <td><%= l work.von, format: :short %></td>
-        <td><%= l work.bis, format: :short %></td>
-        <td><%= l work.mm, format: :short %></td>
-        <td><%= number_with_precision(work.std, :precision => 2) %></td>
+        <td><%= l work.date %></td>
+        <td><%= work.week %></td>
+        <td><%= work.day %></td>
+        <td><%= l work.start_at, format: :short %></td>
+        <td><%= l work.end_at, format: :short %></td>
+        <td><%= l work.pause, format: :short %></td>
+        <td><%= number_with_precision(work.working_hours, :precision => 2) %></td>
         <td><%= work.client.project %></td>
         <td><%= work.client.name %></td>
-        <td><%= work.erl %></td>
+        <td><%= work.description %></td>
       </tr>
   <% end %>
   <tr>
-    <td colspan="6">Gesamt</td>
+    <td colspan="6">Total</td>
     <td><%= number_with_precision(@total_std, :precision => 2) %></td>
   </tr>
 </table>

@@ -107,7 +107,7 @@
       </Row>
       <Row>
         <Cell ss:StyleID="s18"><Data ss:Type="String">Jahr</Data></Cell>
-        <Cell ss:StyleID="s22"><Data ss:Type="String"><%= @works.first.datum.to_s[0,4] %></Data></Cell>
+        <Cell ss:StyleID="s22"><Data ss:Type="String"><%= @works.first.date.to_s[0,4] %></Data></Cell>
       </Row>
       <Row>
         <Cell ss:StyleID="s18"><Data ss:Type="String">Bearbeiter</Data></Cell>
@@ -130,9 +130,9 @@
       </Row>
       <% @works.each do |w| %>
           <Row>
-            <Cell ss:StyleID="s19"><Data ss:Type="String"><%= w.datum.to_s[8,2]  %></Data></Cell>
-            <Cell ss:StyleID="s24"><Data ss:Type="Number"><%= w.std %></Data></Cell>
-            <Cell ss:StyleID="s19"><Data ss:Type="String"><%= w.erl %></Data></Cell>
+            <Cell ss:StyleID="s19"><Data ss:Type="String"><%= w.date.to_s[8,2]  %></Data></Cell>
+            <Cell ss:StyleID="s24"><Data ss:Type="Number"><%= w.working_hours %></Data></Cell>
+            <Cell ss:StyleID="s19"><Data ss:Type="String"><%= w.description %></Data></Cell>
           </Row>
       <% end %>
       <Row ss:Height="14.4375">
