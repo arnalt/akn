@@ -1,4 +1,35 @@
-<%= high_chart("my_id", @h) %>
+<div id="hours_chart"  style="width: 560px; height: 300px;"></div>
+<script type="text/javascript" charset="utf-8">
+    $(function() {
+        new Highcharts.Chart( {
+            chart:  {
+                renderTo: "hours_chart"
+            },
+            title: {
+                text: "Working Hours by Day"
+            } ,
+            xAxis: {
+                type: "datetime"
+            },
+            yAxis: {
+                title: {
+                    text: "Hours"
+                }
+            },
+            tooltip: {
+                formatter: function() {
+                    return Highcharts.dateFormat("%B %e %Y", this.x) + ': ' +
+                            "$" + Highcharts.numberFormat(this.y,2);
+                }
+            },
+            series: [{
+                pointInterval: <%= 1.day * 1000 %>,
+                pointStart: <%= @works.first.date.to_datetime.to_i * 1000 %>,
+                data: <%= (@works.first.date..@works.last.date).map { |date| Work.total_on(date,@works).to_f}.inspect %>
+            }]
+        });
+    } );
+</script>
 
 <table>
   <div>Monat: <%= @akt_monat %> </div>

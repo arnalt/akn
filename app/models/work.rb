@@ -8,7 +8,7 @@ class Work < ActiveRecord::Base
   validates :date, :start_at, :end_at, :pause, :client_id, presence: true
 
   def self.build_report(start_at,end_at,clientname)
-    where("date >= ? AND date <= ? and client_id = ?", start_at, end_at, Client.find_all_by_name(clientname))
+     where("date >= ? AND date <= ? and client_id = ?", start_at, end_at, Client.find_all_by_name(clientname))
   end
 
 
@@ -18,5 +18,10 @@ class Work < ActiveRecord::Base
     self.week = ((self.date - self.date.at_beginning_of_year) / 7 + 0.8).round.to_i
     self.working_hours = ((((self.end_at.hour * 60) + self.end_at.min) - ((self.start_at.hour * 60) + self.start_at.min)) - ((self.pause.hour * 60) + self.pause.min)) / 60.0
   end
+
+  def self.total_on(date,work)
+   where("date = ? AND user_id = ? AND client_id = ? ", date, work.first.user_id, work.first.client_id ).sum(:working_hours)
+  end
+
 
 end
