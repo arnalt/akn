@@ -1,12 +1,13 @@
 class ReportsController < ApplicationController
 
+
   def input
   end
 
   def excel
   end
 
-  def output
+   def output
     @clientname =params[:Clientname]
     start_at = (params[:period_begin].to_s).to_date
     end_at = (params[:period_end].to_s).to_date
@@ -15,12 +16,20 @@ class ReportsController < ApplicationController
     @username = current_user.user_name
     @total_tage = @total_std / 8.0
     @akt_monat = I18n.t("date.month_names")[start_at.to_s[6, 2].to_i]
+
+    @h = LazyHighCharts::HighChart.new('graph') do |f|
+      f.options[:chart][:defaultSeriesType] = "area"
+      f.options[:xAxis] ={ :type => 'datetime' }
+      f.series(:name => @akt_monat, :data=> @works.each.map {|w| [ w.date, w.working_hours.to_f] })
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.xls
       format.json { render json: @work }
     end
   end
+
+
 end
 
 

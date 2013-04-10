@@ -5,7 +5,7 @@ class WorksController < ApplicationController
   end
 
   def index
-    @works = current_user.works.order("date")
+    @works = current_user.works.order("date DESC")
     @username = current_user.user_name
     respond_to do |format|
       format.html # index.html.erb

@@ -21,7 +21,7 @@ describe "Authentication" do
         fill_in "Password",     with: user.password
         click_button "Sign in"
       end
-      it { should have_selector('title', text: user.nachname) }
+      it { should have_selector('title', text: user.lastname) }
       it { should have_link('Profile', href: edit_user_path(user)) }
       it { should have_link('Settings', href: user_path(user)) }
       it { should have_link('Sign out',  href: logout_path) }
