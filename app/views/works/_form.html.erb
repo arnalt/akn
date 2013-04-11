@@ -31,7 +31,7 @@
 
       <%= f.label :client %>
 
-      <%= f.select :client_id, @client.map { |c| [c.name, c.id]}, prompt: "Select a client please"   %>
+      <%= f.select :client_id, @clients.each.map { |c| [c.name, c.id]}, prompt: "Select a client please"   %>
 
       <%= f.label :description %>
       <%= f.text_area :description, rows: 2 %>

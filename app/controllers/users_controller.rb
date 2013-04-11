@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :signed_in_user, only: [:edit, :update]
   before_filter :correct_user, only: [:edit, :update]
   before_filter :admin_user, only: :destroy
-  before_filter :filled_clients, only:[:new, :edit]
+
 
   def index
     @users = User.all
@@ -71,7 +71,5 @@ class UsersController < ApplicationController
     redirect_to(root_path) unless current_user.admin?
   end
 
-  def filled_clients
-     @clients=Client.all
-  end
+
 end

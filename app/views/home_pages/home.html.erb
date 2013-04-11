@@ -1,12 +1,8 @@
 <% provide(:title, '') %>
 <div class="center hero-unit">
-  <h1>Welcome to AKN App</h1>
+  <h3><%= t("text.home_page_title") %></h3>
 
-  <h2>
-    This is the home page for  AKN
+  <h2><%= t("text.home_page_title2") %></h2>
 
-
-  </h2>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+  <%= link_to t("text.home_page_button"), signup_path, class: "btn btn-large btn-primary" %>
 </div>

@@ -1,4 +1,6 @@
 class WorksController < ApplicationController
+  before_filter :filled_clients, only: [:new, :edit, :create]
+
 
   def home
 
@@ -21,7 +23,6 @@ class WorksController < ApplicationController
 
   def new
     @work = current_user.works.build
-    @client = Client.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @work }
@@ -31,7 +32,6 @@ class WorksController < ApplicationController
 
   def edit
     @work = current_user.works.find(params[:id])
-    @client = Client.all
   end
 
 
@@ -76,5 +76,8 @@ class WorksController < ApplicationController
     end
   end
 
+  def filled_clients
+    @clients=Client.all
+  end
 
 end

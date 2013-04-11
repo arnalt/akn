@@ -194,11 +194,39 @@ de:
       long: ! '%A, %d. %B %Y, %H:%M Uhr'
       short: ! '%H:%M Uhr'
     pm: nachmittags
+  text:
+    new_user:  "Neuen Benutzer anlegen"
+    email: "E-Mail"
+    password: "Passwort"
+    login: "Log in"
+    newuser?: "Neuer Benutzer?"
+    akn_title: "ARBEITSKOSTENNACHWEIS"
+    menu_works: "Arbeitstage"
+    menu_display: "Bildschirmausgabe"
+    menu_excel: "Excelausgabe"
+    menu_clients: "Kunden/Projekte"
+    menu_users: "Benutzer"
+    menu_account: "Konto"
+    menue_profil: "Profil"
+    menu_settings: "Kontodaten"
+    menu_logout: "Beenden"
+    menu_signin: "Anmelden"
+    home_page_title: "Willkomen auf der Homepage der AKN App"
+    home_page_title2: "AKN-Homepage"
+    home_page_button: "Jetzt anmelden!"
   # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
   activemodel:
+    user: "Benutzer"
     errors:
-      <<: *errors
+
   activerecord:
+    attributes:
+      user:
+         firstname: "Vorname"
+         lastname: "Nachname"
+         email: "E-Mail"
+         password_digest: "Passwort"
+         password_confirmation: "Passwortbestätigung"
+         password: "Passwort"
     errors:
-      <<: *errors
-  
+

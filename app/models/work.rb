@@ -6,6 +6,7 @@ class Work < ActiveRecord::Base
   before_update :complete_work
 
   validates :date, :start_at, :end_at, :pause, :client_id, presence: true
+  validates :date,  uniqueness:true
 
   def self.build_report(start_at,end_at,clientname)
      where("date >= ? AND date <= ? and client_id = ?", start_at, end_at, Client.find_all_by_name(clientname))
