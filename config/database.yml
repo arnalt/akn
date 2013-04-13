@@ -6,6 +6,7 @@
 development:
   adapter: postgresql
   database: akn_development
+  host: localhost
   pool: 5
   username: postgres
   password: aral
@@ -16,6 +17,7 @@ development:
 test:
    adapter: postgresql
    database: akn_test
+   host: localhost
    pool: 5
    username: postgres
    password: aral
