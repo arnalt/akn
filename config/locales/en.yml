@@ -217,9 +217,28 @@ en:
     menu_logout: "Sign out"
     menu_signin: "Sign in"
     home_page_title: "Welcome to Personnel Costs App"
-    home_page_title2: "This is the hom page for Personnel Costs"
+    home_page_title2: "This is the home page for Personnel Costs"
     home_page_button: "Sign up now!"
-
+    work_index_date: "Date"
+    work_index_week: "Week"
+    work_index_day: "Day"
+    work_index_start_at: "Start_at"
+    work_index_end_at: "End_at"
+    work_index_hours: "Hours"
+    work_index_project: "Project"
+    work_index_client: "Client"
+    work_index_describ: "Description"
+    edit_title: "Update Work"
+    input_title: "Parameters"
+    edit_users_title: "Update your profile"
+  links:
+     work_index_edit: "Edit"
+     work_index_delete: "Delete"
+     work_index_add_new: "Add new Work"
+     button_save: "Save Work"
+     button_back: "Back"
+     button_save_changes: "Save changes"
+     button_avatar_change: "change"
   # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
 
   activemodel:

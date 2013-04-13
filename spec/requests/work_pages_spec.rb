@@ -11,8 +11,7 @@ describe "Works pages" do
       visit works_path
     end
 
-    it { should have_selector('h1', text: 'AKN') }
-    it { should have_selector('title', text: 'Works') }
+      it { should have_selector('title', text: 'Works') }
   end
 
   describe "new" do
@@ -29,7 +28,7 @@ describe "Works pages" do
 
   describe "show" do
     let(:user)    { FactoryGirl.create(:user) }
-    let(:work)   { User.find(1).works(18) }
+    let(:work)   { User.find(2).works(1) }
     before do
       sign_in user
       visit work_path(work)
@@ -47,6 +46,6 @@ describe "Works pages" do
     end
 
     it { should have_selector('title', text: 'Works') }
-    it { should have_selector('h1', text: 'Update Work') }
+    it { should have_selector('h3', text: 'Update Work') }
   end
 end

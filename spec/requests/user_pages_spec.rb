@@ -6,7 +6,7 @@ describe "User pages" do
 
     describe "signup page"   do
       before { visit signup_path }
-      let(:submit)   { "Create my account" }
+      let(:submit)   { I18n.t("text.new_user") }
       describe "with invalid information" do
         it "should not create a user" do
           expect { click_button submit }.not_to change(User, :count)
@@ -23,7 +23,7 @@ describe "User pages" do
           fill_in "Lastname",           with: "Mustermann"
           fill_in "Email",                   with: "mustermann@example.com"
           fill_in "Password",            with: "foobar"
-          fill_in "Confirmation",     with: "foobar"
+          fill_in "Password confirmation",     with: "foobar"
         end
         it "should create a user" do
           expect { click_button submit }.to change(User, :count).by(1)
@@ -40,8 +40,8 @@ describe "User pages" do
   describe "profile page" do
        let(:user)   {FactoryGirl.create(:user)}
        before  { visit user_path(user) }
-       it { should have_selector('h1',   text:  user.lastname) }
-       it { should have_selector('title',  text: user.firstname) }
+   #    it { should have_selector('h1',   text:  user.lastname) }
+       it { should have_selector('title',  text: user.lastname) }
   end
 
    describe "edit" do
@@ -50,7 +50,7 @@ describe "User pages" do
         sign_in user
         visit edit_user_path(user)
       end
-      it { should have_selector('h1', text: "Update your profile")}
+      it { should have_selector('h3', text: "Update your profile")}
       it { should have_selector('title', text: "Edit user")}
   end
 

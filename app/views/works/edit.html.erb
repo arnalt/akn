@@ -1,8 +1,9 @@
 <% provide(:title, 'Works') %>
-<h1>Update Work</h1><br>
+
+<h3><%= t("text.edit_title") %></h3><br>
 
 <div>
   <%= render 'form' %>
 </div>
 
-<%= link_to 'Back', works_path %>
+<%= link_to t("links.button_back"), works_path %>

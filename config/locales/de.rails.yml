@@ -214,6 +214,26 @@ de:
     home_page_title: "Willkomen auf der Homepage der AKN App"
     home_page_title2: "AKN-Homepage"
     home_page_button: "Jetzt anmelden!"
+    work_index_date: "Datum"
+    work_index_week: "Woche"
+    work_index_day: "Tag"
+    work_index_start_at: "Beginn"
+    work_index_end_at: "Ende"
+    work_index_hours: "Stunden"
+    work_index_project: "Projekt"
+    work_index_client: "Kunde"
+    work_index_describ: "Erläuterungen"
+    edit_title: "Tagesdaten ändern"
+    input_title: "Parameter"
+    edit_users_title: "Profil ändern"
+  links:
+     work_index_edit: "Ändern"
+     work_index_delete: "Löschen"
+     work_index_add_new: "Neuer Tag erfassen"
+     button_save: "Speichern"
+     button_back: "Zurück"
+     button_save_changes: "Änderungen speichern"
+     button_avatar_change: "Avatar ändern"
   # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
   activemodel:
     user: "Benutzer"
@@ -228,5 +248,12 @@ de:
          password_digest: "Passwort"
          password_confirmation: "Passwortbestätigung"
          password: "Passwort"
+      work:
+         date: "Datum"
+         start_at: "Beginn"
+         end_at: "Ende"
+         description: "Erläuterungen"
+      client:
+         project: "Projekt"
     errors:
 

@@ -1,19 +1,18 @@
 <% provide(:title, 'Works') %>
-<h1>AKN</h1>
 <h5><%= @username %></h5>
 
 <table>
   <tr>
-    <th width="100px">Date</th>
-    <th width="20px">Week</th>
-    <th width="100px">Day</th>
-    <th width="100px">Start_at</th>
-    <th width="100px">End_at</th>
+    <th width="100px"><%= t("text.work_index_date") %></th>
+    <th width="20px"><%= t("text.work_index_week") %></th>
+    <th width="100px"><%= t("text.work_index_day") %></th>
+    <th width="100px"><%= t("text.work_index_start_at") %></th>
+    <th width="100px"><%= t("text.work_index_end_at") %></th>
     <th width="100px">Pause</th>
-    <th width="40px">Hours</th>
-    <th width="100px">Project</th>
-    <th width="100px">Client</th>
-    <th width="100px">Description</th>
+    <th width="40px"><%= t("text.work_index_hours") %></th>
+    <th width="100px"><%= t("text.work_index_project") %></th>
+    <th width="100px"><%= t("text.work_index_client") %></th>
+    <th width="100px"><%= t("text.work_index_describ") %></th>
 
   </tr>
 
@@ -31,13 +30,13 @@
     <td><%= work.description %></td>
     <td></td><td></td><td></td>
 
-     <td><%= link_to 'Edit', edit_work_path(work) %></td>
-    <td><%= link_to 'Delete', work, confirm: 'Are you sure?', method: :delete %></td>
+     <td><%= link_to t("links.work_index_edit"), edit_work_path(work) %></td>
+    <td><%= link_to t("links.work_index_delete"), work, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
  <div>
-   <%= link_to 'Add new Work', new_work_path %>
+   <%= link_to t("links.work_index_add_new"), new_work_path %>
 </div>

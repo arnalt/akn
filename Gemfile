@@ -11,7 +11,7 @@ gem 'lazy_high_charts', '1.4.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -35,7 +35,7 @@ group :production do
 end
 
 group :development, :test do
-  gem 'sqlite3'
+  gem 'pg'
   gem 'heroku'
   gem 'rspec-rails', '2.11.0'
   gem 'annotate', '2.5.0'
