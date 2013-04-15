@@ -7,6 +7,10 @@ class ReportsController < ApplicationController
   def excel
   end
 
+  def pdf
+
+  end
+
   def output
     @clientname =params[:Clientname]
     start_at = (params[:period_begin].to_s).to_date
@@ -19,7 +23,7 @@ class ReportsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xls
-      format.json { render json: @work }
+    #  format.json { render json: @works }
     end
   end
 

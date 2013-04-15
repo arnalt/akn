@@ -57,5 +57,6 @@ module Akn
     config.assets.version = '1.0'
 
     config.gem "lazy_high_charts"
+    config.middleware.use "PDFKit::Middleware", :print_media_type => true
   end
 end

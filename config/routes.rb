@@ -13,6 +13,7 @@ Akn::Application.routes.draw do
     get "reports/input", as: :input
     post "reports/output", as: :output
     get "reports/excel", as: :excel
+    get "reports/pdf", as: :pdf
 
     resources :clients
     resources :users
