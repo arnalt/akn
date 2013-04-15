@@ -1,5 +1,5 @@
 class ReportsController < ApplicationController
-
+  before_filter :check_period, only: :output
 
   def input
   end
@@ -7,7 +7,7 @@ class ReportsController < ApplicationController
   def excel
   end
 
-   def output
+  def output
     @clientname =params[:Clientname]
     start_at = (params[:period_begin].to_s).to_date
     end_at = (params[:period_end].to_s).to_date
@@ -23,6 +23,13 @@ class ReportsController < ApplicationController
     end
   end
 
+  def check_period
+    if params[:format] == "xls" and
+        ((params[:period_begin].to_s).to_date.month != (params[:period_end].to_s).to_date.month)
+      flash[:error] = I18n.t("messages.excel_period")
+      redirect_to works_path
+    end
+  end
 
 end
 

@@ -1,23 +1,24 @@
 Akn::Application.routes.draw do
 
-  match  '/help',        to:  'home_pages#help'
-  match  '/about',     to:  'home_pages#about'
-  match  '/contact',  to:  'home_pages#contact'
-  match '/signup',     to: 'users#new'
+ scope "(:locale)", locale: /en|de/ do
+    match '/help', to: 'home_pages#help'
+    match '/about', to: 'home_pages#about'
+    match '/contact', to: 'home_pages#contact'
+    match '/signup', to: 'users#new'
 
-  get "login" => "sessions#new", as: "login"
-  post "sessions" => "sessions#create", as: "sessions"
-  delete "logout" => "sessions#destroy", as: "logout"
+    get "login" => "sessions#new", as: "login"
+    post "sessions" => "sessions#create", as: "sessions"
+    delete "logout" => "sessions#destroy", as: "logout"
 
-  get "reports/input", as: :input
-  post "reports/output", as: :output
-  get "reports/excel", as: :excel
+    get "reports/input", as: :input
+    post "reports/output", as: :output
+    get "reports/excel", as: :excel
 
-  resources :clients
-  resources :users
-  resources :works
-
-   # The priority is based upon order of creation:
+    resources :clients
+    resources :users
+    resources :works
+ end
+  # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
@@ -67,9 +68,9 @@ Akn::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
-
+  get '/:locale' => 'home_pages#home'
   root :to => 'home_pages#home'
-  
+
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
