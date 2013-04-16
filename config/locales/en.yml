@@ -216,6 +216,9 @@ en:
     menu_settings: "Settings"
     menu_logout: "Sign out"
     menu_signin: "Sign in"
+    menu_locales: "Language"
+    menu_locales_en: "english"
+    menu_locales_de: "german"
     home_page_title: "Welcome to Personnel Costs App"
     home_page_title2: "This is the home page for Personnel Costs"
     home_page_button: "Sign up now!"
@@ -239,7 +242,9 @@ en:
      button_back: "Back"
      button_save_changes: "Save changes"
      button_avatar_change: "change"
-  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
+  messages:
+     excel_period: "Excel-Sheet should have data for one month only"
+# remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
 
   activemodel:
     errors:
