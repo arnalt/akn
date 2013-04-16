@@ -2,6 +2,7 @@ class ReportsController < ApplicationController
   before_filter :check_period, only: :output
 
   def input
+
   end
 
   def excel
@@ -16,7 +17,9 @@ class ReportsController < ApplicationController
     @username = current_user.user_name
     @total_tage = @total_std / 8.0
     @akt_monat = I18n.t("date.month_names")[start_at.to_s[6, 2].to_i]
-    respond_to do |format|
+    @bar_chart=  (@works.first.date..@works.last.date).map { |date| Work.total_on(date,@works).to_f}
+    @xdata =  (@works.first.date..@works.last.date).each.map { |d| d.to_s[8, 2]}
+   respond_to do |format|
       format.html # show.html.erb
       format.xls
       format.json { render json: @work }

@@ -64,6 +64,7 @@ GEM
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
     ffi (1.6.0-x86-mingw32)
+    googlecharts (1.6.8)
     hash-deep-merge (0.1.1)
     heroku (2.37.2)
       heroku-api (~> 0.3.7)
@@ -176,6 +177,7 @@ DEPENDENCIES
   capybara (= 1.1.2)
   coffee-rails (~> 3.2.1)
   factory_girl_rails
+  googlecharts (= 1.6.8)
   heroku
   jquery-rails
   jquery_datepicker

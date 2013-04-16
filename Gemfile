@@ -6,7 +6,7 @@ gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'jquery_datepicker'
 gem 'lazy_high_charts', '1.4.1'
-
+gem 'googlecharts', '1.6.8'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
