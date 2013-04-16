@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9347eff-de8d-4721-b6f5-e33c36fba2b5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/akn.iml" afterPath="$PROJECT_DIR$/.idea/akn.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/reports_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/reports_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="akn.iws" />
@@ -26,7 +18,7 @@
     <file path="/application.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1366030809802" ignored="false" />
     <file path="/excel_controller.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1363164969509" ignored="false" />
     <file path="/routes.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1366035843867" ignored="false" />
-    <file path="/Dummy.txt" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1366029405416" ignored="false" />
+    <file path="/Dummy.txt" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1366095360916" ignored="false" />
     <file path="/environment.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1365579184028" ignored="false" />
     <file path="/win32ole.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1362156475230" ignored="false" />
     <file path="/Gemfile" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1366029944480" ignored="false" />
@@ -93,7 +85,7 @@
     <file path="/en.yml" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1366023566807" ignored="false" />
     <file path="/database.yml" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1365842024026" ignored="false" />
     <file path="/pdfkit.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1366032814469" ignored="false" />
-    <file path="/pdf.html.erb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1366035780614" ignored="false" />
+    <file path="/pdf.html.erb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1366096160753" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +119,7 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/reports/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -145,7 +137,7 @@
       <file leaf-file-name="excel.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/reports/excel.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="79" selection-start="0" selection-end="216" vertical-scroll-proportion="-5.75">
+            <state line="8" column="79" selection-start="0" selection-end="216" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -155,7 +147,50 @@
         <entry file="file://$PROJECT_DIR$/app/views/reports/output.xls.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
+              <folding>
+                <marker date="1365495108895" expanded="true" signature="125:8197" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="436:713" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="788:832" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="897:1147" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="1158:3951" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="1203:1430" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="1454:1574" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="1598:1630" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="1654:1774" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="1798:2152" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="2176:2715" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="2739:2940" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="2964:3040" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="3064:3522" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="3546:3939" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="3984:8185" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="4066:7373" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="4313:4414" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="4426:4599" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="4611:4800" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="4812:4989" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="5001:5188" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="5200:5375" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="5456:5935" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="5560:5821" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="5586:5814" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="5669:5804" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="5729:5800" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="5982:6284" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="6332:6506" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="6518:6701" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="6713:6789" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="6801:6924" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="6936:7048" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="7060:7137" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="7149:7269" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="7281:7360" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="7443:8170" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="7461:7625" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="7639:7835" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="7906:8052" placeholder="..." />
+                <marker date="1365495108895" expanded="true" signature="7921:8037" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,10 +198,8 @@
       <file leaf-file-name="output.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/reports/output.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="51" selection-start="1688" selection-end="1688" vertical-scroll-proportion="13.8125">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="53" column="51" selection-start="1688" selection-end="1688" vertical-scroll-proportion="-0.71875">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -174,25 +207,25 @@
       <file leaf-file-name="_header.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="76" selection-start="865" selection-end="865" vertical-scroll-proportion="-5.75">
+            <state line="30" column="64" selection-start="1545" selection-end="1545" vertical-scroll-proportion="-7.1875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reports_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="reports_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="33" selection-start="699" selection-end="699" vertical-scroll-proportion="0.820155">
+            <state line="23" column="33" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pdf.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pdf.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/reports/pdf.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="42" selection-start="115" selection-end="115" vertical-scroll-proportion="-2.15625">
+            <state line="8" column="162" selection-start="216" selection-end="216" vertical-scroll-proportion="0.30016312">
               <folding />
             </state>
           </provider>
@@ -232,11 +265,11 @@
         <option value="$PROJECT_DIR$/config/initializers/pdfkit.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/reports/pdf.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/reports/output.html.erb" />
         <option value="$PROJECT_DIR$/app/views/reports/output.pdf.erb" />
         <option value="$PROJECT_DIR$/app/controllers/reports_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/reports/pdf.html.erb" />
       </list>
     </option>
   </component>
@@ -279,6 +312,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -679,8 +714,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -696,42 +729,11 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="Rails.Development: akn">
-    <configuration default="false" name="home_pages_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="akn" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/requests/home_pages_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Rake.routes">
     <configuration default="false" name="user_pages_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="akn" />
@@ -826,6 +828,28 @@
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="middleware" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="routes" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
+      <module name="akn" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="routes" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
@@ -958,6 +982,13 @@
       <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -987,13 +1018,6 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
@@ -1095,18 +1119,18 @@
       <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
       <item index="2" class="java.lang.String" itemvalue="Rails.Production: akn" />
       <item index="3" class="java.lang.String" itemvalue="Rails.Development: akn" />
-      <item index="4" class="java.lang.String" itemvalue="RSpec.home_pages_spec" />
-      <item index="5" class="java.lang.String" itemvalue="RSpec.user_pages_spec" />
-      <item index="6" class="java.lang.String" itemvalue="RSpec.work_pages_spec" />
-      <item index="7" class="java.lang.String" itemvalue="IRB console.Rails console: akn" />
-      <item index="8" class="java.lang.String" itemvalue="Rake.middleware" />
+      <item index="4" class="java.lang.String" itemvalue="RSpec.user_pages_spec" />
+      <item index="5" class="java.lang.String" itemvalue="RSpec.work_pages_spec" />
+      <item index="6" class="java.lang.String" itemvalue="IRB console.Rails console: akn" />
+      <item index="7" class="java.lang.String" itemvalue="Rake.middleware" />
+      <item index="8" class="java.lang.String" itemvalue="Rake.routes" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Rake.middleware" />
-        <item index="1" class="java.lang.String" itemvalue="IRB console.Rails console: akn" />
+        <item index="0" class="java.lang.String" itemvalue="Rake.routes" />
+        <item index="1" class="java.lang.String" itemvalue="Rake.middleware" />
         <item index="2" class="java.lang.String" itemvalue="IRB console.Rails console: akn" />
-        <item index="3" class="java.lang.String" itemvalue="RSpec.work_pages_spec" />
+        <item index="3" class="java.lang.String" itemvalue="IRB console.Rails console: akn" />
         <item index="4" class="java.lang.String" itemvalue="RSpec.work_pages_spec" />
       </list>
     </recent_temporary>
@@ -1203,13 +1227,12 @@
     <frame x="-8" y="-8" width="1456" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32467532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3268734" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32597402" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329233" sideWeight="0.6382429" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298397" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3039074" sideWeight="0.6363636" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3219971" sideWeight="0.6363636" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32816538" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1220,6 +1243,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3268734" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32467532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1288,18 +1312,21 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/reports/pdf.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="3" column="42" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/pdfkit.rb">
@@ -1311,16 +1338,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="110" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="24" column="110" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="32" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="26" column="32" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
@@ -1330,23 +1353,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="76" selection-start="865" selection-end="865" vertical-scroll-proportion="-5.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/works_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="0" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/reports/input.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
@@ -1360,7 +1369,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/reports/excel.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="79" selection-start="0" selection-end="216" vertical-scroll-proportion="-5.75">
+        <state line="8" column="79" selection-start="0" selection-end="216" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="33" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1368,29 +1384,77 @@
     <entry file="file://$PROJECT_DIR$/app/views/reports/output.xls.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1365495108895" expanded="true" signature="125:8197" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="436:713" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="788:832" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="897:1147" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="1158:3951" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="1203:1430" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="1454:1574" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="1598:1630" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="1654:1774" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="1798:2152" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="2176:2715" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="2739:2940" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="2964:3040" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="3064:3522" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="3546:3939" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="3984:8185" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="4066:7373" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="4313:4414" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="4426:4599" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="4611:4800" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="4812:4989" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="5001:5188" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="5200:5375" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="5456:5935" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="5560:5821" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="5586:5814" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="5669:5804" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="5729:5800" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="5982:6284" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="6332:6506" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="6518:6701" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="6713:6789" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="6801:6924" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="6936:7048" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="7060:7137" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="7149:7269" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="7281:7360" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="7443:8170" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="7461:7625" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="7639:7835" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="7906:8052" placeholder="..." />
+            <marker date="1365495108895" expanded="true" signature="7921:8037" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="64" selection-start="1545" selection-end="1545" vertical-scroll-proportion="-7.1875">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/reports/output.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="51" selection-start="1688" selection-end="1688" vertical-scroll-proportion="13.8125">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="53" column="51" selection-start="1688" selection-end="1688" vertical-scroll-proportion="-0.71875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/reports/input.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/reports/pdf.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="42" selection-start="115" selection-end="115" vertical-scroll-proportion="-2.15625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/reports_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="33" selection-start="699" selection-end="699" vertical-scroll-proportion="0.820155">
+        <state line="8" column="162" selection-start="216" selection-end="216" vertical-scroll-proportion="0.30016312">
           <folding />
         </state>
       </provider>
