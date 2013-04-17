@@ -1,7 +1,8 @@
 # config/initializers/pdfkit.rb
+bs = RbConfig::CONFIG['host']
 PDFKit.configure do |config|
-   config.wkhtmltopdf =  'C:/wkhtmltopdf/wkhtmltopdf.exe'
-   config.default_options = {
+     bs.include?("linux") ?  config.wkhtmltopdf =  '/usr/bin/wkhtmltopdf' :  config.wkhtmltopdf =  'C:/wkhtmltopdf/wkhtmltopdf.exe'
+     config.default_options = {
      :page_size => 'Legal',
      :print_media_type => true
    }
