@@ -24,4 +24,19 @@ class Work < ActiveRecord::Base
    where("date = ? AND user_id = ? AND client_id = ? ", date, work.first.user_id, work.first.client_id ).sum(:working_hours)
   end
 
+  def self.get_avg(start_at, end_at,clientname)
+    self.build_report(start_at,end_at, clientname).average(:working_hours)
+  end
+
+  def self.get_min(start_at, end_at, clientname)
+    self.build_report(start_at,end_at, clientname).minimum(:working_hours)
+  end
+
+  def self.get_max(start_at, end_at, clientname)
+    self.build_report(start_at,end_at, clientname).maximum(:working_hours)
+  end
+
+  def self.get_days(start_at, end_at, clientname)
+    self.build_report(start_at,end_at, clientname).count
+  end
 end

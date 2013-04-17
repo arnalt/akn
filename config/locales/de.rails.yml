@@ -239,6 +239,8 @@ de:
      button_avatar_change: "Avatar ändern"
   messages:
      excel_period: "Das Excel-Sheet sollte nur Daten eines Monats enthalten!"
+     report_average: "Durchnitt:"
+     report_days: "Tage:"
   # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
   activemodel:
     user: "Benutzer"
