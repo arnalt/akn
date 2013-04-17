@@ -24,5 +24,4 @@ class Work < ActiveRecord::Base
    where("date = ? AND user_id = ? AND client_id = ? ", date, work.first.user_id, work.first.client_id ).sum(:working_hours)
   end
 
-
 end
