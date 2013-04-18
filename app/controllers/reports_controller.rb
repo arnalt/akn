@@ -37,13 +37,13 @@ class ReportsController < ApplicationController
   end
 
   def check_work
-    @clientname =params[:Clientname]
+    @clientname =params[:clientname]
     @start_at = (params[:period_begin].to_s).to_date
     @end_at = (params[:period_end].to_s).to_date
     @works = current_user.works.build_report(@start_at, @end_at, @clientname).order("date")
     if @works.empty?
       flash[:error] = I18n.t("messages.empty_work")
-      redirect_to works_path
+     redirect_to input_path
     end
 
   end
