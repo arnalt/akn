@@ -241,7 +241,7 @@ de:
      excel_period: "Das Excel-Sheet sollte nur Daten eines Monats enthalten!"
      report_average: "Durchnitt:"
      report_days: "Tage:"
-     empty_work: "Für die ausgewählte Periode sind keine Daten vorhanden!"
+     empty_work: "Für die ausgewählte Periode sind keine Daten vorhanden oder die Sprache wurde geändert!"
      report_month: "Monat: "
   # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
   activemodel:
