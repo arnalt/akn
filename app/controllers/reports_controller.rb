@@ -17,10 +17,10 @@ class ReportsController < ApplicationController
     @akt_monat = I18n.t("date.month_names")[@start_at.to_s[6, 2].to_i]
     @bar_chart=  (@works.first.date..@works.last.date).map { |date| Work.total_on(date,@works).to_f}
     @xdata =  (@works.first.date..@works.last.date).each.map { |d| d.to_s[8, 2]}
-    @w_avg = current_user.works.get_avg(start_at, end_at,@clientname)
-    @w_min =  current_user.works.get_min(start_at, end_at, @clientname)
-    @w_max =  current_user.works.get_max(start_at, end_at, @clientname)
-    @w_days = current_user.works.get_days(start_at, end_at, @clientname)
+    @w_avg = current_user.works.get_avg(@start_at, @end_at,@clientname)
+    @w_min =  current_user.works.get_min(@start_at, @end_at, @clientname)
+    @w_max =  current_user.works.get_max(@start_at, @end_at, @clientname)
+    @w_days = current_user.works.get_days(@start_at, @end_at, @clientname)
    respond_to do |format|
       format.html # show.html.erb
       format.xls

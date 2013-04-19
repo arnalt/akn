@@ -16,4 +16,4 @@
 
 #Ignore idea
 /.idea
-/.idea/workspace.xml
+/.idea/*
