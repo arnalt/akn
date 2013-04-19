@@ -14,6 +14,7 @@ Akn::Application.routes.draw do
     post "reports/output", as: :output
     get "reports/excel", as: :excel
 
+
     resources :clients
     resources :users
     resources :works

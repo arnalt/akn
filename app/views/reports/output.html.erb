@@ -10,16 +10,16 @@
 <table>
   <div>Monat: <%= @akt_monat %> </div>
   <tr>
-    <th width="100px">Date</th>
-    <th width="20px">Week</th>
-    <th width="100px">Day</th>
-    <th width="100px">Start_at</th>
-    <th width="100px">End_at</th>
+    <th width="100px"><%= t("text.work_index_date") %></th>
+    <th width="20px"><%= t("text.work_index_week") %></th>
+    <th width="100px"><%= t("text.work_index_date") %></th>
+    <th width="100px"><%= t("text.work_index_start_at") %></th>
+    <th width="100px"><%= t("text.work_index_end_at") %></th>
     <th width="100px">Pause</th>
-    <th width="100px">Hours</th>
-    <th width="100px">Project</th>
-    <th width="100px">Client</th>
-    <th width="100px">Description</th>
+    <th width="100px"><%= t("text.work_index_hours") %></th>
+    <th width="100px"><%= t("text.work_index_project") %></th>
+    <th width="100px"><%= t("text.work_index_client") %></th>
+    <th width="100px"><%= t("text.work_index_describ") %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -43,4 +43,28 @@
     <td colspan="6">Total</td>
     <td><%= number_with_precision(@total_std, :precision => 2) %></td>
   </tr>
+  </table>
+<br>
+<table border>
+  <colgroup>
+    <col width=80>
+    <col width=50 align=char char=".">
+  </colgroup>
+  <tr>
+    <td><%= t("messages.report_average") %></td>
+    <td> <%= number_with_precision(@w_avg, :precision => 2) %></td>
+  </tr>
+  <tr>
+    <td>Minimum:</td>
+    <td><%= number_with_precision(@w_min, :precision => 2) %></td>
+  </tr>
+  <tr>
+    <td>Maximum:</td>
+    <td> <%= number_with_precision(@w_max, :precision => 2) %></td>
+  </tr>
+  <tr>
+    <td><%= t("messages.report_days") %></td>
+    <td><%= number_with_precision(@w_days, :precision => 2) %></td>
+  </tr>
 </table>
+
