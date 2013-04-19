@@ -14,6 +14,7 @@ Akn::Application.routes.draw do
     post "reports/output", as: :output
     get "reports/excel", as: :excel
     get "reports/pdf", as: :pdf
+    post "reports/output_pdf", as: :output_pdf
 
     resources :clients
     resources :users
