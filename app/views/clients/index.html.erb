@@ -1,10 +1,11 @@
 <div class="row">
   <div class="offset1">
-    <h3>Projects</h3><br>
+    <h3><%= t("text.client_title") %></h3><br>
     <table>
       <tr>
         <th width="100px">Name</th>
-        <th width="100px">Projekt</th>
+        <th width="100px"><%= t("text.work_index_project") %></th>
+        <th width="100px"><%= t("text.tasks_title") %></th>
         <th></th>
         <th></th>
         <th></th>
@@ -14,15 +15,16 @@
           <tr>
             <td><%= client.name %></td>
             <td><%= client.project %></td>
-            <td><%= link_to 'Show', client %></td>
-            <td><%= link_to 'Edit', edit_client_path(client) %></td>
-            <td><%= link_to 'Destroy', client, confirm: 'Are you sure?', method: :delete %></td>
+            <td><%= client.task.name %></td>
+            <td><%= link_to t("links.work_index_show"), client %></td>
+            <td><%= link_to t("links.work_index_edit"), edit_client_path(client) %></td>
+            <td><%= link_to t("links.work_index_delete"), client, confirm: 'Are you sure?', method: :delete %></td>
           </tr>
       <% end %>
     </table>
 
     <br/>
 
-    <%= link_to 'New Client', new_client_path %>
+    <%= link_to t("text.client_new"), new_client_path %>
   </div>
 </div>

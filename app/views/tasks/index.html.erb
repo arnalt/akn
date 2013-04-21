@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="offset1">
+    <h3><%= t("text.tasks_title") %></h3>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th><%= t("text.tasks_description") %></th>
+        <th><%= t("text.work_index_client") %></th>
+        <th><%= t("text.work_index_project") %></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+      <% @tasks.each do |task| %>
+          <tr>
+            <td><%= task.name %></td>
+            <td><%= task.description %></td>
+            <td><%= task.client.name %></td>
+            <td><%= task.client.project %></td>
+            <td><%= link_to t("links.work_index_show"), task %></td>
+            <td><%= link_to t("links.work_index_edit"), edit_task_path(task) %></td>
+            <td><%= link_to t("links.work_index_delete"), task, confirm: 'Are you sure?', method: :delete %></td>
+          </tr>
+      <% end %>
+    </table>
+
+    <br/>
+
+    <%= link_to t("text.tasks_new"), new_task_path %>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @task.name %>
+</p>
+
+<p>
+  <b><%= t("text.tasks_description") %></b>
+  <%= @task.description %>
+</p>
+
+
+<%= link_to t("links.button_edit"), edit_task_path(@task) %> |
+<%= link_to t("links.button_back"), tasks_path %>
