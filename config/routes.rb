@@ -17,11 +17,17 @@ Akn::Application.routes.draw do
     get "reports/excel", as: :excel
     get "reports/output"
 
+    post "works/show", as: :work
 
     resources :clients
     resources :users
-    resources :works
-    resources :tasks
+     resources :tasks
+
+    resources :works do
+      get 'sel_task', :on => :collection
+    end
+
+
  end
   # The priority is based upon order of creation:
   # first created -> highest priority.

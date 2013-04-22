@@ -221,6 +221,7 @@ en:
     menu_locales: "Language"
     menu_locales_en: "english"
     menu_locales_de: "german"
+    menu_sel_tasks: "Select Tasks"
     home_page_title: "Welcome to Personnel Costs App"
     home_page_title2: "This is the home page for Personnel Costs"
     home_page_button: "Sign up now!"
@@ -233,6 +234,7 @@ en:
     work_index_project: "Project"
     work_index_client: "Client"
     work_index_describ: "Description"
+    work_task_show: "Task"
     edit_title: "Update Work"
     input_title: "Parameters"
     edit_users_title: "Update your profile"
@@ -257,6 +259,7 @@ en:
      button_edit: "Edit"
      button_save_changes: "Save changes"
      button_avatar_change: "change"
+
 
   messages:
      excel_period: "Excel-Sheet should have data for one month only"

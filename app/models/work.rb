@@ -12,6 +12,9 @@ class Work < ActiveRecord::Base
      where("date >= ? AND date <= ? and client_id = ?", start_at, end_at, Client.find_all_by_name(clientname))
   end
 
+  def self.build_works_by_client(client_id)
+    where("client_id = ?", client_id )
+  end
 
   def complete_work
     @arr = I18n.t("date.day_names")

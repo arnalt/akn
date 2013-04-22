@@ -17,7 +17,13 @@ class WorksController < ApplicationController
 
 
   def show
-
+  @task = Task.find_by_name(params[:task])
+  @works = current_user.works.build_works_by_client(@task.client.id)
+  @total_hours = current_user.works.build_works_by_client(@task.client.id).sum(:working_hours).to_f
+  respond_to do |format|
+    format.html
+    format.json { render json: @works }
+  end
   end
 
 
@@ -73,6 +79,13 @@ class WorksController < ApplicationController
     respond_to do |format|
       format.html { redirect_to works_url }
       format.json { head :no_content }
+    end
+  end
+
+  def sel_task
+    @tasks = Task.all
+    respond_to do |format|
+       format.html
     end
   end
 

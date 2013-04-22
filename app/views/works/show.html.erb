@@ -1,2 +1,41 @@
 <% provide(:title, 'Works') %>
-<h1>Update Work</h1><br>
+<h5><%= t("text.work_task_show") %>:  <%= @task.name %></h5>
+
+<table>
+  <tr>
+    <th width="100px"><%= t("text.work_index_date") %></th>
+    <th width="20px"><%= t("text.work_index_week") %></th>
+    <th width="100px"><%= t("text.work_index_day") %></th>
+    <th width="100px"><%= t("text.work_index_start_at") %></th>
+    <th width="100px"><%= t("text.work_index_end_at") %></th>
+    <th width="100px">Pause</th>
+    <th width="40px"><%= t("text.work_index_hours") %></th>
+    <th width="100px"><%= t("text.work_index_project") %></th>
+    <th width="100px"><%= t("text.work_index_client") %></th>
+    <th width="100px"><%= t("text.work_index_describ") %></th>
+
+  </tr>
+
+  <% @works.each do |work| %>
+      <tr>
+        <td><%= l work.date %></td>
+        <td><%= work.week %></td>
+        <td><%=  work.day %></td>
+        <td><%= l work.start_at, format: :short %></td>
+        <td><%= l work.end_at, format: :short %></td>
+        <td><%= l work.pause, format: :short %></td>
+        <td><%= number_with_precision(work.working_hours, :precision => 2) %></td>
+        <td><%= work.client.project %></td>
+        <td><%= work.client.name %></td>
+        <td><%= work.description %></td>
+        <td></td><td></td><td></td>
+
+      </tr>
+  <% end %>
+  <tr>
+    <td colspan="6">Total</td>
+    <td><%= number_with_precision(@total_hours, :precision => 2) %></td>
+  </tr>
+</table>
+
+
