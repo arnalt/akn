@@ -1,7 +1,5 @@
 Akn::Application.routes.draw do
 
-
-
  scope "(:locale)", locale: /en|de/ do
     match '/help', to: 'home_pages#help'
     match '/about', to: 'home_pages#about'
@@ -17,16 +15,13 @@ Akn::Application.routes.draw do
     get "reports/excel", as: :excel
     get "reports/output"
 
-    post "works/show", as: :work
-
     resources :clients
     resources :users
-     resources :tasks
+    resources :tasks
 
     resources :works do
       get 'sel_task', :on => :collection
     end
-
 
  end
   # The priority is based upon order of creation:
