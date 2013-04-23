@@ -1,5 +1,5 @@
 class WorksController < ApplicationController
-  before_filter :filled_clients, only: [:new, :edit, :create]
+  before_filter :filled_clients, only: [:new, :edit, :create, :tasks]
 
 
   def home
@@ -7,8 +7,10 @@ class WorksController < ApplicationController
   end
 
   def index
+
     @works = current_user.works.order("date DESC")
     @username = current_user.user_name
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @works }
@@ -17,14 +19,7 @@ class WorksController < ApplicationController
 
 
   def show
-    @work = Work.find(params[:id])
-    @works = []
-#  @works = current_user.works.build_works_by_client(@task.client.id)
-#  @total_hours = current_user.works.build_works_by_client(@task.client.id).sum(:working_hours).to_f
-    respond_to do |format|
-      format.html
-      format.json { render json: @work }
-    end
+
   end
 
 
@@ -43,6 +38,7 @@ class WorksController < ApplicationController
 
   def create
     @work = current_user.works.build(params[:work])
+    @work.client_id = Task.find(@work.task_id).client.id
     respond_to do |format|
       if @work.save
         format.html { redirect_to works_path, notice: 'Work was successfully created.' }
@@ -82,14 +78,12 @@ class WorksController < ApplicationController
   end
 
   def tasks
-    @tasks = Task.all
-#    respond_to do |format|
-  #    format.html
-   # end
+
   end
 
   def filled_clients
     @clients=Client.all
+    @tasks=Task.all
   end
 
 end

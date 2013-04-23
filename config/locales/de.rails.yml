@@ -192,7 +192,7 @@ de:
     formats:
       default: ! '%A, %d. %B %Y, %H:%M Uhr'
       long: ! '%A, %d. %B %Y, %H:%M Uhr'
-      short: ! '%H:%M Uhr'
+      short: ! '%H:%M '
     pm: nachmittags
   text:
     new_user:  "Neuen Benutzer anlegen"
@@ -228,6 +228,7 @@ de:
     work_index_hours: "Stunden"
     work_index_project: "Projekt"
     work_index_client: "Kunde"
+    work_index_task: "Aufgabe"
     work_index_describ: "Erläuterungen"
     work_task_show: "Aufgabe"
     edit_title: "Tagesdaten ändern"
@@ -243,6 +244,7 @@ de:
     tasks_client: "Projekt"
     tasks_save: "Aufgabe speichern"
     tasks_edit: "Aufgabe ändern"
+    work_new_title: "Arbeitstag erfassen"
   links:
      work_index_edit: "Ändern"
      work_index_delete: "Löschen"
@@ -279,6 +281,7 @@ de:
          date: "Datum"
          start_at: "Beginn"
          end_at: "Ende"
+         task: "Aufgabe"
          description: "Erläuterungen"
       client:
          project: "Projekt"

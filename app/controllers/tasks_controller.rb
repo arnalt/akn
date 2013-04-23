@@ -15,8 +15,9 @@ class TasksController < ApplicationController
   # GET /tasks/1
   # GET /tasks/1.json
   def show
-    @task = Task.find(params[:id])
-
+   @task = Task.find(params[:id])
+    @works = current_user.works.build_works_by_task(@task.id)
+    @total_std =  current_user.works.build_works_by_task(@task.id).sum(:working_hours).to_f
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @task }

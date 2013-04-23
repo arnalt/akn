@@ -197,7 +197,7 @@ en:
     formats:
       default: ! '%a, %d %b %Y %H:%M:%S %z'
       long: ! '%d %B, %Y %H:%M'
-      short: ! '%d %b %H:%M'
+      short: ! '%H:%M'
     pm: pm
   text:
     new_user: "Sign up"
@@ -233,6 +233,7 @@ en:
     work_index_hours: "Hours"
     work_index_project: "Project"
     work_index_client: "Client"
+    work_index_task: "Task"
     work_index_describ: "Description"
     work_task_show: "Task"
     edit_title: "Update Work"
@@ -248,6 +249,7 @@ en:
     tasks_client: "Project"
     tasks_save: "Save task"
     tasks_edit: "Editing Task"
+    work_new_title: "Create Work"
   links:
      work_index_edit: "Edit"
      work_index_delete: "Delete"
