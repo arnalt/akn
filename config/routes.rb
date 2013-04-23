@@ -8,6 +8,7 @@ Akn::Application.routes.draw do
     match '/contact', to: 'home_pages#contact'
     match '/signup', to: 'users#new'
 
+
     get "login" => "sessions#new", as: "login"
     post "sessions" => "sessions#create", as: "sessions"
     delete "logout" => "sessions#destroy", as: "logout"
@@ -16,16 +17,15 @@ Akn::Application.routes.draw do
     post "reports/output", as: :output
     get "reports/excel", as: :excel
     get "reports/output"
+    get "reports/sel"
 
-    post "works/show", as: :work
 
     resources :clients
     resources :users
-     resources :tasks
+    resources :tasks
+    resources :works
 
-    resources :works do
-      get 'sel_task', :on => :collection
-    end
+
 
 
  end
