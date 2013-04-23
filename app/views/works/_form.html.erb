@@ -30,7 +30,7 @@
     </table>
 
       <%= f.label :task %>
-      <%= f.select :task_id, @tasks.each.map { |t| [t.name+' '+t.client.name, t.id]}    %>
+      <%= f.select :task_id, @tasks.each.map { |t| [t.name+' '+t.client.project, t.id]}    %>
 
       <%= f.label :description %>
       <%= f.text_area :description, rows: 2 %>
