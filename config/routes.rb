@@ -1,7 +1,5 @@
 Akn::Application.routes.draw do
 
-
-
  scope "(:locale)", locale: /en|de/ do
     match '/help', to: 'home_pages#help'
     match '/about', to: 'home_pages#about'
@@ -20,11 +18,16 @@ Akn::Application.routes.draw do
     get "reports/sel"
 
 
+    resources :works do
+      collection do
+        get 'tasks'
+      end
+    end
+
+
     resources :clients
     resources :users
     resources :tasks
-    resources :works
-
 
 
 

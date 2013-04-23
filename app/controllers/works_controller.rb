@@ -17,13 +17,14 @@ class WorksController < ApplicationController
 
 
   def show
-  @task = Task.find_by_name(params[:task])
-  @works = current_user.works.build_works_by_client(@task.client.id)
-  @total_hours = current_user.works.build_works_by_client(@task.client.id).sum(:working_hours).to_f
-  respond_to do |format|
-    format.html
-    format.json { render json: @works }
-  end
+    @work = Work.find(params[:id])
+    @works = []
+#  @works = current_user.works.build_works_by_client(@task.client.id)
+#  @total_hours = current_user.works.build_works_by_client(@task.client.id).sum(:working_hours).to_f
+    respond_to do |format|
+      format.html
+      format.json { render json: @work }
+    end
   end
 
 
@@ -40,7 +41,6 @@ class WorksController < ApplicationController
     @work = current_user.works.find(params[:id])
   end
 
-
   def create
     @work = current_user.works.build(params[:work])
     respond_to do |format|
@@ -53,7 +53,6 @@ class WorksController < ApplicationController
       end
     end
   end
-
 
   def update
     @work = current_user.works.find(params[:id])
@@ -82,11 +81,11 @@ class WorksController < ApplicationController
     end
   end
 
-  def sel_task
+  def tasks
     @tasks = Task.all
-    respond_to do |format|
-       format.html
-    end
+#    respond_to do |format|
+  #    format.html
+   # end
   end
 
   def filled_clients

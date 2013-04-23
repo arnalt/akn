@@ -1,5 +1,4 @@
 <% provide(:title, 'Works') %>
-<h5><%= t("text.work_task_show") %>:  <%= @task.name %></h5>
 
 <table>
   <tr>
@@ -32,10 +31,6 @@
 
       </tr>
   <% end %>
-  <tr>
-    <td colspan="6">Total</td>
-    <td><%= number_with_precision(@total_hours, :precision => 2) %></td>
-  </tr>
 </table>
 
 

@@ -30,8 +30,9 @@
     <td><%= work.description %></td>
     <td></td><td></td><td></td>
 
-     <td><%= link_to t("links.work_index_edit"), edit_work_path(work) %></td>
-     <td><%= link_to t("links.work_index_delete"), work, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to t("links.work_index_edit"), edit_work_path(work) %></td>
+    <td><%= link_to t("links.work_index_show"), work_path(work) %></td>
+    <td><%= link_to t("links.work_index_delete"), work, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
