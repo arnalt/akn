@@ -16,8 +16,7 @@ class TasksController < ApplicationController
   # GET /tasks/1.json
   def show
    @task = Task.find(params[:id])
-    @works = current_user.works.build_works_by_task(@task.id)
-    @total_std =  current_user.works.build_works_by_task(@task.id).sum(:working_hours).to_f
+   @works = [ ]
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @task }
@@ -81,6 +80,15 @@ class TasksController < ApplicationController
     respond_to do |format|
       format.html { redirect_to tasks_url }
       format.json { head :no_content }
+    end
+  end
+
+  def report
+    @task = Task.find(params[:id])
+    @works = current_user.works.build_works_by_task(@task.id)
+    @total_std =  current_user.works.build_works_by_task(@task.id).sum(:working_hours).to_f
+    respond_to do |format|
+      format.html { render 'show.html.erb' }
     end
   end
 

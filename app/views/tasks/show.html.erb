@@ -10,6 +10,7 @@
   <%= @task.description %>
 </p>
 
+<% unless @works.empty? %>
 <table>
   <tr>
     <th width="100px"><%= t("text.work_index_date") %></th>
@@ -46,7 +47,10 @@
     <td><%= number_with_precision(@total_std, :precision => 2) %></td>
   </tr>
 </table>
-
+<% end %>
+<% if @works.empty? %>
+<%= link_to t("links.tasks_report"), report_tasks_path(@task)  %> |
+<% end %>
 <%= link_to t("links.button_back"), tasks_path %>
 
 

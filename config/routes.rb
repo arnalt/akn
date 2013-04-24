@@ -18,16 +18,16 @@ Akn::Application.routes.draw do
     get "reports/sel"
 
 
-    resources :works do
+    resources :tasks do
       collection do
-        get 'tasks'
+        get ':id/report' => 'tasks#report', as: 'report'
       end
     end
 
-
+    resources :works
     resources :clients
     resources :users
-    resources :tasks
+   #  resources :tasks
 
 
 

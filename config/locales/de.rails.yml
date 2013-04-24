@@ -216,7 +216,6 @@ de:
     menu_locales: "Sprache"
     menu_locales_en: "englisch"
     menu_locales_de: "deutsch"
-    menu_sel_tasks: "Aufgaben selektieren"
     home_page_title: "Willkomen auf der Homepage der AKN App"
     home_page_title2: "AKN-Homepage"
     home_page_button: "Jetzt anmelden!"
@@ -256,6 +255,7 @@ de:
      button_edit: "Ändern"
      button_save_changes: "Änderungen speichern"
      button_avatar_change: "Avatar ändern"
+     tasks_report: "Report generieren"
 
   messages:
      excel_period: "Das Excel-Sheet sollte nur Daten eines Monats enthalten!"
