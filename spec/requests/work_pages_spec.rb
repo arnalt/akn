@@ -22,13 +22,12 @@ describe "Works pages" do
       visit new_work_path
     end
 
-    it { should have_selector('h1', text: 'Create Work') }
-    it { should have_selector('title', text: 'New Works') }
+      it { should have_selector('title', text: 'New Works') }
   end
 
   describe "show" do
     let(:user)    { FactoryGirl.create(:user) }
-    let(:work)   { User.find(2).works(1) }
+    let(:work)   { FactoryGirl.create(:work) }
     before do
       sign_in user
       visit work_path(work)

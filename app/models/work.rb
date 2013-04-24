@@ -10,7 +10,7 @@ class Work < ActiveRecord::Base
   validates :date,  uniqueness:true
 
   def self.build_report(start_at,end_at,clientname)
-     where("date >= ? AND date <= ? and client_id = ?", start_at, end_at, Client.find_all_by_name(clientname))
+     where("date >= ? AND date <= ? and client_id = ?", start_at, end_at, Client.find_by_name(clientname))
   end
 
   def self.build_works_by_task(task_id)

@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :work do
-    id 1
+    id 30
     date "28.03.2013"
     week "14"
     day "Montag"
@@ -9,9 +9,11 @@ FactoryGirl.define do
     pause "00:30"
     working_hours 8.0
     client_id 1
-    user_id 1
+    user_id 2
+    task_id 6
   end
   factory :user do
+    id 1
     email "mustermann@example.com"
     password "foobar"
     password_confirmation "foobar"

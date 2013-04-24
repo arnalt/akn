@@ -81,7 +81,7 @@ describe TasksController do
 
       it "redirects to the created task" do
         post :create, {:task => valid_attributes}, valid_session
-        response.should redirect_to(Task.last)
+        response.should redirect_to tasks_path
       end
     end
 

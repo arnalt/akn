@@ -1,5 +1,7 @@
 require 'spec_helper'
 
-describe Task do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Task  do
+it "has a valid factory"
+it "is invalid without a name"
+it "is invalid without a description"
 end
