@@ -6,10 +6,10 @@
 </p>
 
 <p>
-  <b>Projekt:</b>
+  <b><%= t("text.work_index_project") %></b>
   <%= @client.project %>
 </p>
 
 
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+<%= link_to t("links.button_edit"), edit_client_path(@client) %> |
+<%= link_to t("links.button_back"), clients_path %>

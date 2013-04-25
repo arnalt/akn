@@ -18,6 +18,7 @@
               </li>
                <% if current_user.admin? %>
                   <li><%= link_to t("text.menu_clients"), clients_path %></li>
+                  <li><%= link_to t("text.menu_tasks"), tasks_path %></li>
                   <li><%= link_to t("text.menu_users"), users_path %></li>
               <% end %>
               <li id="fat-menu" class="dropdown">

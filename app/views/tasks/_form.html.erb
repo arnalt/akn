@@ -1,0 +1,29 @@
+<%= form_for(@task) do |f| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% @task.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label t("text.tasks_description") %>
+    <%= f.text_area :description, rows: 2 %>
+  </div>
+  <div>
+    <%= f.label t("text.tasks_client") %>
+    <%= f.select :client_id, @clients.each.map { |c| [c.name+' '+ c.project, c.id] } %>
+  </div>
+
+    <%= f.submit t("text.tasks_save"),    class: "btn btn-large btn-primary"  %>
+
+<% end %>

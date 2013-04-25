@@ -1,8 +1,14 @@
 <% provide(:title, 'New Works') %>
-<h1>Create Work</h1>
+<div class="row">
+  <div class="span6 offset3">
+    <% provide(:title, 'New Works') %>
+    <br>
 
-<%= render 'form' %>
+    <h3><%= t("text.work_new_title") %></h3>
 
-<%= link_to 'Back', works_path %>
+    <%= render 'form' %>
 
+    <%= link_to t("links.button_back"), works_path %>
 
+  </div>
+</div>

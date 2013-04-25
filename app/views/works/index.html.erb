@@ -12,6 +12,7 @@
     <th width="40px"><%= t("text.work_index_hours") %></th>
     <th width="100px"><%= t("text.work_index_project") %></th>
     <th width="100px"><%= t("text.work_index_client") %></th>
+    <th width="100px"><%= t("text.work_index_task") %></th>
     <th width="100px"><%= t("text.work_index_describ") %></th>
 
   </tr>
@@ -27,10 +28,11 @@
     <td><%= number_with_precision(work.working_hours, :precision => 2) %></td>
     <td><%= work.client.project %></td>
     <td><%= work.client.name %></td>
+    <td><%= work.task.name %></td>
     <td><%= work.description %></td>
     <td></td><td></td><td></td>
 
-     <td><%= link_to t("links.work_index_edit"), edit_work_path(work) %></td>
+    <td><%= link_to t("links.work_index_edit"), edit_work_path(work) %></td>
     <td><%= link_to t("links.work_index_delete"), work, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>

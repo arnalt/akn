@@ -1,7 +1,7 @@
-<% if @client.errors.any?  %>
+<% if @client.errors.any? %>
     <div id="error_explanation">
       <div class="alert alert-error">
-        The form contains <%= pluralize(@user.errors.count, "error") %>.
+        The form contains <%= pluralize(@client.errors.count, "error") %>.
       </div>
       <ul>
         <% @client.errors.full_messages.each do |msg| %>
@@ -11,11 +11,13 @@
     </div>
 <% end %>
 
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+<%= f.label :name %>
+<%= f.text_field :name %>
 
 
-    <%= f.label :project %><br />
-    <%= f.text_field :project %>
+<%= f.label :project %>
+<%= f.text_field :project %>
+
+
 
 

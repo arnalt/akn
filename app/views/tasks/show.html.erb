@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @task.name %>
+</p>
+
+<p>
+  <b><%= t("text.tasks_description") %>: </b>
+  <%= @task.description %>
+</p>
+
+<% unless @works.empty? %>
+<table>
+  <tr>
+    <th width="100px"><%= t("text.work_index_date") %></th>
+    <th width="20px"><%= t("text.work_index_week") %></th>
+    <th width="100px"><%= t("text.work_index_day") %></th>
+    <th width="100px"><%= t("text.work_index_start_at") %></th>
+    <th width="100px"><%= t("text.work_index_end_at") %></th>
+    <th width="100px">Pause</th>
+    <th width="40px"><%= t("text.work_index_hours") %></th>
+    <th width="100px"><%= t("text.work_index_project") %></th>
+    <th width="100px"><%= t("text.work_index_client") %></th>
+    <th width="100px"><%= t("text.work_index_describ") %></th>
+
+  </tr>
+
+  <% @works.each do |work| %>
+      <tr>
+        <td><%= l work.date %></td>
+        <td><%= work.week %></td>
+        <td><%=  work.day %></td>
+        <td><%= l work.start_at, format: :short %></td>
+        <td><%= l work.end_at, format: :short %></td>
+        <td><%= l work.pause, format: :short %></td>
+        <td><%= number_with_precision(work.working_hours, :precision => 2) %></td>
+        <td><%= work.client.project %></td>
+        <td><%= work.client.name %></td>
+        <td><%= work.description %></td>
+        <td></td><td></td><td></td>
+
+      </tr>
+  <% end %>
+  <tr>
+    <td colspan="6">Total</td>
+    <td><%= number_with_precision(@total_std, :precision => 2) %></td>
+  </tr>
+</table>
+<% end %>
+<% if @works.empty? %>
+<%= button_to t("links.tasks_report"), report_tasks_path(@task), class: "btn btn-large btn-primary", :method => :get  %>
+<% end %>
+<%= link_to t("links.button_back"), tasks_path %>
+
+

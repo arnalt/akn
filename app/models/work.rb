@@ -1,6 +1,7 @@
 class Work < ActiveRecord::Base
   belongs_to :user
   belongs_to :client
+  belongs_to :task
 
   before_create :complete_work
   before_update :complete_work
@@ -9,11 +10,15 @@ class Work < ActiveRecord::Base
   validates :date,  uniqueness:true
 
   def self.build_report(start_at,end_at,clientname)
-     where("date >= ? AND date <= ? and client_id = ?", start_at, end_at, Client.find_all_by_name(clientname))
+     where("date >= ? AND date <= ? and client_id = ?", start_at, end_at, Client.find_by_name(clientname))
   end
 
+  def self.build_works_by_task(task_id)
+    where("task_id = ?", task_id )
+  end
 
   def complete_work
+    self.client_id = Task.find(self.task_id).client_id
     @arr = I18n.t("date.day_names")
     self.day = @arr.at(self.date.wday)
     self.week = ((self.date - self.date.at_beginning_of_year) / 7 + 0.8).round.to_i
