@@ -27,6 +27,8 @@ describe "Works pages" do
 
   describe "show" do
     let(:user)    { FactoryGirl.create(:user) }
+    let(:client)  { FactoryGirl.create(:client) }
+    let(:task)     { FactoryGirl.create(:task) }
     let(:work)   { FactoryGirl.create(:work) }
     before do
       sign_in user
@@ -38,6 +40,8 @@ describe "Works pages" do
 
   describe "edit" do
     let(:user)    { FactoryGirl.create(:user) }
+    let(:client)  { FactoryGirl.create(:client) }
+    let(:task)    {FactoryGirl.create(:task)}
     let(:work)   { FactoryGirl.create(:work) }
     before do
       sign_in user
@@ -45,6 +49,5 @@ describe "Works pages" do
     end
 
     it { should have_selector('title', text: 'Works') }
-    it { should have_selector('h3', text: 'Update Work') }
   end
 end

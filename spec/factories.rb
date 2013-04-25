@@ -13,14 +13,26 @@ FactoryGirl.define do
     task_id 6
   end
   factory :user do
-    id 1
+    id 2
     email "mustermann@example.com"
     password "foobar"
     password_confirmation "foobar"
     firstname "Klaus"
     lastname "Mustermann"
   end
+  factory :task do |t|
+    t.id 6
+    t.name "Task'1001"
+    t.description "some task description"
+  end
+  factory :client do
+    id 1
+    name "client"
+    description "client"
+  end
 end
+
+
 
 
 def sign_in(user)

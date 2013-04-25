@@ -9,8 +9,8 @@ class Work < ActiveRecord::Base
   validates :date, :start_at, :end_at, :pause, :client_id, presence: true
   validates :date,  uniqueness:true
 
-  def self.build_report(start_at,end_at,clientname)
-     where("date >= ? AND date <= ? and client_id = ?", start_at, end_at, Client.find_by_name(clientname))
+  def self.build_report(start_at,end_at,client_id)
+     where("date >= ? and date <= ? and client_id = ?", start_at, end_at, client_id)
   end
 
   def self.build_works_by_task(task_id)
@@ -29,19 +29,19 @@ class Work < ActiveRecord::Base
    where("date = ? AND user_id = ? AND client_id = ? ", date, work.first.user_id, work.first.client_id ).sum(:working_hours)
   end
 
-  def self.get_avg(start_at, end_at,clientname)
-    self.build_report(start_at,end_at, clientname).average(:working_hours)
+  def self.get_avg(start_at, end_at,client_id)
+    self.build_report(start_at,end_at, client_id).average(:working_hours)
   end
 
-  def self.get_min(start_at, end_at, clientname)
-    self.build_report(start_at,end_at, clientname).minimum(:working_hours)
+  def self.get_min(start_at, end_at, client_id)
+    self.build_report(start_at,end_at, client_id).minimum(:working_hours)
   end
 
-  def self.get_max(start_at, end_at, clientname)
-    self.build_report(start_at,end_at, clientname).maximum(:working_hours)
+  def self.get_max(start_at, end_at, client_id)
+    self.build_report(start_at,end_at, client_id).maximum(:working_hours)
   end
 
-  def self.get_days(start_at, end_at, clientname)
-    self.build_report(start_at,end_at, clientname).count
+  def self.get_days(start_at, end_at, client_id)
+    self.build_report(start_at,end_at, client_id).count
   end
 end

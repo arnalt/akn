@@ -37,8 +37,10 @@
   </tr>
 <% end %>
 </table>
-
 <br />
  <div>
    <%= link_to t("links.work_index_add_new"), new_work_path %>
+</div>
+<div>
+  <h3><%= will_paginate @works %></h3>
 </div>

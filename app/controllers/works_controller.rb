@@ -7,9 +7,8 @@ class WorksController < ApplicationController
   end
 
   def index
-
-    @works = current_user.works.order("date DESC")
-    @username = current_user.user_name
+   @works = current_user.works.paginate page: params[:page], order: 'date DESC', per_page: 15
+   @username = current_user.user_name
 
     respond_to do |format|
       format.html # index.html.erb
