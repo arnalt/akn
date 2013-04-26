@@ -10,7 +10,7 @@ FactoryGirl.define do
     working_hours 8.0
     client_id 1
     user_id 2
-    task_id 6
+    task
   end
   factory :user do
     id 2
@@ -27,8 +27,8 @@ FactoryGirl.define do
   end
   factory :client do
     id 1
-    name "client"
-    description "client"
+    sequence(:name){ |n| 'CLient name ' + n.to_s }
+    sequence(:project){ |n| 'Project name ' + n.to_s }
   end
 end
 

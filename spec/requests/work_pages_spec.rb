@@ -26,11 +26,12 @@ describe "Works pages" do
   end
 
   describe "show" do
-    let(:user)    { FactoryGirl.create(:user) }
-    let(:client)  { FactoryGirl.create(:client) }
-    let(:task)     { FactoryGirl.create(:task) }
-    let(:work)   { FactoryGirl.create(:work) }
     before do
+      user = FactoryGirl.create(:user) 
+      client = FactoryGirl.create(:client)
+      task = FactoryGirl.create(:task, :client => client)
+      work = FactoryGirl.create(:work, :task => task)
+
       sign_in user
       visit work_path(work)
     end
