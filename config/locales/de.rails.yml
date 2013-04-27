@@ -119,6 +119,9 @@ de:
       too_long: ist zu lang (nicht mehr als %{count} Zeichen)
       too_short: ist zu kurz (nicht weniger als %{count} Zeichen)
       wrong_length: hat die falsche Länge (muss genau %{count} Zeichen haben)
+      work_successfully_created: Datensatz wurde erfolreich gespeichert
+      work_successfully_updated: Datensatz wurde erfolgreich geändert
+      error: Fehler
     template:
       body: ! 'Bitte überprüfen Sie die folgenden Felder:'
       header:
@@ -283,7 +286,12 @@ de:
          end_at: "Ende"
          task: "Aufgabe"
          description: "Erläuterungen"
+      task:
+          name:"Name"
+          description:"Erläuterungen"
       client:
          project: "Projekt"
     errors:
-
+        messages:
+            save_failed: "verhindern das Speichern des Datensatzes"
+            record_invalid: "Ungültiger Datensatz"

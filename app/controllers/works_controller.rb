@@ -40,7 +40,7 @@ class WorksController < ApplicationController
     @work.client_id = Task.find(@work.task_id).client.id
     respond_to do |format|
       if @work.save
-        format.html { redirect_to works_path, notice: 'Work was successfully created.' }
+        format.html { redirect_to works_path, notice:  t('messages.work_successfully_created') }
         format.json { render json: works_path, status: :created, location: @work }
       else
         format.html { render action: "new" }
@@ -56,7 +56,7 @@ class WorksController < ApplicationController
 
       if @work.update_attributes(params[:work])
 
-        format.html { redirect_to works_path, notice: 'Work was successfully updated.' }
+        format.html { redirect_to works_path, notice: t('messages.work_successfully_updated') }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

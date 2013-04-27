@@ -4,33 +4,38 @@ describe "Works pages" do
 
   subject { page }
 
+  def valid_attributes
+    {}
+  end
+
   describe "index" do
-    let(:user)    { FactoryGirl.create(:user) }
+    let(:user) { FactoryGirl.create(:user) }
     before do
       sign_in user
       visit works_path
     end
 
-      it { should have_selector('title', text: 'Works') }
+    it { should have_selector('title', text: 'Works') }
   end
 
   describe "new" do
-    let(:user)    { FactoryGirl.create(:user) }
-    let(:work)   {FactoryGirl.create(:work)}
+    let(:user) { FactoryGirl.create(:user) }
+    let(:work) { FactoryGirl.create(:work) }
     before do
       sign_in user
       visit new_work_path
     end
 
-      it { should have_selector('title', text: 'New Works') }
+    it { should have_selector('title', text: 'New Works') }
   end
 
   describe "show" do
     before do
-      user = FactoryGirl.create(:user) 
+      user = FactoryGirl.create(:user)
       client = FactoryGirl.create(:client)
       task = FactoryGirl.create(:task, :client => client)
       work = FactoryGirl.create(:work, :task => task)
+
 
       sign_in user
       visit work_path(work)
@@ -39,14 +44,17 @@ describe "Works pages" do
     it { should have_selector('title', text: 'Works') }
   end
 
+
   describe "edit" do
-    let(:user)    { FactoryGirl.create(:user) }
-    let(:client)  { FactoryGirl.create(:client) }
-    let(:task)    {FactoryGirl.create(:task)}
-    let(:work)   { FactoryGirl.create(:work) }
     before do
+      user = FactoryGirl.create(:user)
+      client = FactoryGirl.create(:client)
+      task = FactoryGirl.create(:task, :client => client)
+      work = FactoryGirl.create(:work, :task => task)
+
+
       sign_in user
-      visit edit_work_path(work)
+      visit edit_work_path(work, { 'id' => 1})
     end
 
     it { should have_selector('title', text: 'Works') }

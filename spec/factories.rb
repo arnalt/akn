@@ -1,6 +1,10 @@
 FactoryGirl.define do
+  to_create do |instance|
+    unless instance.save
+      raise "Invalid record: " + instance.errors.full_messages.join(", ")
+    end
+  end
   factory :work do
-    id 30
     date "28.03.2013"
     week "14"
     day "Montag"
@@ -8,12 +12,12 @@ FactoryGirl.define do
     end_at "16:00"
     pause "00:30"
     working_hours 8.0
-    client_id 1
-    user_id 2
     task
+    client
+
   end
   factory :user do
-    id 2
+
     email "mustermann@example.com"
     password "foobar"
     password_confirmation "foobar"
@@ -21,12 +25,11 @@ FactoryGirl.define do
     lastname "Mustermann"
   end
   factory :task do |t|
-    t.id 6
     t.name "Task'1001"
     t.description "some task description"
+    client
   end
   factory :client do
-    id 1
     sequence(:name){ |n| 'CLient name ' + n.to_s }
     sequence(:project){ |n| 'Project name ' + n.to_s }
   end
