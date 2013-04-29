@@ -14,23 +14,22 @@ FactoryGirl.define do
     working_hours 8.0
     task
     client
-
+    user
   end
   factory :user do
-
-    email "mustermann@example.com"
+    sequence(:email){ |n| 'email' + n.to_s + '@example.com' }
     password "foobar"
     password_confirmation "foobar"
     firstname "Klaus"
     lastname "Mustermann"
   end
   factory :task do |t|
-    t.name "Task'1001"
-    t.description "some task description"
+    sequence(:name){ |n| 'Task name' + n.to_s }
+    sequence(:description){ |n| 'Task description ' + n.to_s }
     client
   end
   factory :client do
-    sequence(:name){ |n| 'CLient name ' + n.to_s }
+    sequence(:name){ |n| 'Client name ' + n.to_s }
     sequence(:project){ |n| 'Project name ' + n.to_s }
   end
 end

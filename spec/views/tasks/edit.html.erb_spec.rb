@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe "tasks/edit" do
   before(:each) do
+    FactoryGirl.create(:client)
+    FactoryGirl.create(:work)
     @task = assign(:task, stub_model(Task,
       :name => "MyString",
       :description => "MyText"

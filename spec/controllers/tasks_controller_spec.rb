@@ -24,8 +24,10 @@ describe TasksController do
   # Task. As you add validations to Task, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {:name => "Task'1001",
+     :description => "some task description"}
   end
+
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -34,19 +36,22 @@ describe TasksController do
     {}
   end
 
+  before(:each) do
+    Task.destroy_all
+    @task = FactoryGirl.create(:task)
+  end
+
   describe "GET index" do
     it "assigns all tasks as @tasks" do
-      task = Task.create! valid_attributes
       get :index, {}, valid_session
-      assigns(:tasks).should eq([task])
+      assigns(:tasks).should eq([@task])
     end
   end
 
   describe "GET show" do
     it "assigns the requested task as @task" do
-      task = Task.create! valid_attributes
-      get :show, {:id => task.to_param}, valid_session
-      assigns(:task).should eq(task)
+      get :show, {:id => @task.to_param}, valid_session
+      assigns(:task).should eq(@task)
     end
   end
 

@@ -50,11 +50,11 @@ describe "Works pages" do
       user = FactoryGirl.create(:user)
       client = FactoryGirl.create(:client)
       task = FactoryGirl.create(:task, :client => client)
-      work = FactoryGirl.create(:work, :task => task)
+      work = FactoryGirl.create(:work, :task => task, :user => user)
 
 
       sign_in user
-      visit edit_work_path(work, { 'id' => 1})
+      visit edit_work_path(work, { 'id' => work.id})
     end
 
     it { should have_selector('title', text: 'Works') }
