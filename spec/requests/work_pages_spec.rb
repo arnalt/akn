@@ -5,7 +5,7 @@ describe "Works pages" do
   subject { page }
 
   def valid_attributes
-    {}
+       {}
   end
 
   describe "index" do

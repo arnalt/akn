@@ -32,6 +32,7 @@ FactoryGirl.define do
     sequence(:name){ |n| 'Client name ' + n.to_s }
     sequence(:project){ |n| 'Project name ' + n.to_s }
   end
+
 end
 
 
