@@ -21,7 +21,7 @@ class ReportsController < ApplicationController
   end
 
   def output_pdf
-
+     @format = 'pdf'
     respond_to do |format|
       format.html { render "output.html.erb", :layout => false }
     end
@@ -34,7 +34,6 @@ class ReportsController < ApplicationController
       flash[:error] = I18n.t("messages.excel_period")
       redirect_to works_path
     else
-      @format = params[:format]
       @clientname =params[:Clientname]
       start_at = (params[:period_begin].to_s).to_date
       end_at = (params[:period_end].to_s).to_date
