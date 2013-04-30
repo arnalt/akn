@@ -28,14 +28,19 @@ describe "Works pages" do
     before do
       user = FactoryGirl.create(:user)
       client = FactoryGirl.create(:client)
+      task = FactoryGirl.create(:task, :client => client)
+      work = FactoryGirl.create(:work, :task => task, :user => user)
 
 
 
       sign_in user
       visit output_path
+
+    #  visit output_path({:id => work.id, :clientname => client.name, :period_begin => '01.04.2013', :period_end => '30.04.2013'})
     end
 
     it { should have_selector('title', text:'Output Reports') }
+
   end
 
   end
