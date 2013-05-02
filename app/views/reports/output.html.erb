@@ -1,13 +1,53 @@
+<<<<<<< HEAD
 <% provide(:title, 'Output Reports') %>
-<img src="<%= Gchart.bar(:data => @bar_chart,
-                                                 :title => 'Monthly working hours',
-                                                 :bar_colors => '76A4FB',
-                                                 :background => 'EEEEEE',
-                                                 :chart_background => 'CCCCCC',
-                                                 :legend => 'Monthly working days',
-                                                 :axis_with_labels =>  'x',
-                                                 :axis_labels => @xdata,
-                                                 :size => '700x400')%> " />
+<% if @format == 'pdf' %>
+<img src= <%=chart_pdf %> />
+<% else %>
+    <div id="hours_chart"  style="width: 860px; height: 300px;"></div>
+    <script type="text/javascript" charset="utf-8">
+        $(function() {
+            new Highcharts.Chart( {
+                chart:  {
+                    renderTo: "hours_chart"
+                },
+                title: {
+                    text: "Working hours by day"
+                } ,
+                xAxis: {
+                    type: "datetime"
+                },
+                yAxis: {
+                    title: {
+                        text: "Hours"
+                    }
+                },
+                tooltip: {
+                    formatter: function() {
+                        return Highcharts.dateFormat("%B %e %Y", this.x) + ': ' +
+                                Highcharts.numberFormat(this.y,2) + "h";
+                    }
+                },
+                legend: {
+                    title: {
+                        text: "Monthly Working Days",
+                        style: {
+                            fontStyle: "italic"
+                        }
+                    },
+                    width: 160,
+                    legendItemWidth: 100
+                },
+                series: [{
+                    pointInterval: <%= 1.day * 1000 %>,
+                    pointStart: <%= @works.first.date.to_datetime.to_i * 1000 %>,
+                    type: "column",
+                    data: <%= (@works.first.date..@works.last.date).map { |date| Work.total_on(date,@works).to_f}.inspect %> ,
+                    name: "Hours by day"
+                }]
+            });
+        } );
+    </script>
+<% end %>
 <table>
   <div><%= t("messages.report_month") %><%= @akt_monat %> </div>
   <tr>

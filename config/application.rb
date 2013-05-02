@@ -58,6 +58,7 @@ module Akn
 
     config.gem "lazy_high_charts"
 
+
     config.generators do |g|
       g.test_framework :rspec,
                        :fixtures => true,
@@ -68,6 +69,9 @@ module Akn
                        :request_specs => true
       g.fixture_replacement :factory_girl, :dir => "spec/factories"
     end
+
+
+    config.middleware.use "PDFKit::Middleware", :print_media_type => true
 
   end
 end

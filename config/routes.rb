@@ -17,6 +17,9 @@ Akn::Application.routes.draw do
     get "reports/output"
     get "reports/sel"
 
+    get "reports/pdf", as: :pdf
+    post "reports/output_pdf", as: :output_pdf
+
 
     resources :tasks do
       collection do
