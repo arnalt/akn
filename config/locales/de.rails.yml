@@ -251,7 +251,7 @@ de:
      work_index_edit: "Ändern"
      work_index_delete: "Löschen"
      work_index_show: "Anzeigen"
-     work_index_add_new: "Neuer Tag erfassen"
+     work_index_add_new: "Neuen Tag erfassen"
      button_save: "Speichern"
      button_back: "Zurück"
      button_show: "Anzeigen"
@@ -266,6 +266,7 @@ de:
      report_days: "Tage:"
      empty_work: "Für die ausgewählte Periode sind keine Daten vorhanden oder die Sprache wurde geändert!"
      report_month: "Monat: "
+     work_successfully_created: "Datensatz erfolgreich angelegt"
   # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
   activemodel:
     user: "Benutzer"

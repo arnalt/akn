@@ -67,11 +67,17 @@ class ClientsController < ApplicationController
 
   def destroy
     @client = Client.find(params[:id])
+    begin
     @client.destroy
 
     respond_to do |format|
       format.html { redirect_to clients_url }
       format.json { head :no_content }
+    end
+    rescue ActiveRecord::DeleteRestrictionError => e
+      @client.errors.add(:base, e)
+      flash[:error] = "#{e}"
+      redirect_to clients_path
     end
   end
 

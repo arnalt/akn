@@ -50,9 +50,14 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    begin
     User.find(params[:id]).destroy
     flash[:success] = "User destroyed."
     redirect_to users_path
+    rescue ActiveRecord::DeleteRestrictionError => e
+       flash[:error] = "#{e}"
+      redirect_to users_path
+    end
   end
 
   def signed_in_user

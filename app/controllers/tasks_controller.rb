@@ -15,8 +15,8 @@ class TasksController < ApplicationController
   # GET /tasks/1
   # GET /tasks/1.json
   def show
-   @task = Task.find(params[:id])
-   @works = [ ]
+    @task = Task.find(params[:id])
+    @works = []
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @task }
@@ -75,18 +75,23 @@ class TasksController < ApplicationController
   # DELETE /tasks/1.json
   def destroy
     @task = Task.find(params[:id])
-    @task.destroy
-
-    respond_to do |format|
-      format.html { redirect_to tasks_url }
-      format.json { head :no_content }
+    begin
+      @task.destroy
+      respond_to do |format|
+        format.html { redirect_to tasks_url }
+        format.json { head :no_content }
+      end
+    rescue ActiveRecord::DeleteRestrictionError => e
+      @task.errors.add(:base, e)
+      flash[:error] = "#{e}"
+      redirect_to tasks_path
     end
   end
 
   def report
     @task = Task.find(params[:id])
     @works = current_user.works.build_works_by_task(@task.id)
-    @total_std =  current_user.works.build_works_by_task(@task.id).sum(:working_hours).to_f
+    @total_std = current_user.works.build_works_by_task(@task.id).sum(:working_hours).to_f
     respond_to do |format|
       format.html { render 'show.html.erb' }
     end
