@@ -31,15 +31,20 @@ describe "Works pages" do
       task = FactoryGirl.create(:task, :client => client)
       work = FactoryGirl.create(:work, :task => task, :user => user)
 
-
-
       sign_in user
-      visit output_path
+      visit input_path
+      fill_in "Client",            with: client.name
+      fill_in "Start_at",         with: work.start_at
+      fill_in "End_at",            with: work.end_at
+      click_button "GO"
+
+
+
 
     #  visit output_path({:id => work.id, :clientname => client.name, :period_begin => '01.04.2013', :period_end => '30.04.2013'})
     end
 
-    it { should have_selector('title', text:'Output Reports') }
+   it { should have_selector('title', text:'Output Reports') }
 
   end
 
