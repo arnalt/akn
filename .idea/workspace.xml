@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9347eff-de8d-4721-b6f5-e33c36fba2b5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/reports_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/reports_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="akn.iws" />
@@ -19,7 +19,7 @@
     <file path="/application.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1366010735912" ignored="false" />
     <file path="/excel_controller.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1363164969509" ignored="false" />
     <file path="/routes.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1366791668921" ignored="false" />
-    <file path="/Dummy.txt" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1367652929400" ignored="false" />
+    <file path="/Dummy.txt" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1367735558134" ignored="false" />
     <file path="/environment.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1365579184028" ignored="false" />
     <file path="/win32ole.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1362156475230" ignored="false" />
     <file path="/Gemfile" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1367569168409" ignored="false" />
@@ -42,7 +42,7 @@
     <file path="/show.xls.erb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1363712001087" ignored="false" />
     <file path="/home.html.erb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1367307575244" ignored="false" />
     <file path="/application_helper.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1364198197928" ignored="false" />
-    <file path="/_header.html.erb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1366631611506" ignored="false" />
+    <file path="/_header.html.erb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1367736059238" ignored="false" />
     <file path="/_footer.html.erb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1364209180194" ignored="false" />
     <file path="/20130319155038_create_clients.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1363708348527" ignored="false" />
     <file path="/clients.css.scss" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1363708869407" ignored="false" />
@@ -77,7 +77,7 @@
     <file path="/20130408134712_rename_attributes_in_works.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1365430146272" ignored="false" />
     <file path="/20130408141157_rename_field_wday_to_day.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1365431045894" ignored="false" />
     <file path="/20130408142633_rename_fields_in_users.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1365431265598" ignored="false" />
-    <file path="/output.html.erb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1367306330073" ignored="false" />
+    <file path="/output.html.erb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1367735898408" ignored="false" />
     <file path="/20130409080106_rename_field_hours_to_working_hours.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1365494641282" ignored="false" />
     <file path="/boot.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1365496720285" ignored="false" />
     <file path="/seeds.rb" changelist="b9347eff-de8d-4721-b6f5-e33c36fba2b5" time="1367569530697" ignored="false" />
@@ -145,7 +145,7 @@
       <file leaf-file-name="pdf.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/reports/pdf.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -154,7 +154,7 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/reports/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -163,16 +163,27 @@
       <file leaf-file-name="output.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/reports/output.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="1" column="29" selection-start="65" selection-end="65" vertical-scroll-proportion="-0.71875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reports_helper.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_header.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="48" selection-start="807" selection-end="807" vertical-scroll-proportion="0.57231724">
+              <folding>
+                <element signature="e#2008#2029#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reports_helper.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/reports_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="65" selection-start="682" selection-end="682" vertical-scroll-proportion="0.32624114">
+            <state line="10" column="65" selection-start="682" selection-end="682" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -201,10 +212,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/spec/requests/report_pages_spec.rb" />
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
         <option value="$PROJECT_DIR$/config/locales/de.rails.yml" />
-        <option value="$PROJECT_DIR$/app/views/reports/output.html.erb" />
         <option value="$PROJECT_DIR$/app/models/task.rb" />
         <option value="$PROJECT_DIR$/app/views/tasks/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
@@ -217,6 +226,8 @@
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/controllers/reports_controller.rb" />
         <option value="$PROJECT_DIR$/app/helpers/reports_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/reports/output.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
       </list>
     </option>
   </component>
@@ -259,8 +270,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -763,6 +772,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -778,9 +789,9 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Rails.Development: akn">
     <configuration default="false" name="All specs in: spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
@@ -1061,6 +1072,13 @@
       <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -1090,13 +1108,6 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
@@ -1311,7 +1322,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329233" sideWeight="0.6382429" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298397" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44356006" sideWeight="0.56623375" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45224312" sideWeight="0.56623375" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1396,13 +1407,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/locales/de.rails.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/task.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="41" selection-start="72" selection-end="92" vertical-scroll-proportion="0.0" />
@@ -1482,17 +1486,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/reports/output.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/reports_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="10" column="65" selection-start="682" selection-end="682" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/reports_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/reports/output.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="65" selection-start="682" selection-end="682" vertical-scroll-proportion="0.32624114">
+        <state line="1" column="29" selection-start="65" selection-end="65" vertical-scroll-proportion="-0.71875">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="48" selection-start="807" selection-end="807" vertical-scroll-proportion="0.57231724">
+          <folding>
+            <element signature="e#2008#2029#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
