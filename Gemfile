@@ -8,6 +8,7 @@ gem 'jquery_datepicker'
 gem 'lazy_high_charts', '1.4.1'
 gem 'pdfkit'
 gem 'googlecharts', '1.6.8'
+gem 'mail', '2.4.4'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

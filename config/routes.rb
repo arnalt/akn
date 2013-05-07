@@ -21,6 +21,7 @@ Akn::Application.routes.draw do
     post "reports/output_pdf", as: :output_pdf
 
 
+
     resources :tasks do
       collection do
         get ':id/report' => 'tasks#report', as: 'report'

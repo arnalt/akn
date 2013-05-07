@@ -1,8 +1,13 @@
 <div class="select">
-  <%=  label_tag t("text.work_index_client") %>
-  <%=  select_tag 'clientname', options_for_select(Client.all.map {|d| d.name}) %><br>
-  <%=  label_tag t("text.work_index_start_at") %>
-  <%=  datepicker :period_begin,  params[:period_begin],dateFormat: 'dd.mm.yy'  %> <br>
-  <%=  label_tag t("text.work_index_end_at") %>
-  <%=  datepicker :period_end,  params[:period_end],dateFormat: 'dd.mm.yy'  %>
+  <%= label_tag t("text.work_index_client") %>
+  <%= select_tag 'clientname', options_for_select(Client.all.map { |d| d.name }) %>
+  <br>
+  <%= label_tag t("text.work_index_start_at") %>
+  <%= datepicker :period_begin, params[:period_begin], dateFormat: 'dd.mm.yy' %> <br>
+  <%= label_tag t("text.work_index_end_at") %>
+  <%= datepicker :period_end, params[:period_end], dateFormat: 'dd.mm.yy' %> <br>
+  <% if @format == 'html' %>
+      <%= label_tag t("messages.report_per_email")  %>
+      <%= select_tag :email, options_for_select([ t("messages.report_per_email_no"), t("messages.report_per_email_yes")]) %>
+  <% end %>
 </div>

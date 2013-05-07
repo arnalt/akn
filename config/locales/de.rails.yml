@@ -267,6 +267,9 @@ de:
      empty_work: "Für die ausgewählte Periode sind keine Daten vorhanden oder die Sprache wurde geändert!"
      report_month: "Monat: "
      work_successfully_created: "Datensatz erfolgreich angelegt"
+     report_per_email: "Report per E-Mail senden"
+     report_per_email_yes: "ja"
+     report_per_email_no: "nein"
   # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
   activemodel:
     user: "Benutzer"

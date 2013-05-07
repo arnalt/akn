@@ -3,18 +3,27 @@ class ReportsController < ApplicationController
   before_filter :check_work, only: [:output, :output_pdf]
 
   def input
+    @format = 'html'
   end
 
   def excel
+    @format = 'xls'
   end
 
   def pdf
+    @format = 'pdf'
   end
 
   def output
-    respond_to do |format|
-      format.html
-      format.xls
+    if params[:email] == t("messages.report_per_email_yes")
+      UserMailer.report_email(current_user, @works, @xdata, @bar_chart,
+                              @w_avg, @w_days, @w_max, @w_min).deliver
+      flash[:notice] = 'E-Mail sent successfully'
+    else
+      respond_to do |format|
+        format.html
+        format.xls
+      end
     end
   end
 
@@ -24,6 +33,7 @@ class ReportsController < ApplicationController
       format.html { render "output.html.erb", :layout => false }
     end
   end
+
 
   def check_period
     if params[:format] == "xls" and
@@ -58,7 +68,7 @@ class ReportsController < ApplicationController
         @w_days = current_user.works.get_days(@start_at, @end_at, @client_id)
       end
     end
-   end
+  end
 end
 
 

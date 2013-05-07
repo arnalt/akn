@@ -183,6 +183,7 @@ DEPENDENCIES
   jquery-rails
   jquery_datepicker
   lazy_high_charts (= 1.4.1)
+  mail (= 2.4.4)
   pdfkit
   pg
   rails (= 3.2.1)

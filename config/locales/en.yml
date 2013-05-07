@@ -273,6 +273,9 @@ en:
      empty_work: "Couldn't find data for the selected period or language changed!"
      report_month: "Month: "
      work_successfully_created: "Work successfully created"
+     report_per_email: "Report sending per email"
+     report_per_email_yes: "yes"
+     report_per_email_no: "no"
 # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
 
   activemodel:
