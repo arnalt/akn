@@ -1,7 +1,7 @@
 class UserMailer < ActionMailer::Base
   default from: "reports@example.com"
 
-   def  report_email(user, works, xdata, bar_chart, w_avg, w_days, w_max, w_min)
+   def  report_email(email, works,  xdata, bar_chart, w_avg, w_days, w_max, w_min, formatpdf)
        @works = works
        @xdata = xdata
        @bar_chart = bar_chart
@@ -9,9 +9,11 @@ class UserMailer < ActionMailer::Base
        @w_days = w_days
        @w_max = w_max
        @w_min = w_min
-        mail( :to => user.email,
+       @format = formatpdf
+        mail( :to => email.to_s,
                   :subject => 'Monthly report') do |format|
-          format.html { render 'reports/output',  :layout => false }
+          format.html { render 'reports/output', :layout => false }
+
         end
    end
   end

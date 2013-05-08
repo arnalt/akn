@@ -252,6 +252,8 @@ en:
     tasks_save: "Save task"
     tasks_edit: "Editing Task"
     work_new_title: "Create Work"
+    report_per_email: "Report sending per email"
+    report_email: "Email"
   links:
      work_index_edit: "Edit"
      work_index_delete: "Delete"
@@ -264,8 +266,6 @@ en:
      button_save_changes: "Save changes"
      button_avatar_change: "change"
      tasks_report: "Generate report"
-
-
   messages:
      excel_period: "Excel-Sheet should have data for one month only"
      report_average: "Average:"
@@ -273,9 +273,9 @@ en:
      empty_work: "Couldn't find data for the selected period or language changed!"
      report_month: "Month: "
      work_successfully_created: "Work successfully created"
-     report_per_email: "Report sending per email"
-     report_per_email_yes: "yes"
-     report_per_email_no: "no"
+     report_email_missing: "'You need to add a email address for sending emails"
+     report_email_invalid: "Email is invalid"
+     report_email_sent: "Email successfully transmitted"
 # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
 
   activemodel:
