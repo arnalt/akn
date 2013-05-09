@@ -6,10 +6,15 @@
   <%= datepicker :period_begin, params[:period_begin], dateFormat: 'dd.mm.yy' %> <br>
   <%= label_tag t("text.work_index_end_at") %>
   <%= datepicker :period_end, params[:period_end], dateFormat: 'dd.mm.yy' %> <br>
+</div>
   <% if @format == 'pdf' %>
-        <%= label_tag t("text.report_per_email")   %>
-        <%= check_box_tag :sending_email, value = '1', checked = false %>
+    <div class="controls">
+      <label class="checkbox">
+        <%= check_box_tag :sending_email, value = '1', checked = false %>  <%= t("text.report_per_email")   %>
+     </label>
+    </div>
+    <div class="select">
         <%= label_tag t("text.report_email")  %>
       <%= text_field_tag :email %>
+    </div>
   <% end %>
-</div>
