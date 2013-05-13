@@ -26,16 +26,19 @@ describe "Works pages" do
 
   describe "output" do
     before do
-      user = FactoryGirl.create(:user)
-      client = FactoryGirl.create(:client)
-      task = FactoryGirl.create(:task, :client => client)
-      work = FactoryGirl.create(:work, :task => task, :user => user)
+     # user = FactoryGirl.create(:user)
+     # client = FactoryGirl.create(:client)
+     # task = FactoryGirl.create(:task, :client => client)
+    #  work = FactoryGirl.create(:work, :task => task, :user => user)
+
+     user = User.first
+     client = Client.first
 
       sign_in user
       visit input_path
       fill_in "Client",            with: client.name
-      fill_in "Start_at",         with: work.start_at
-      fill_in "End_at",            with: work.end_at
+      fill_in "Start_at",         with: Work.start_at
+      fill_in "End_at",            with: Work.work.end_at
       click_button "GO"
 
 

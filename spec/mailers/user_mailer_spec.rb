@@ -2,8 +2,8 @@ require "spec_helper"
 
 describe UserMailer do
   describe "report_email" do
+    let(:works)   { Work.all }
     let(:recipient) { "altenhofer@web.de" }
-    let(:works) { Work.all }
     let(:xdata) { ['01', '02', '03', '04', '05']}
     let(:bar_chart) { [8.0, 7.0, 9.0, 8.0, 8.0]}
     let(:w_avg)    {8}
