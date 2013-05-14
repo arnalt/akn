@@ -23,6 +23,13 @@ describe ReportsController do
      post("/reports/output").should route_to("reports#output")
     end
 
+    it "routes to #output_pdf" do
+      post("/reports/output_pdf").should route_to("reports#output_pdf")
+    end
+
+    it "routes to #pdf" do
+      get("/reports/pdf").should route_to("reports#pdf")
+    end
 
   end
 end
