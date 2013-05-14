@@ -15,7 +15,6 @@ class ReportsController < ApplicationController
   end
 
   def output
-
     respond_to do |format|
       format.html
       format.xls
@@ -72,7 +71,7 @@ class ReportsController < ApplicationController
     else
       @start_at = (params[:period_begin].to_s).to_date
       @end_at = (params[:period_end].to_s).to_date
-      if   Client.get_client_id(params[:clientname]).empty?
+      if Client.get_client_id(params[:clientname]).empty?
         flash[:error] = I18n.t("messages.empty_work")
         redirect_to works_path
       else
