@@ -48,7 +48,6 @@ class ReportsController < ApplicationController
     end
   end
 
-
   def check_period
     if params[:period_begin] == [""] or
         params[:period_end] == [""]
