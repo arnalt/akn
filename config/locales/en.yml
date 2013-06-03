@@ -254,6 +254,7 @@ en:
     work_new_title: "Create Work"
     report_per_email: "Report sending per email"
     report_email: "Email"
+    user_all_user: "All users"
   links:
      work_index_edit: "Edit"
      work_index_delete: "Delete"
@@ -273,6 +274,7 @@ en:
      empty_work: "Couldn't find data for the selected period or language changed!"
      report_month: "Month: "
      work_successfully_created: "Work successfully created"
+     work_successfully_updated: "Work successfully updated"
      report_email_missing: "'You need to add a email address for sending emails"
      report_email_invalid: "Email is invalid"
      report_email_sent: "Email successfully transmitted"

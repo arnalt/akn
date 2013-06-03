@@ -1,6 +1,6 @@
 <div class="select">
   <%= label_tag t("text.work_index_client") %>
-  <%= select_tag 'clientname', options_for_select(Client.all.map { |d| d.name }) %>
+  <%= select_tag 'clientname', options_for_select(Client.all.map { |d| d.name+' ' + d.project }) %>
   <br>
   <%= label_tag t("text.work_index_start_at") %>
   <%= datepicker :period_begin, params[:period_begin], dateFormat: 'dd.mm.yy' %> <br>

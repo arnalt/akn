@@ -1,9 +1,14 @@
-<% provide(:title,  @user.lastname) %>
+<% provide(:title, @user.lastname) %>
 <div class="row">
   <aside>
     <section>
       <h1>
-        <%= gravatar_for @user %>
+        <% if @user.photo.present?%>
+            <%= image_tag @user.photo, :size => '64x64' %>
+
+        <% else %>
+            <%= image_tag "rails.png", :size => '64x64' %>
+        <% end %>
         <%= @user.firstname %>
         <%= @user.lastname %>
       </h1>

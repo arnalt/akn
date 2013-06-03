@@ -7,7 +7,7 @@ class WorksController < ApplicationController
   end
 
   def index
-   @works = current_user.works.paginate page: params[:page], order: 'date DESC', per_page: 15
+   @works = current_user.works
    @username = current_user.user_name
 
     respond_to do |format|
@@ -18,7 +18,11 @@ class WorksController < ApplicationController
 
 
   def show
-
+    @work = Work.find(params[:id])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @work }
+    end
   end
 
 

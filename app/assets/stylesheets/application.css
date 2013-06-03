@@ -9,21 +9,8 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *     #9c9;  #bfb;  #141;
  *= require_self
+ *= require jquery.ui.core
+ *= require jquery.ui.theme
+ *= require dataTables/src/demo_table_jui
  *= require_tree .
 */
-@media print {
-     body {
-       background-color: #FFF;
-     }
-
-     #container {
-       with: auto;
-       margin:  0;
-       padding:  0;
-       border:  none;
-     }
-
-     #lines_items {
-       page-break-before: always;
-     }
-}

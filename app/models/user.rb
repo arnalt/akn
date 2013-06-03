@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
-  attr_accessible :firstname, :lastname, :email, :password, :password_confirmation
+  attr_accessible :firstname, :lastname, :email, :password, :password_confirmation, :photo
   has_many :works, dependent: :restrict
   has_secure_password
+  has_attached_file :photo
 
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
@@ -18,6 +19,7 @@ class User < ActiveRecord::Base
   def user_name
     "#{firstname} #{lastname}"
   end
+
 
   private
   def create_remember_token

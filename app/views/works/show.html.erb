@@ -1,1 +1,42 @@
 <% provide(:title, 'Works') %>
+
+<% if @notice != nil %>
+    <p id="notice"><%= @notice %></p>
+<% end %>
+<div>
+  <table class="table table-bordered">
+    <br><br>
+    <tr >
+      <td><b>Date:</b></td>
+      <td><%= l @work.date %></td>
+    </tr>
+    <tr>
+      <td><b>Week:</b></td>
+      <td><%= @work.week %></td>
+    </tr>
+    <tr">
+    <td><b>Start_at:</b></td>
+    <td><%= l @work.start_at, format: :short %></td>
+    </tr>
+    <tr>
+      <td><b>End_at:</b></td>
+      <td><%= l @work.end_at, format: :short %></td>
+    </tr>
+    <tr>
+      <td><b>Pause:</b></td>
+      <td><%= l @work.pause, format: :short %></td>
+    </tr>
+    <tr>
+      <td><b>Client:</b></td>
+      <td><%= @work.client.name %></td>
+    </tr>
+    <tr>
+      <td><b>Project:</b></td>
+      <td><%= @work.task.name %></td>
+    </tr>
+    <tr>
+      <td><b>Description:</b></td>
+      <td><%= @work.description %></td>
+    </tr>
+</div>
+</table>

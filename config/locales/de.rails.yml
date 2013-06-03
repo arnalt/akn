@@ -249,6 +249,7 @@ de:
     work_new_title: "Arbeitstag erfassen"
     report_per_email: "Report per E-Mail senden"
     report_email: "E-Mail"
+    user_all_user: "Benutzer"
   links:
      work_index_edit: "Ändern"
      work_index_delete: "Löschen"
@@ -269,6 +270,7 @@ de:
      empty_work: "Für die ausgewählte Periode sind keine Daten vorhanden oder die Sprache wurde geändert!"
      report_month: "Monat: "
      work_successfully_created: "Datensatz erfolgreich angelegt"
+     work_successfully_updated: "Datensatz erfolgreich geändert !"
      report_email_missing: "Geben Sie bitte eine E-Mail-Adresse an"
      report_email_invalid: "Die angegebene E-Mail-Adresse ist ungültig"
      report_email_sent: "Die E-Mail wurde erfolfreich versendet"

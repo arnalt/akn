@@ -1,27 +1,28 @@
 <% provide(:title, 'Works') %>
 <h5><%= @username %></h5>
 
-<table>
+<table id="works" class="display">
+  <thead>
   <tr>
-    <th width="100px"><%= t("text.work_index_date") %></th>
-    <th width="20px"><%= t("text.work_index_week") %></th>
-    <th width="100px"><%= t("text.work_index_day") %></th>
-    <th width="100px"><%= t("text.work_index_start_at") %></th>
-    <th width="100px"><%= t("text.work_index_end_at") %></th>
-    <th width="100px">Pause</th>
-    <th width="40px"><%= t("text.work_index_hours") %></th>
-    <th width="100px"><%= t("text.work_index_project") %></th>
-    <th width="100px"><%= t("text.work_index_client") %></th>
-    <th width="100px"><%= t("text.work_index_task") %></th>
-    <th width="100px"><%= t("text.work_index_describ") %></th>
-
+    <th><%= t("text.work_index_date") %></th>
+    <th><%= t("text.work_index_week") %></th>
+    <th><%= t("text.work_index_start_at") %></th>
+    <th><%= t("text.work_index_end_at") %></th>
+    <th>Pause</th>
+    <th><%= t("text.work_index_hours") %></th>
+    <th><%= t("text.work_index_project") %></th>
+    <th><%= t("text.work_index_client") %></th>
+    <th><%= t("text.work_index_task") %></th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
-
-<% @works.each do |work| %>
+  </thead>
+  <tbody>
+ <% @works.each do |work| %>
   <tr>
     <td><%= l work.date %></td>
     <td><%= work.week %></td>
-    <td><%=  work.day %></td>
     <td><%= l work.start_at, format: :short %></td>
     <td><%= l work.end_at, format: :short %></td>
     <td><%= l work.pause, format: :short %></td>
@@ -29,18 +30,14 @@
     <td><%= work.client.project %></td>
     <td><%= work.client.name %></td>
     <td><%= work.task.name %></td>
-    <td><%= work.description %></td>
-    <td></td><td></td><td></td>
-
+   <td><%= link_to t("links.work_index_show"), work_path(work)%></td>
     <td><%= link_to t("links.work_index_edit"), edit_work_path(work) %></td>
     <td><%= link_to t("links.work_index_delete"), work, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
+  </tbody>
 </table>
 <br />
  <div>
    <%= link_to t("links.work_index_add_new"), new_work_path %>
-</div>
-<div>
-  <%= will_paginate @works %>
 </div>
