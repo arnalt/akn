@@ -21,8 +21,8 @@ Akn::Application.configure do
       :address => 'smtp.gmail.com',
       :port => 587,
       :domain => 'gmail.com',
-      :user_name => 'arno.altenhofer@gmail.com',
-      :password => 'aa72aabb',
+      :user_name => '@gmail.com',
+      :password => 'xxxxxxxx',
       :authentication => 'plain',
       :enable_starttls_auto => true
   }
