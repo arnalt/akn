@@ -255,6 +255,8 @@ en:
     report_per_email: "Report sending per email"
     report_email: "Email"
     user_all_user: "All users"
+    user_show_firstname: "Firstname"
+    user_show_lastname: "Lastname"
   links:
      work_index_edit: "Edit"
      work_index_delete: "Delete"

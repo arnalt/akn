@@ -12,7 +12,7 @@
 </p>
 
 <% unless @works.empty? %>
-<table>
+<table class="table table-bordered">
   <tr>
     <th width="100px"><%= t("text.work_index_date") %></th>
     <th width="20px"><%= t("text.work_index_week") %></th>
@@ -25,8 +25,7 @@
     <th width="100px"><%= t("text.work_index_client") %></th>
     <th width="100px"><%= t("text.work_index_describ") %></th>
 
-  </tr>
-
+   </tr>
   <% @works.each do |work| %>
       <tr>
         <td><%= l work.date %></td>
@@ -39,13 +38,16 @@
         <td><%= work.client.project %></td>
         <td><%= work.client.name %></td>
         <td><%= work.description %></td>
-        <td></td><td></td><td></td>
+
 
       </tr>
   <% end %>
   <tr>
     <td colspan="6">Total</td>
     <td><%= number_with_precision(@total_std, :precision => 2) %></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
 </table>
 <% end %>

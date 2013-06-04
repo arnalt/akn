@@ -203,7 +203,7 @@ de:
     password: "Passwort"
     login: "Log in"
     newuser?: "Neuer Benutzer?"
-    akn_title: "ARBEITSKOSTENNACHWEIS"
+    akn_title: "ARBEITSKOSTEN"
     menu_works: "Arbeitstage"
     menu_display: "Bildschirmausgabe"
     menu_excel: "Excelausgabe"
@@ -250,6 +250,8 @@ de:
     report_per_email: "Report per E-Mail senden"
     report_email: "E-Mail"
     user_all_user: "Benutzer"
+    user_show_firstname: "Vorname"
+    user_show_lastname: "Nachname"
   links:
      work_index_edit: "Ändern"
      work_index_delete: "Löschen"

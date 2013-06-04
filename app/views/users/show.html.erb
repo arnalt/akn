@@ -3,7 +3,7 @@
   <aside>
     <section>
       <h1>
-        <% if @user.photo.present?%>
+        <% if @user.photo.present? %>
             <%= image_tag @user.photo, :size => '64x64' %>
 
         <% else %>
@@ -12,6 +12,21 @@
         <%= @user.firstname %>
         <%= @user.lastname %>
       </h1>
+      <table class="table table-bordered">
+        <br><br>
+        <tr>
+          <td><b><%= t("text.user_show_firstname") %>:</b></td>
+          <td><%= @user.firstname %></td>
+        </tr>
+        <tr>
+          <td><b><%= t("text.user_show_lastname") %>:</b></td>
+          <td><%= @user.lastname %></td>
+        </tr>
+        <tr>
+        <td><b>E-Mail</b></td>
+        <td><%= @user.email %></td>
+        </tr>
+      </table>
     </section>
   </aside>
 </div>
