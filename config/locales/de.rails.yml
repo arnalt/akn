@@ -252,6 +252,7 @@ de:
     user_all_user: "Benutzer"
     user_show_firstname: "Vorname"
     user_show_lastname: "Nachname"
+    login_or_email: "Login-Name oder E-Mail"
   links:
      work_index_edit: "Ändern"
      work_index_delete: "Löschen"
@@ -290,6 +291,7 @@ de:
          password_digest: "Passwort"
          password_confirmation: "Passwortbestätigung"
          password: "Passwort"
+         login: "Login-Name"
       work:
          date: "Datum"
          start_at: "Beginn"
