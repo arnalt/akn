@@ -1,0 +1,10 @@
+<% provide(:title, 'Admperiod Reports') %>
+<div class="row">
+  <div class="offset1">
+    <h4><%= t("text.input_title") %></h4>
+    <%=  form_tag admout_path do %>
+        <%= render 'fields' %>
+        <%=  submit_tag "GO"   %>
+    <% end %>
+  </div>
+</div>

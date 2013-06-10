@@ -12,7 +12,9 @@ Akn::Application.routes.draw do
     delete "logout" => "sessions#destroy", as: "logout"
 
     get "reports/input", as: :input
+    get "reports/admperiod", as: :admperiod
     post "reports/output", as: :output
+    post "reports/admout", as: :admout
     get "reports/excel", as: :excel
     get "reports/output"
     get "reports/sel"

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130605112515) do
+ActiveRecord::Schema.define(:version => 20130610065750) do
 
   create_table "clients", :force => true do |t|
     t.string   "name"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(:version => 20130605112515) do
     t.integer  "user_id"
     t.integer  "client_id"
     t.integer  "task_id"
+    t.boolean  "passed"
   end
 
 end

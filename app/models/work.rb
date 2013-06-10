@@ -17,6 +17,18 @@ class Work < ActiveRecord::Base
     where("task_id = ?", task_id )
   end
 
+  def self.report_passed(user_id,start_at, end_at, client_id)
+    where("user_id = ? and date >= ? and date <= ? and client_id = ?", user_id, start_at, end_at, client_id).update_all(:passed => true)
+  end
+
+  def self.report_user_passed(start_at, end_at, client_id)
+    where("date >= ? and date <= ? and client_id = ?", start_at, end_at, client_id).update_all(:passed => true)
+  end
+
+  def self.report_unpassed(user_id,start_at, end_at, client_id)
+    where("user_id = ? and date >= ? and date <= ? and client_id = ?", user_id,start_at, end_at, client_id).update_all(:passed =>false)
+  end
+
   def complete_work
     self.client_id = Task.find(self.task_id).client_id
     @arr = I18n.t("date.day_names")
