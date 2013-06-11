@@ -3,7 +3,8 @@
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
- $grayLight: #d3d3d3;
+$grayLight: #d3d3d3;
+$gray: #808080;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
