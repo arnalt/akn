@@ -1,20 +1,34 @@
+<% if @report.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-error">
+        The form contains <%= pluralize(@report.errors.count, "error") %>.
+      </div>
+      <ul>
+        <% @report.errors.full_messages.each do |msg| %>
+            <li>* <%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
 <div class="select">
-  <%= label_tag t('messages.report_user') %>
-  <%= select_tag "user", options_for_select(@users.each.map { |u| u.lastname+' '+u.id.to_s} )%>
-  <%= label_tag t("text.work_index_client") %>
-  <%= select_tag 'clientname', options_for_select(Client.all.map { |d| d.name+' ' + d.project }) %>
+  <%= f.label t('messages.report_user') %>
+  <%= f.select :username, options_for_select(@users.each.map { |u| u.lastname+' '+u.id.to_s }) %>
+  <%= f.label t("text.work_index_client") %>
+  <%= f.select :clientname, options_for_select(Client.all.map { |d| d.name+' ' + d.project }) %>
   <br>
-  <%= label_tag t("text.work_index_start_at") %>
-  <%= datepicker :period_begin, params[:period_begin], dateFormat: 'dd.mm.yy' %> <br>
-  <%= label_tag t("text.work_index_end_at") %>
-  <%= datepicker :period_end, params[:period_end], dateFormat: 'dd.mm.yy' %> <br>
+  <%= f.label t("text.work_index_start_at") %>
+  <%= f.datepicker :period_begin, dateFormat: 'dd.mm.yy' %> <br>
+  <%= f.label t("text.work_index_end_at") %>
+  <%= f.datepicker :period_end, dateformat: 'dd.mm.yy' %> <br>
   <label class="radio">
-    <%= radio_button_tag :passed, value= '1' %>
+    <%= f.radio_button :passed, value= '1' %>
     <%= t('messages.report_passed') %>
   </label>
   <label class="radio">
-    <%= radio_button_tag :passed, value='2' %>
+    <%= f.radio_button :passed, value='2' %>
     <%= t('messages.report_passed_op2') %>
   </label>
+</div>
 
 

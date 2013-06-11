@@ -266,6 +266,7 @@ de:
      button_save_changes: "Änderungen speichern"
      button_avatar_change: "Avatar ändern"
      tasks_report: "Report generieren"
+     report_exec: "Ausführen"
 
   messages:
      excel_period: "Das Excel-Sheet sollte nur Daten eines Monats enthalten!"

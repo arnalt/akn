@@ -30,9 +30,16 @@ Akn::Application.routes.draw do
       end
     end
 
+    resources :users do
+      collection do
+        get ':id/report' => 'users#report', as: 'report'
+      end
+    end
+
     resources :works
     resources :clients
     resources :users
+   resources :reports, only:  :create
    #  resources :tasks
 
 

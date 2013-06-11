@@ -17,29 +17,36 @@ class ReportsController < ApplicationController
 
   def admperiod
     @users = User.all
-
+    @report = Report.new
   end
 
-  def admout
-    @start_at = (params[:period_begin].to_s).to_date
-    @end_at = (params[:period_end].to_s).to_date
-    @clientname = params[:clientname].to_s
-    @client = @clientname.split(' ').at(0)
-    @project = @clientname.split(' ').at(1)
-    @user_id = params[:user].to_s.split(' ').at(1).to_i
-    if Client.get_client_id(@client, @project).empty?
-      flash[:error] = I18n.t("messages.empty_work")
-      redirect_to works_path
+  def create
+    @report = Report.new(params[:report])
+    if @report.valid?
+      @start_at = @report.period_begin.to_s.to_date
+      @end_at = @report.period_end.to_s.to_date
+      @clientname = @report.clientname.to_s
+      @client = @clientname.split(' ').at(0)
+      @project = @clientname.split(' ').at(1)
+      @user_id =@report.username.to_s.split(' ').at(1).to_i
+
+      if Client.get_client_id(@client, @project).empty?
+        flash[:error] = I18n.t("messages.empty_work")
+        redirect_to works_path
+      else
+        @client_id = Client.get_client_id(@client, @project).at(0).id
+        if @report.passed == '1'
+          Work.report_passed(@user_id, @start_at, @end_at, @client_id)
+        end
+        if @report.passed == '2'
+          Work.report_unpassed(@user_id, @start_at, @end_at, @client_id)
+        end
+        flash[:error] = "OK"
+        redirect_to works_path
+      end
     else
-      @client_id = Client.get_client_id(@client, @project).at(0).id
-      if params[:passed] == '1'
-        Work.report_passed(@user_id, @start_at, @end_at, @client_id)
-      end
-      if params[:passed] == '2'
-        Work.report_unpassed(@user_id, @start_at, @end_at, @client_id)
-      end
-      flash[:error] = "OK"
-      redirect_to works_path
+      @users = User.all
+      render "reports/admperiod"
     end
   end
 
