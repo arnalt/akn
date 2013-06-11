@@ -30,10 +30,15 @@
     <td><%= work.client.project %></td>
     <td><%= work.client.name %></td>
     <td><%= work.task.name %></td>
-   <td><%= link_to t("links.work_index_show"), work_path(work)%></td>
-    <td><%= link_to t("links.work_index_edit"), edit_work_path(work) %></td>
-    <td><%= link_to t("links.work_index_delete"), work, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+    <td><%= link_to t("links.work_index_show"), work_path(work)%></td>
+    <% if work.passed %>
+         <td></td>
+        <td></td>
+   <% else %>
+        <td><%= link_to t("links.work_index_edit"), edit_work_path(work) %></td>
+        <td><%= link_to t("links.work_index_delete"), work, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>
+   </tr>
 <% end %>
   </tbody>
 </table>

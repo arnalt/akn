@@ -12,6 +12,7 @@ gem 'mail', '2.4.4'
 gem 'paperclip', git: 'git://github.com/thoughtbot/paperclip.git'
 gem 'jquery-datatables-rails',  git: 'git://github.com/rweng/jquery-datatables-rails.git'
 gem 'jquery-ui-rails', '4.0.3'
+gem 'active_attr'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -44,6 +45,8 @@ group :development, :test do
   gem 'heroku'
   gem 'rspec-rails', '2.11.0'
   gem 'annotate', '2.5.0'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 gem 'jquery-rails'

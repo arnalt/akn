@@ -1,12 +1,7 @@
 class WorksController < ApplicationController
   before_filter :filled_clients, only: [:new, :edit, :create, :tasks]
 
-
-  def home
-
-  end
-
-  def index
+   def index
    @works = current_user.works.order('date DESC')
    @username = current_user.user_name
 

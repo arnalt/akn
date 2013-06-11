@@ -75,5 +75,12 @@ class UsersController < ApplicationController
     redirect_to(root_path) unless current_user.admin?
   end
 
+ def report
+   @user = User.find(params[:id])
+   @works = User.find(params[:id]).works.paginate page: params[:page], order: 'date desc', per_page: 10
 
+   respond_to do |format|
+     format.html { render 'show.html.erb' }
+   end
+ end
 end

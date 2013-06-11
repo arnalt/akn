@@ -1,0 +1,14 @@
+<% provide(:title, 'Admperiod Report') %>
+<div class="row">
+  <div class="span6 offset3">
+    <br>
+    <h3><%= t("text.input_title") %></h3>
+    <%= form_for @report do |f| %>
+        <%= render 'fields', f: f %>
+        <br>
+        <%= f.submit t('links.report_exec'), class: "btn btn-large btn-primary" %>
+        <br><br><br>
+        <%= link_to t("links.button_back"), root_path %>
+    <% end %>
+  </div>
+</div>

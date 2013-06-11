@@ -20,9 +20,18 @@
                 </ul>
               </li>
               <% if current_user.admin? %>
-                  <li><%= link_to t("text.menu_clients"), clients_path %></li>
-                  <li><%= link_to t("text.menu_tasks"), tasks_path %></li>
-                  <li><%= link_to t("text.menu_users"), users_path %></li>
+                  <li id="fat-menu" class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      Admin<b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><%= link_to t("text.menu_clients"), clients_path %></li>
+                      <li><%= link_to t("text.menu_tasks"), tasks_path %></li>
+                      <li><%= link_to t("text.menu_users"), users_path %></li>
+                      <li class="divider"></li>
+                      <li><%= link_to t("text.menu_admin_period"), admperiod_path %></li>
+                    </ul>
+                  </li>
               <% end %>
               <li id="fat-menu" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">

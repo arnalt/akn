@@ -253,6 +253,7 @@ de:
     user_show_firstname: "Vorname"
     user_show_lastname: "Nachname"
     login_or_email: "Login-Name oder E-Mail"
+    menu_admin_period: "Freigabe"
   links:
      work_index_edit: "Ändern"
      work_index_delete: "Löschen"
@@ -265,6 +266,7 @@ de:
      button_save_changes: "Änderungen speichern"
      button_avatar_change: "Avatar ändern"
      tasks_report: "Report generieren"
+     report_exec: "Ausführen"
 
   messages:
      excel_period: "Das Excel-Sheet sollte nur Daten eines Monats enthalten!"
@@ -277,6 +279,9 @@ de:
      report_email_missing: "Geben Sie bitte eine E-Mail-Adresse an"
      report_email_invalid: "Die angegebene E-Mail-Adresse ist ungültig"
      report_email_sent: "Die E-Mail wurde erfolfreich versendet"
+     report_passed: "Ausgewählter Zeitraum übernehmen"
+     report_passed_op2: "Ausgewählter Zeitraum freigeben"
+     report_user: "Benutzer"
   # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
   activemodel:
     user: "Benutzer"

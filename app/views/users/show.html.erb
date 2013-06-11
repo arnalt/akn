@@ -2,18 +2,16 @@
 <div class="row">
   <aside>
     <section>
-      <h1>
+      <h3>
         <% if @user.photo.present? %>
             <%= image_tag @user.photo, :size => '64x64' %>
-
         <% else %>
             <%= image_tag "rails.png", :size => '64x64' %>
         <% end %>
         <%= @user.firstname %>
         <%= @user.lastname %>
-      </h1>
+      </h3>
       <table class="table table-bordered">
-        <br><br>
         <tr>
           <td><b><%= t("text.user_show_firstname") %>:</b></td>
           <td><%= @user.firstname %></td>
@@ -23,8 +21,8 @@
           <td><%= @user.lastname %></td>
         </tr>
         <tr>
-        <td><b>E-Mail</b></td>
-        <td><%= @user.email %></td>
+          <td><b>E-Mail</b></td>
+          <td><%= @user.email %></td>
         </tr>
         <tr>
           <td><b>Login-Name</b></td>
@@ -34,3 +32,50 @@
     </section>
   </aside>
 </div>
+<% unless @works.present? %>
+    <%= button_to t("links.tasks_report"), report_users_path(@user), class: "btn btn-small btn-primary", :method => :get %>
+<% else %>
+    <div class="row">
+      <aside>
+        <section>
+          <table class="table table-condensed">
+            <tr>
+              <th><%= t("text.work_index_date") %></th>
+              <th><%= t("text.work_index_week") %></th>
+              <th><%= t("text.work_index_start_at") %></th>
+              <th><%= t("text.work_index_end_at") %></th>
+              <th>Pause</th>
+              <th><%= t("text.work_index_hours") %></th>
+              <th><%= t("text.work_index_project") %></th>
+              <th><%= t("text.work_index_client") %></th>
+              <th><%= t("text.work_index_task") %></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            <% @works.each do |work| %>
+                <tr>
+                  <td><%= l work.date %></td>
+                  <td><%= work.week %></td>
+                  <td><%= l work.start_at, format: :short %></td>
+                  <td><%= l work.end_at, format: :short %></td>
+                  <td><%= l work.pause, format: :short %></td>
+                  <td><%= number_with_precision(work.working_hours, :precision => 2) %></td>
+                  <td><%= work.client.project %></td>
+                  <td><%= work.client.name %></td>
+                  <td><%= work.task.name %></td>
+                  <td><%= link_to t("links.work_index_show"), work_path(work) %></td>
+                  <td><%= link_to t("links.work_index_edit"), edit_work_path(work) %></td>
+                  <td><%= link_to t("links.work_index_delete"), work, confirm: 'Are you sure?', method: :delete %></td>
+                </tr>
+            <% end %>
+          </table>
+          <div class="pagination pagination-small">
+            <%= will_paginate @works %>
+          </div>
+          <%= link_to t("links.button_back"), users_path %>
+        </section>
+      </aside>
+    </div>
+
+<% end %>
