@@ -273,6 +273,7 @@ en:
      button_avatar_change: "change"
      tasks_report: "Generate report"
      report_exec: "Execute"
+     report_passed: "Finalize"
   messages:
      excel_period: "Excel-Sheet should have data for one month only"
      report_average: "Average:"

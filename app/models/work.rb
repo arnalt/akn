@@ -21,8 +21,8 @@ class Work < ActiveRecord::Base
     where("user_id = ? and date >= ? and date <= ? and client_id = ?", user_id, start_at, end_at, client_id).update_all(:passed => true)
   end
 
-  def self.report_user_passed(start_at, end_at, client_id)
-    where("date >= ? and date <= ? and client_id = ?", start_at, end_at, client_id).update_all(:passed => true)
+  def self.works_finalize(user_id,date)
+    where("user_id = ? and date <= ?", user_id, date).update_all(:passed => true)
   end
 
   def self.report_unpassed(user_id,start_at, end_at, client_id)

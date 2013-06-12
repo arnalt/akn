@@ -6,13 +6,14 @@
   <tr>
     <th><%= t("text.work_index_date") %></th>
     <th><%= t("text.work_index_week") %></th>
+    <th><%= t("text.work_index_day") %></th>
     <th><%= t("text.work_index_start_at") %></th>
     <th><%= t("text.work_index_end_at") %></th>
     <th>Pause</th>
     <th><%= t("text.work_index_hours") %></th>
     <th><%= t("text.work_index_project") %></th>
-    <th><%= t("text.work_index_client") %></th>
     <th><%= t("text.work_index_task") %></th>
+    <th></th>
     <th></th>
     <th></th>
     <th></th>
@@ -23,20 +24,22 @@
   <tr>
     <td><%= l work.date %></td>
     <td><%= work.week %></td>
+    <td><%=  work.day %></td>
     <td><%= l work.start_at, format: :short %></td>
     <td><%= l work.end_at, format: :short %></td>
     <td><%= l work.pause, format: :short %></td>
     <td><%= number_with_precision(work.working_hours, :precision => 2) %></td>
     <td><%= work.client.project %></td>
-    <td><%= work.client.name %></td>
     <td><%= work.task.name %></td>
-    <td><%= link_to t("links.work_index_show"), work_path(work)%></td>
+    <td><%= link_to  (image_tag "view.png", :title => t("links.work_index_show") ), work_path(work)%></td>
     <% if work.passed? %>
          <td></td>
         <td></td>
+        <td></td>
    <% else %>
-        <td><%= link_to t("links.work_index_edit"), edit_work_path(work) %></td>
-        <td><%= link_to t("links.work_index_delete"), work, confirm: 'Are you sure?', method: :delete %></td>
+        <td><%= link_to (image_tag "edit.jpg", :title => t("links.work_index_edit") ), edit_work_path(work) %></td>
+        <td><%= link_to  (image_tag "delete.jpg", :title => t("links.work_index_delete") ), work, confirm: 'Are you sure?', method: :delete %></td>
+        <td><%= link_to  (image_tag "finalize.png", :title => t("links.report_passed") ), finalize_works_path(work) %></td>
     <% end %>
    </tr>
 <% end %>

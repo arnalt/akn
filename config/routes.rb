@@ -36,9 +36,15 @@ Akn::Application.routes.draw do
       end
     end
 
-    resources :works
+    resources :works do
+      collection do
+        get ':id/finalize' => 'works#finalize', as: 'finalize'
+      end
+    end
+
+
     resources :clients
-    resources :users
+ #   resources :users
    resources :reports, only:  :create
    #  resources :tasks
 

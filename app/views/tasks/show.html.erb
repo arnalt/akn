@@ -1,11 +1,9 @@
 <% provide(:title, 'Show Task') %>
 <p id="notice"><%= notice %></p>
-
 <p>
   <b>Name:</b>
   <%= @task.name %>
 </p>
-
 <p>
   <b><%= t("text.tasks_description") %>: </b>
   <%= @task.description %>
@@ -38,8 +36,6 @@
         <td><%= work.client.project %></td>
         <td><%= work.client.name %></td>
         <td><%= work.description %></td>
-
-
       </tr>
   <% end %>
   <tr>
@@ -52,7 +48,7 @@
 </table>
 <% end %>
 <% if @works.empty? %>
-<%= button_to t("links.tasks_report"), report_tasks_path(@task), class: "btn btn-large btn-primary", :method => :get  %>
+<%= button_to t("links.tasks_report"), report_tasks_path(@task), class: "btn btn-small btn-primary", :method => :get  %>
 <% end %>
 <%= link_to t("links.button_back"), tasks_path %>
 

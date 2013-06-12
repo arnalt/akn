@@ -84,4 +84,9 @@ class WorksController < ApplicationController
     @tasks=Task.all
   end
 
+  def finalize
+    @work = current_user.works.find(params[:id])
+    Work.works_finalize(current_user.id,@work.date)
+    redirect_to works_path
+  end
 end

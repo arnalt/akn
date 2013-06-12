@@ -126,9 +126,6 @@ class ReportsController < ApplicationController
           @w_min = current_user.works.get_min(@start_at, @end_at, @client_id)
           @w_max = current_user.works.get_max(@start_at, @end_at, @client_id)
           @w_days = current_user.works.get_days(@start_at, @end_at, @client_id)
-          if params[:passed] == '1'
-            current_user.works.report_user_passed(@start_at, @end_at, @client_id)
-          end
         end
       end
     end
