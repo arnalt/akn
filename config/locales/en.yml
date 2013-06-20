@@ -260,6 +260,8 @@ en:
     login_or_email: "Login-Name  or Email "
     menu_admin_period: " Period Control"
     base_title: "AKRA CP Activity Report"
+    report_stat_year: "Year"
+    report_stat_user: "User"
   links:
      work_index_edit: "Edit"
      work_index_delete: "Delete"
@@ -274,6 +276,7 @@ en:
      tasks_report: "Generate report"
      report_exec: "Execute"
      report_passed: "Finalize"
+     tasks_stat: "Annual report"
   messages:
      excel_period: "Excel-Sheet should have data for one month only"
      report_average: "Average:"

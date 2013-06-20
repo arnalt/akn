@@ -23,8 +23,7 @@ class ApplicationController < ActionController::Base
     {locale: I18n.locale}
   end
 
-
-  def locale_path(locale)
+    def locale_path(locale)
     locale_regexp = %r{/(en|de) /?}
     if request.env['PATH_INFO'] =~ locale_regexp
       "#{request.env['PATH_INFO']} "

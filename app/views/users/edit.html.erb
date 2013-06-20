@@ -6,8 +6,8 @@
     <h3><%= t("text.edit_users_title") %></h3>
     <%= form_for @user, :html => { :multipart => true } do |f| %>
         <%= render 'fields', f: f %>
-        <br>
-        <%= f.submit t("links.button_save_changes"), class: "btn btn-large btn-primary" %>
+        <br><br>
+        <%= f.submit t("links.button_save_changes"), class: "btn btn-small btn-primary" %>
     <% end %>
 
     </div>

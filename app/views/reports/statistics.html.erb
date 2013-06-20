@@ -1,0 +1,13 @@
+<% provide(:title, 'Statistics Reports') %>
+<div class="row">
+  <div class="offset1">
+    <h4><%= t("links.tasks_stat")%></h4>
+    <%=  form_tag yearstats_path do %>
+        <%= select_tag :year, options_for_select(Work.give_years.each.map  { |y| y.year }) %><br>
+       <% if current_user.admin? %>
+            <%= select_tag :user , options_for_select(User.select("id, lastname").group("id, lastname").each.map { |u| u.id.to_s+' '+ u.lastname  } ) %><br>
+         <% end %>
+        <%=  submit_tag "GO"   %>
+    <% end %>
+  </div>
+</div>

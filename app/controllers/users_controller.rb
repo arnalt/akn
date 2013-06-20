@@ -76,11 +76,12 @@ class UsersController < ApplicationController
   end
 
  def report
-   @user = User.find(params[:id])
-   @works = User.find(params[:id]).works.paginate page: params[:page], order: 'date desc', per_page: 10
+ @user = User.find(params[:id])
+@works = User.find(params[:id]).works.paginate page: params[:page], order: 'date desc', per_page: 10
 
-   respond_to do |format|
-     format.html { render 'show.html.erb' }
-   end
- end
+respond_to do |format|
+  format.html { render 'show.html.erb' }
+end
+end
+
 end

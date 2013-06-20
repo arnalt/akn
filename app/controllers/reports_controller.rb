@@ -15,6 +15,9 @@ class ReportsController < ApplicationController
     @format = 'pdf'
   end
 
+  def statistics
+
+  end
   def admperiod
     @users = User.all
     @report = Report.new
@@ -50,7 +53,6 @@ class ReportsController < ApplicationController
     end
   end
 
-
   def output
     respond_to do |format|
       format.html
@@ -83,6 +85,33 @@ class ReportsController < ApplicationController
         format.html { render "output.html.erb", :layout => false }
       end
     end
+  end
+
+  def yearstats
+    if params[:user].present?
+       @user = User.find(params[:user].split(' ').at(0).to_i)
+    else
+      @user = current_user
+    end
+    @year = params[:year]
+    @mons =  I18n.t("date.month_names")
+    @soll = 160
+    @month_array = []
+    ind = 1
+    12.times do
+      @month_array <<  Work.statistics_build(@user.id, @year,ind)
+      ind += 1
+    end
+    @total_hours = @month_array.sum
+    @task = Task.find_by_name('Urlaub')
+    @holiday_array=[]
+    ind = 1
+    12.times do
+      @holiday_array << Work.statistics_holidays(@user.id, @year, ind, @task.id)
+      ind += 1
+    end
+    @total_holidays = @holiday_array.sum
+    @total_soll = @user.annual_hours
   end
 
   def check_period

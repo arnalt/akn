@@ -13,8 +13,10 @@ Akn::Application.routes.draw do
 
     get "reports/input", as: :input
     get "reports/admperiod", as: :admperiod
+    get "reports/statistics", as: :statistics
     post "reports/output", as: :output
     post "reports/admout", as: :admout
+    post "reports/yearstats", as: :yearstats
     get "reports/excel", as: :excel
     get "reports/output"
     get "reports/sel"

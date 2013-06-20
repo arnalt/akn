@@ -1,0 +1,30 @@
+<h4>
+  <table class="table table-bordered">
+    <tr>
+      <td><%= t("text.report_stat_year")%>: <%= @year%></td>
+      <td> <%= t("text.report_stat_user")%>: <%= @user.lastname %>, <%= @user.firstname %></td>
+  </tr>
+  </table>
+</h4>
+<table class="table table-bordered">
+  <tr>
+    <th>Monate</th>
+    <th>Ist</th>
+    <th>Soll</th>
+    <th>Urlaub</th>
+  </tr>
+  <% 12.times do |ind| %>
+      <tr>
+        <td><%= @mons[ind+1] %></td>
+        <td><%= @month_array[ind] %></td>
+        <td><%= @soll %></td>
+        <td><%= @holiday_array[ind] %></td>
+      </tr>
+  <% end %>
+  <tr>
+    <td><b>Total</b></td>
+    <td><b><%= @total_hours %></b></td>
+    <td><b><%= @total_soll%></b></td>
+    <td><b><%= @total_holidays%></b></td>
+  </tr>
+</table>

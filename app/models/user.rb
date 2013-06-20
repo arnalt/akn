@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  attr_accessible :firstname, :lastname, :email, :password, :password_confirmation, :photo, :login
+  attr_accessible :firstname, :lastname, :email, :password, :password_confirmation, :admin, :photo, :login,
+                              :personnel_number, :annual_hours
   has_many :works, dependent: :restrict
   has_secure_password
   has_attached_file :photo

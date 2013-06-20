@@ -14,6 +14,7 @@
                   <li><%= link_to t("text.menu_display"), input_path %></li>
                   <li class="divider"></li>
                   <li><%= link_to t("text.menu_excel"), excel_path %></li>
+                  <li><%= link_to "Jahresübersicht",statistics_path %></li>
                   <% unless Rails.env.production? %>
                       <li><%= link_to "PDF", pdf_path %></li>
                   <% end %>
