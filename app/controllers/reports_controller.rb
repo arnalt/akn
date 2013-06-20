@@ -18,6 +18,7 @@ class ReportsController < ApplicationController
   def statistics
 
   end
+
   def admperiod
     @users = User.all
     @report = Report.new
@@ -89,28 +90,32 @@ class ReportsController < ApplicationController
 
   def yearstats
     if params[:user].present?
-       @user = User.find(params[:user].split(' ').at(0).to_i)
+      @user = User.find(params[:user].split(' ').at(0).to_i)
     else
       @user = current_user
     end
     @year = params[:year]
-    @mons =  I18n.t("date.month_names")
+    @mons = I18n.t("date.month_names")
     @soll = 160
     @month_array = []
     ind = 1
     12.times do
-      @month_array <<  Work.statistics_build(@user.id, @year,ind)
+      @month_array << Work.statistics_build(@user.id, @year, ind)
       ind += 1
     end
     @total_hours = @month_array.sum
     @task = Task.find_by_name('Urlaub')
-    @holiday_array=[]
-    ind = 1
-    12.times do
-      @holiday_array << Work.statistics_holidays(@user.id, @year, ind, @task.id)
-      ind += 1
+    if @task.present?
+      @holiday_array=[]
+      ind = 1
+      12.times do
+        @holiday_array << Work.statistics_holidays(@user.id, @year, ind, @task.id)
+        ind += 1
+      end
+      @total_holidays = @holiday_array.sum
+    else
+      @holiday_array = []
     end
-    @total_holidays = @holiday_array.sum
     @total_soll = @user.annual_hours
   end
 

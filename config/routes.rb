@@ -19,6 +19,7 @@ Akn::Application.routes.draw do
     post "reports/yearstats", as: :yearstats
     get "reports/excel", as: :excel
     get "reports/output"
+    get "reports/yearstats"
     get "reports/sel"
 
     get "reports/pdf", as: :pdf
