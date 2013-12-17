@@ -1,32 +1,33 @@
 class Work < ActiveRecord::Base
   belongs_to :user
   belongs_to :client
+  belongs_to :project
   belongs_to :task
 
   before_create :complete_work
   before_update :complete_work
 
   validates :date, :start_at, :end_at, :pause, :client_id, presence: true
-  validates :date, uniqueness: true
 
-  def self.build_report(start_at, end_at, client_id)
-    where("date >= ? and date <= ? and client_id = ?", start_at, end_at, client_id)
+
+  def self.build_report(start_at, end_at, project_id)
+    where("date >= ? and date <= ? and project_id = ?", start_at, end_at, project_id)
   end
 
   def self.build_works_by_task(task_id)
     where("task_id = ?", task_id)
   end
 
-  def self.report_passed(user_id, start_at, end_at, client_id)
-    where("user_id = ? and date >= ? and date <= ? and client_id = ?", user_id, start_at, end_at, client_id).update_all(:passed => true)
+  def self.report_passed(user_id, start_at, end_at, projectt_id)
+    where("user_id = ? and date >= ? and date <= ? and project_id = ?", user_id, start_at, end_at, project_id).update_all(:passed => true)
   end
 
   def self.works_finalize(user_id, date)
     where("user_id = ? and date <= ?", user_id, date).update_all(:passed => true)
   end
 
-  def self.report_unpassed(user_id, start_at, end_at, client_id)
-    where("user_id = ? and date >= ? and date <= ? and client_id = ?", user_id, start_at, end_at, client_id).update_all(:passed => false)
+  def self.report_unpassed(user_id, start_at, end_at, project_id)
+    where("user_id = ? and date >= ? and date <= ? and project_id = ?", user_id, start_at, end_at, project_id).update_all(:passed => false)
   end
 
   def self.statistics_build(user_id, year, month)
@@ -40,7 +41,9 @@ class Work < ActiveRecord::Base
   def complete_work
     self.year = self.date.year.to_int
     self.month = self.date.to_s[5, 2].to_i
-    self.client_id = Task.find(self.task_id).client_id
+   # self.project_id = Task.find(self.task_id).project_id
+    #self.client_id = Project.find(self.project_id).client_id
+
     @arr = I18n.t("date.day_names")
     self.day = @arr.at(self.date.wday)
     self.week = ((self.date - self.date.at_beginning_of_year) / 7 + 0.8).round.to_i
@@ -59,22 +62,22 @@ class Work < ActiveRecord::Base
    end
 
   def self.total_on(date, work)
-    where("date = ? AND user_id = ? AND client_id = ? ", date, work.first.user_id, work.first.client_id).sum(:working_hours)
+    where("date = ? AND user_id = ? AND project_id = ? ", date, work.first.user_id, work.first.project_id).sum(:working_hours)
   end
 
-  def self.get_avg(start_at, end_at, client_id)
-    self.build_report(start_at, end_at, client_id).average(:working_hours)
+  def self.get_avg(start_at, end_at, project_id)
+    self.build_report(start_at, end_at, project_id).average(:working_hours)
   end
 
-  def self.get_min(start_at, end_at, client_id)
-    self.build_report(start_at, end_at, client_id).minimum(:working_hours)
+  def self.get_min(start_at, end_at, project_id)
+    self.build_report(start_at, end_at, project_id).minimum(:working_hours)
   end
 
-  def self.get_max(start_at, end_at, client_id)
-    self.build_report(start_at, end_at, client_id).maximum(:working_hours)
+  def self.get_max(start_at, end_at, project_id)
+    self.build_report(start_at, end_at, project_id).maximum(:working_hours)
   end
 
-  def self.get_days(start_at, end_at, client_id)
-    self.build_report(start_at, end_at, client_id).count
+  def self.get_days(start_at, end_at, project_id)
+    self.build_report(start_at, end_at, project_id).count
   end
 end

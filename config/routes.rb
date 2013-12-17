@@ -1,5 +1,6 @@
 Akn::Application.routes.draw do
 
+
  scope "(:locale)", locale: /en|de/ do
     match '/help', to: 'home_pages#help'
     match '/about', to: 'home_pages#about'
@@ -47,13 +48,10 @@ Akn::Application.routes.draw do
 
 
     resources :clients
- #   resources :users
+    resources :projects
    resources :reports, only:  :create
-   #  resources :tasks
-
-
-
  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

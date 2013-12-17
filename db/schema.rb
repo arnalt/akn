@@ -11,13 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130616091748) do
+ActiveRecord::Schema.define(:version => 20130702121102) do
 
   create_table "clients", :force => true do |t|
     t.string   "name"
-    t.string   "project"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.text     "description"
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "client_id"
   end
 
   create_table "tasks", :force => true do |t|
@@ -25,7 +33,7 @@ ActiveRecord::Schema.define(:version => 20130616091748) do
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-    t.integer  "client_id"
+    t.integer  "project_id"
   end
 
   create_table "users", :force => true do |t|
@@ -65,6 +73,7 @@ ActiveRecord::Schema.define(:version => 20130616091748) do
     t.boolean  "passed"
     t.integer  "year"
     t.integer  "month"
+    t.integer  "project_id"
   end
 
 end

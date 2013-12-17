@@ -32,10 +32,14 @@
     </tr>
     <tr>
       <td><b><%= t('text.work_index_client') %></b></td>
-      <td><%= @work.client.name %></td>
+      <td><%= @work.project.client.name %></td>
     </tr>
     <tr>
       <td><b><%= t('text.work_index_project') %></b></td>
+      <td><%= @work.project.name %></td>
+    </tr>
+    <tr>
+      <td><b><%= t('text.work_index_task') %></b></td>
       <td><%= @work.task.name %></td>
     </tr>
     <tr>

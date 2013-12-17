@@ -18,8 +18,8 @@
           <tr>
             <td><%= task.name %></td>
             <td><%= task.description %></td>
-            <td><%= task.client.name %></td>
-            <td><%= task.client.project %></td>
+            <td><%= task.project.client.name %></td>
+            <td><%= task.project.name %></td>
             <td><%= link_to t("links.work_index_show"), task %></td>
             <td><%= link_to t("links.work_index_edit"), edit_task_path(task) %></td>
             <td><%= link_to t("links.work_index_delete"), task, confirm: 'Are you sure?', method: :delete %></td>

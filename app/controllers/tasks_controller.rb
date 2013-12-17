@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_filter :fill_clients, only: [:new, :edit, :create]
+  before_filter :fill_projects, only: [:new, :edit, :create]
 
   # GET /tasks
   # GET /tasks.json
@@ -97,7 +97,7 @@ class TasksController < ApplicationController
     end
   end
 
-  def fill_clients
-    @clients = Client.all
+  def fill_projects
+    @projects = Project.all
   end
 end

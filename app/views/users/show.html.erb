@@ -69,7 +69,7 @@
                   <td><%= l work.end_at, format: :short %></td>
                   <td><%= l work.pause, format: :short %></td>
                   <td><%= number_with_precision(work.working_hours, :precision => 2) %></td>
-                  <td><%= work.client.project %></td>
+                  <td><%= work.project.name %></td>
                   <td><%= work.client.name %></td>
                   <td><%= work.task.name %></td>
                   <td><%= link_to t("links.work_index_show"), work_path(work) %></td>

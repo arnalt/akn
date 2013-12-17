@@ -36,7 +36,8 @@ class WorksController < ApplicationController
 
   def create
     @work = current_user.works.build(params[:work])
-    @work.client_id = Task.find(@work.task_id).client.id
+    @work.project_id = Task.find(@work.task_id).project.id
+    @work.client_id = Project.find(@work.project_id).client.id
     respond_to do |format|
       if @work.save
         format.html { redirect_to works_path, notice:  t('messages.work_successfully_created') }
