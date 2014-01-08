@@ -99,9 +99,11 @@ class ReportsController < ApplicationController
     @mons = I18n.t("date.month_names")
     @soll = 160
     @month_array = []
+    @task = Task.find_by_name('Gleittag')
+    @ta   = Task.find_by_name('Urlaub')
     ind = 1
     12.times do
-      @month_array << Work.statistics_build(@user.id, @year, ind)
+      @month_array << Work.statistics_build(@user.id, @year, ind, @task.id, @ta.id)
       ind += 1
     end
     @total_hours = @month_array.sum

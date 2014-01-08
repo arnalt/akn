@@ -33,8 +33,8 @@
         <td><%= l work.end_at, format: :short %></td>
         <td><%= l work.pause, format: :short %></td>
         <td><%= number_with_precision(work.working_hours, :precision => 2) %></td>
-        <td><%= work.client.project %></td>
-        <td><%= work.client.name %></td>
+        <td><%= work.project.name %></td>
+        <td><%= work.task.name %></td>
         <td><%= work.description %></td>
       </tr>
   <% end %>

@@ -30,8 +30,8 @@ class Work < ActiveRecord::Base
     where("user_id = ? and date >= ? and date <= ? and project_id = ?", user_id, start_at, end_at, project_id).update_all(:passed => false)
   end
 
-  def self.statistics_build(user_id, year, month)
-    where("user_id = ? and year = ? and month = ?", user_id, year, month).sum(:working_hours)
+  def self.statistics_build(user_id, year, month, task_id, ta_id)
+    where("user_id = ? and year = ? and month = ? and task_id <> ? and task_id <> ?", user_id, year, month, task_id, ta_id).sum(:working_hours)
   end
 
   def self.statistics_holidays(user_id, year,month, task_id)
