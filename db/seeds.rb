@@ -20,7 +20,7 @@
 # updated_at: '2013-04-09 08:41:27.812524', user_id: users.first.id, client_id: clients.first.id, task_id: tasks.first.id } ])
 
 
-calendars=Calendar.create([
+calendars=Calendar.create([{datum: '2018-01-01',wochentage:2,jahr:2018,arbeitstag:0,stunden: 0.0,created_at: '2013-04-09 08:41:27.812525',updated_at: '2013-04-09 08:41:27.812525',kaltag:1},
 {datum: '2018-01-02',wochentage:3,jahr:2018,arbeitstag:0,stunden: 0.0,created_at: '2013-04-09 08:41:27.812525',updated_at: '2013-04-09 08:41:27.812525',kaltag:1},
 {datum: '2018-01-03',wochentage:4,jahr:2018,arbeitstag:1,stunden: 0.0,created_at: '2013-04-09 08:41:27.812526',updated_at: '2013-04-09 08:41:27.812526',kaltag:1},
 {datum: '2018-01-04',wochentage:5,jahr:2018,arbeitstag:1,stunden: 0.0,created_at: '2013-04-09 08:41:27.812527',updated_at: '2013-04-09 08:41:27.812527',kaltag:1},

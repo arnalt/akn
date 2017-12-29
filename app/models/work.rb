@@ -46,8 +46,7 @@ class Work < ActiveRecord::Base
 
     @arr = I18n.t("date.day_names")
     self.day = @arr.at(self.date.wday)
-    self.week = ((self.date - self.date.at_beginning_of_year) / 7 + 0.8).round.to_i
-    self.week = Calendar.get_kaltag(self.date)
+    self.week = self.date.strftime("%W").to_i
     if  Task.find(self.task_id).name == 'Urlaub'
       self.working_hours = 8.0
       self.end_at = '16:00'
@@ -61,6 +60,7 @@ class Work < ActiveRecord::Base
    def self.give_years
         self.select(:year).group('year')
    end
+
 
   def self.total_on(date, work)
     where("date = ? AND user_id = ? AND project_id = ? ", date, work.first.user_id, work.first.project_id).sum(:working_hours)
