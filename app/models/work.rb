@@ -47,6 +47,7 @@ class Work < ActiveRecord::Base
     @arr = I18n.t("date.day_names")
     self.day = @arr.at(self.date.wday)
     self.week = ((self.date - self.date.at_beginning_of_year) / 7 + 0.8).round.to_i
+    self.week = Calendar.get_kaltag(self.date)
     if  Task.find(self.task_id).name == 'Urlaub'
       self.working_hours = 8.0
       self.end_at = '16:00'

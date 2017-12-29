@@ -36,12 +36,8 @@ group :test do
   gem 'capybara', '1.1.2'
   gem 'factory_girl_rails'
 end
-group :production do
-  gem 'pg'
-end
 
 group :development, :test do
-  gem 'pg'
   gem 'heroku'
   gem 'rspec-rails', '2.11.0'
   gem 'annotate', '2.5.0'

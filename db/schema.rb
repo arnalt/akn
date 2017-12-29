@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20171228202514) do
+ActiveRecord::Schema.define(:version => 20171229084713) do
 
   create_table "calendars", :force => true do |t|
     t.date     "datum"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20171228202514) do
     t.decimal  "stunden"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "kaltag"
   end
 
   create_table "clients", :force => true do |t|
