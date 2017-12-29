@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130702121102) do
+ActiveRecord::Schema.define(:version => 20171228202514) do
+
+  create_table "calendars", :force => true do |t|
+    t.date     "datum"
+    t.integer  "wochentage"
+    t.integer  "jahr"
+    t.integer  "arbeitstag"
+    t.decimal  "stunden"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "clients", :force => true do |t|
     t.string   "name"
