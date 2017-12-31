@@ -1,0 +1,23 @@
+<% if @calendar.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-error">
+        The form contains <%= pluralize(@calendar.errors.count, "error") %>.
+      </div>
+      <ul>
+        <% @calendar.errors.full_messages.each do |msg| %>
+            <li>* <%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+<%= f.label :datum %>
+<%= f.text_field :datum %>
+
+
+<%= f.label :arbeitstag %>
+<%= f.text_area :arbeitstag %>
+
+<%= f.label :stunden %>
+<%= f.text_area :stunden, rows: 2 %>
+

@@ -1,13 +1,7 @@
 Akn::Application.routes.draw do
 
 
-  get "calendars/index"
 
-  get "calendars/show"
-
-  get "calendars/edit"
-
-  get "calendars/update"
 
  scope "(:locale)", locale: /en|de/ do
     match '/help', to: 'home_pages#help'
@@ -54,7 +48,7 @@ Akn::Application.routes.draw do
       end
     end
 
-
+    resources :calendars
     resources :clients
     resources :projects
    resources :reports, only:  :create

@@ -1,0 +1,12 @@
+<% provide(:title, 'Edit Calendar') %>
+<div class="row">
+  <div class="span6 offset3">
+    <br>
+    <h3><%= t("text.client_edit") %></h3>
+    <%= form_for(@calendar) do |f| %>
+        <%= render 'form', f: f %>
+        <br>
+        <%= f.submit t("links.button_save_changes"), class: "btn btn-large btn-primary" %>
+    <% end %>
+
+    <%= link_to t("links.button_back"), calendars_path %>
