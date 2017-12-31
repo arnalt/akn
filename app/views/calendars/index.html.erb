@@ -5,16 +5,16 @@
     <table class="table table-condensed">
       <tr>
         <th>Name</th>
-        <th><%= t("text.work_index_describ") %></th>
+        <th><%= t("text.calendar_index_describ") %></th>
         <th></th>
         <th></th>
         <th></th>
       </tr>
-
       <% @calendars.each do |calendar| %>
           <tr>
             <td><%= calendar.datum %></td>
             <td><%= calendar.arbeitstag %></td>
+            <td><%= link_to (image_tag "edit.jpg", :title => t("links.work_index_edit") ), edit_calendar_path(calendar) %></td>
           </tr>
       <% end %>
     </table>
