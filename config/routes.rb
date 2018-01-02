@@ -25,6 +25,7 @@ Akn::Application.routes.draw do
     get "reports/yearstats"
     get "reports/sel"
 
+
     get "reports/pdf", as: :pdf
     post "reports/output_pdf", as: :output_pdf
 
@@ -47,6 +48,8 @@ Akn::Application.routes.draw do
         get ':id/finalize' => 'works#finalize', as: 'finalize'
       end
     end
+
+
 
     resources :calendars
     resources :clients

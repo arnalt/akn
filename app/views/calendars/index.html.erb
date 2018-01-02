@@ -21,5 +21,10 @@
       <% end %>
     </table>
     <br/>
+    <h3>
+    <%= "Arbeitstage: " %><%= Calendar.find_all_by_arbeitstag(1).count() %><br>
+    <%= "Urlaubstage: " %><%= Calendar.find_all_by_arbeitstag(9).count() %><br>
+    <%= "Arbeitsstunden-Soll: " %><%= Calendar.find_all_by_arbeitstag(1).count() * 8 %>
+    </h3>
   </div>
 </div>

@@ -1,0 +1,13 @@
+<% provide(:title, 'Show Client') %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Arbeitstage:</b>
+  <%= Calendar.find_all_by_arbeitstag(1).count() %>
+</p>
+
+
+
+
+
+<%= link_to t("links.button_back"), clients_path %>

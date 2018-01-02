@@ -2,7 +2,6 @@ class CalendarsController < ApplicationController
 
   def index
     @calendars = Calendar.order('datum asc')
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @calendars }
@@ -12,6 +11,8 @@ class CalendarsController < ApplicationController
   def edit
     @calendar = Calendar.find(params[:id])
   end
+
+
 
   def update
     @calendar = Calendar.find(params[:id])
